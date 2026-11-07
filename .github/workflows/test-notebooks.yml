@@ -1,0 +1,37 @@
+name: Test notebooks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    outputs:
+      tutorials: ${{ steps.list.outputs.tutorials }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: list
+        # every top-level folder with a requirements.txt, except the template
+        run: |
+          dirs=$(find . -mindepth 2 -maxdepth 2 -name requirements.txt -not -path './_template/*' -exec dirname {} \; | sed 's|^\./||' | jq -R . | jq -cs .)
+          echo "tutorials=$dirs" >> "$GITHUB_OUTPUT"
+
+  run:
+    needs: discover
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        tutorial: ${{ fromJson(needs.discover.outputs.tutorials) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: pip install -r ${{ matrix.tutorial }}/requirements.txt nbmake pytest
+      - name: Run every notebook top to bottom
+        run: pytest --nbmake --nbmake-timeout=900 ${{ matrix.tutorial }}
