@@ -19,7 +19,7 @@ Building, benchmarking and stress-testing AI agents that do scientific modelling
 - Zero false discoveries in null worlds.
 - Positive controls rediscovered even with every gene name hidden.
 - Candidates tested prospectively (cell lines screened after the data release, new CRISPR system) and under RNAi, all pre-registered.
-- The best-supported candidates (DNAJC15 → DNAJC19, TTC7B → TTC7A) hold under every test but turn out to be **published**, as does the original lead (ATP6V0E2 → ATP6V0E1, found by a full-text search after an abstract-only search missed it). NABP1 → NABP2 and AGPAT2 → AGPAT1 are supported by several kinds of evidence, and we found no report of them.
+- The best-supported candidates (DNAJC15 → DNAJC19, TTC7B → TTC7A) hold under every test but turn out to be **published**, as does the original lead (ATP6V0E2 → ATP6V0E1, found by a full-text search after an abstract-only search missed it). NABP1 → NABP2 and AGPAT2 → AGPAT1 have no paper but were computationally predicted in 2019-2020 supplementary tables. This project adds independent held-out, prospective and RNAi evidence for them, not a discovery.
 
 The notebooks **replay recorded agent runs by default, so they need no API key and cost nothing.** Each one also has a live mode that uses *your own* key.
 

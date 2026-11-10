@@ -1,5 +1,5 @@
 {
- "method": "Europe PMC open-access full-text search with aliases (target_discovery/fulltext_novelty.py); passages where both genes occur within ~250 characters were read and judged by Claude (an AI assistant), not by a domain expert. Not searched: closed-access papers, supplementary tables (including published combinatorial paralog screens), patents.",
+ "method": "Europe PMC open-access full-text search with aliases (target_discovery/fulltext_novelty.py); passages where both genes occur within ~250 characters were read and judged by Claude (an AI assistant), not by a domain expert. Not searched: closed-access papers, supplementary tables (including published combinatorial paralog screens), patents. Supplementary tables of open-access paralog screens were also searched (paralog_screen_check.json).",
  "verdicts": [
   {
    "biomarker": "LOSS_ATP6V0E2",
@@ -34,14 +34,14 @@
   {
    "biomarker": "LOSS_NABP1",
    "target": "NABP2",
-   "verdict": "not found in open-access full text",
-   "evidence": "43 full-text hits mention both; none of the passages read reports a dependency"
+   "verdict": "computationally predicted (2019-2020)",
+   "evidence": "De Kegel 2019 PLoS Genet Suppl. Table 5; Dede 2020 Table S1 (FDR 1.6e-10); in4mer 2024 double knockout depleted in 2 melanoma lines (see paralog_screen_check.json)"
   },
   {
    "biomarker": "LOSS_AGPAT2",
    "target": "AGPAT1",
-   "verdict": "not found in open-access full text",
-   "evidence": "201 hits; passages are lipid biology, none reports a dependency"
+   "verdict": "computationally predicted (2019-2020)",
+   "evidence": "De Kegel 2019 PLoS Genet Suppl. Table 5; Dede 2020 Table S1 (Broad FDR 1.7e-6, Sanger 1.4e-3)"
   },
   {
    "biomarker": "LOSS_DMXL2",

@@ -1,0 +1,22 @@
+{
+ "method": "Supplementary tables of open-access paralog-pair studies, downloaded from the publishers' static file servers and searched for NABP1/NABP2/AGPAT1/AGPAT2 (and aliases). Parrish et al. 2021 (Cell Rep) could not be downloaded (NCBI bot check); Ito 2021, Koferle 2022 and De Kegel 2021 (Cell Syst) are not open access.",
+ "sources_checked": [
+  "Dede et al. 2020 Genome Biol (PMC7558751) Tables S1-S2",
+  "Thompson et al. 2021 Nat Commun (PMC7910459) Supplementary Data 1-8",
+  "Esmaeili Anvar et al. 2024 Nat Commun, in4mer (PMC11055879) Supplementary Data 1-10",
+  "2025 Genome Biol compendium (PMC12445041) Additional file 1"
+ ],
+ "findings": {
+  "NABP1 -> NABP2": [
+   "Computationally predicted: De Kegel et al. 2019 PLoS Genet Supplementary Table 5 (as listed in Thompson 2021 Supplementary Data 7); Dede 2020 Table S1, Broad: odds ratio 651, FDR 1.6e-10.",
+   "Experimentally screened in in4mer 2024 (Supplementary Data 7): NABP1+NABP2 double knockout log fold change -2.00 (Meljuso) and -2.68 (A375) vs single knockouts -0.24/-0.19 (NABP1) and 0.23/0.10 (NABP2); not measured in K562/A549. Their genetic-interaction summary (Supplementary Data 8) did not call it (fdr_synth 0.95); not reconciled here.",
+   "Not screened by Thompson 2021 or Gonatopoulos-Pournatzis 2020."
+  ],
+  "AGPAT2 -> AGPAT1": [
+   "Computationally predicted: De Kegel et al. 2019 Supplementary Table 5; Dede 2020 Table S1, Broad FDR 1.7e-6 and Sanger FDR 1.4e-3 (AGPAT2 alteration -> AGPAT1 essential).",
+   "in4mer 2024: double knockout -1.69 in Meljuso (singles -0.58/-1.39), near zero elsewhere; no synthetic call.",
+   "Not screened by Thompson 2021 or Gonatopoulos-Pournatzis 2020."
+  ]
+ },
+ "verdict": "Neither is novel as a computational observation: both were predicted from earlier DepMap data in 2019-2020. What this project adds is independent evidence: replication in held-out and independent-Sanger lines, prospectively in Cas12-screened lines first screened after 24Q4 (NABP2), and under RNAi (both)."
+}
