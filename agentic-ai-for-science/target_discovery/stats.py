@@ -25,7 +25,17 @@ from scipy import stats as sps
 from .prep import DEFAULT_DATA
 
 CACHE = Path(DEFAULT_DATA) / "cache"
-SPLITS = ("discovery", "holdout", "sanger")
+SPLITS = ("discovery", "holdout", "sanger", "sanger_indep")
+
+
+def frame(name: str) -> pd.DataFrame:
+    """Gene-effect matrix for a split. 'sanger_indep' is the Sanger screens restricted to cell lines
+    NOT in the discovery split (about 200 of 315), so replication there uses new cell lines as
+    well as a different lab and library. Plain 'sanger' includes lines also screened in discovery."""
+    if name == "sanger_indep":
+        G = load("sanger")
+        return G[~G.index.isin(load("discovery").index)]
+    return load(name)
 
 
 @lru_cache(maxsize=None)
@@ -51,12 +61,12 @@ def bh(p: np.ndarray) -> np.ndarray:
 class _Split:
     """A gene-effect matrix prepared once: NaNs filled, lineage codes, lineage-centred copy."""
 
-    def __init__(self, name: str):
-        G = load(name)
+    def __init__(self, name: str, group: str = "OncotreeLineage"):
+        G = frame(name)
         self.name, self.genes, self.lines = name, G.columns, G.index
         Y = G.to_numpy(np.float64)
         self.Y = np.where(np.isnan(Y), np.nanmean(Y, axis=0), Y)
-        lin = load("meta")["OncotreeLineage"].reindex(G.index).fillna("Unknown")
+        lin = load("meta")[group].reindex(G.index).fillna("Unknown")
         self.lineage = lin
         self.codes, self.lin_names = pd.factorize(lin)
         self.k = self.codes.max() + 1
@@ -69,8 +79,10 @@ class _Split:
 
 
 @lru_cache(maxsize=None)
-def split(name: str) -> _Split:
-    return _Split(name)
+def split(name: str, group: str = "OncotreeLineage") -> _Split:
+    """group: the covariate adjusted for. 'OncotreeLineage' (about 30 tissues) by default;
+    'OncotreePrimaryDisease' (about 77 diseases) is a stricter check against subtype confounding."""
+    return _Split(name, group)
 
 
 class World:
@@ -103,9 +115,10 @@ class World:
         x = self.features[col].reindex(lines)
         return (1 - x) if neg else x
 
-    def scan(self, biomarker: str, split_name: str = "discovery", genes=None) -> pd.DataFrame:
+    def scan(self, biomarker: str, split_name: str = "discovery", genes=None,
+             group: str = "OncotreeLineage") -> pd.DataFrame:
         """Test one biomarker against every gene (or the listed genes). One row per gene."""
-        s = split(split_name)
+        s = split(split_name, group)
         x = self.biomarker(biomarker, s.lines).to_numpy(float)
         ok = np.isfinite(x)
         cols = np.arange(len(s.genes)) if genes is None else np.flatnonzero(s.genes.isin(list(genes)))
@@ -144,9 +157,9 @@ class World:
         out.attrs.update(n=n, n_altered=n_alt, dof=max(dof, 1), split=split_name)
         return out
 
-    def test_pair(self, biomarker: str, gene: str, split_name: str) -> dict:
+    def test_pair(self, biomarker: str, gene: str, split_name: str, group: str = "OncotreeLineage") -> dict:
         """One-sided test that altered lines are MORE dependent on `gene` in one split."""
-        res = self.scan(biomarker, split_name, genes=[gene])
+        res = self.scan(biomarker, split_name, genes=[gene], group=group)
         if res.empty:
             raise ValueError(f"gene {gene!r} not in {split_name}")
         r = res.iloc[0]

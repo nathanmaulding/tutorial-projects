@@ -188,9 +188,11 @@ class TargetSession:
             raise ToolError(f"replication budget of {self.max_replications} used up")
         h = self.registered[hypothesis_id]
         res = {}
-        for sp in ("holdout", "sanger"):
+        # Sanger replication uses only cell lines NOT in discovery (v2; the runs recorded before this
+        # change used all Sanger lines, see target_discovery/reanalysis.py for their re-test).
+        for sp, split_name in (("holdout", "holdout"), ("sanger", "sanger_indep")):
             try:
-                res[sp] = self.world.test_pair(h["biomarker"], h["target"], sp)
+                res[sp] = self.world.test_pair(h["biomarker"], h["target"], split_name)
             except ValueError as e:
                 res[sp] = {"error": str(e)}
         passed = all("p_one_sided" in res[sp] and res[sp]["p_one_sided"] < ALPHA and res[sp]["beta_adj"] < 0

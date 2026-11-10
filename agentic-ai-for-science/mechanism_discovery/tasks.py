@@ -6,9 +6,11 @@ inhibitor level). The agent's final model is scored on how well it predicts thos
 conditions, which is what a mechanistic model is for: extrapolating to experiments not yet run.
 
 Three "hard" tasks use mechanisms deliberately left out of the agent's model library: no library
-model can fit them and no card gives their equation (the cards only warn, as textbooks do, when the
-standard models stop applying). They test whether the agent notices that nothing fits and builds a
-new model.
+model can fit them and no card gives their equation. The cards do point toward them, as textbooks
+do: the inhibition card says what a plateau at saturating inhibitor means, and the indirect-response
+card names the variants the library leaves out (including stimulated loss). So these tasks test
+whether the agent notices that nothing fits and builds a new model, with retrieval as a pointer;
+the no-retrieval ablation is the unaided version.
 """
 from __future__ import annotations
 

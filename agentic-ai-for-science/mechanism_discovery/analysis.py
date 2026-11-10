@@ -108,3 +108,64 @@ def wilson(p: float, n: int, z: float = 1.96) -> tuple[float, float]:
     centre = (p + z * z / (2 * n)) / den
     half = z * np.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / den
     return (centre - half, centre + half)
+
+
+# ---------------------------------------------------------------- uncertainty and stricter scoring
+RESCORED = ROOT / "runs" / "part1" / "rescored.jsonl"
+
+
+def with_strict(df: pd.DataFrame, path=RESCORED) -> pd.DataFrame:
+    """Add the stricter mechanism check from mechanism_discovery.rescore (probe-grid equivalence)."""
+    if not Path(path).exists():
+        return df.assign(mechanism_strict=np.nan, success_strict=np.nan)
+    s = pd.read_json(path, lines=True)
+    return df.merge(s[["run_key", "mechanism_strict", "success_strict", "probe_nrmse", "probe_threshold"]],
+                    on="run_key", how="left")
+
+
+def cluster_ci(d: pd.DataFrame, col: str = "success", n_boot: int = 4000, seed: int = 0) -> tuple[float, float]:
+    """95% bootstrap interval that resamples DATASETS (task x seed), not runs.
+
+    Repeat runs on the same dataset are not independent evidence, and neither are two runs of one
+    task: resampling whole datasets keeps that dependence, so the interval is honest about how
+    little data a few dozen benchmark instances really are."""
+    if d.empty:
+        return (np.nan, np.nan)
+    g = d.groupby(["task_id", "seed"])[col].agg(["sum", "size"])
+    s, n = g["sum"].to_numpy(float), g["size"].to_numpy(float)
+    rng = np.random.default_rng(seed)
+    idx = rng.integers(0, len(g), (n_boot, len(g)))
+    rates = s[idx].sum(1) / n[idx].sum(1)
+    return tuple(np.quantile(rates, [0.025, 0.975]))
+
+
+def headline(df: pd.DataFrame, strict: bool = True) -> pd.DataFrame:
+    """Success split into in-library and out-of-library, with dataset-level 95% intervals.
+
+    Exhaustive search can only return library models, so it scores 0% out-of-library BY
+    CONSTRUCTION. The fair comparison of search vs agent is the in-library column."""
+    col = "success_strict" if strict and "success_strict" in df and df["success_strict"].notna().all() else "success"
+    rows = []
+    for m, g in df.groupby("method"):
+        row = {"method": m, "runs": len(g), "datasets": g.groupby(["task_id", "seed"]).ngroups}
+        for name, part in [("in-library", g[g.kind != "out-of-library"]), ("out-of-library", g[g.kind == "out-of-library"])]:
+            k, n = int(part[col].sum()), len(part)
+            lo, hi = cluster_ci(part, col)
+            row[name] = f"{k}/{n} = {k / n:.0%}  [{lo:.0%}, {hi:.0%}]" if n else "-"
+        rows.append(row)
+    out = pd.DataFrame(rows).set_index("method")
+    order = [m for a in ARM_ORDER for m in out.index if m.startswith(a)]
+    return out.loc[order]
+
+
+def paired_difference(df: pd.DataFrame, a: str, b: str, kind: str | None = None, col: str = "success",
+                      n_boot: int = 4000, seed: int = 0) -> dict:
+    """Success-rate difference between two methods on the SAME datasets, with a dataset bootstrap."""
+    d = df if kind is None else df[(df.kind == kind) if kind != "in-library" else (df.kind != "out-of-library")]
+    p = d.pivot_table(index=["task_id", "seed"], columns="method", values=col, aggfunc="mean")[[a, b]].dropna()
+    diff = (p[a] - p[b]).to_numpy()
+    rng = np.random.default_rng(seed)
+    boots = diff[rng.integers(0, len(diff), (n_boot, len(diff)))].mean(1)
+    lo, hi = np.quantile(boots, [0.025, 0.975])
+    return {"a": a, "b": b, "subset": kind or "all", "datasets": len(diff), "difference": round(float(diff.mean()), 3),
+            "ci95": (round(float(lo), 3), round(float(hi), 3))}

@@ -138,9 +138,9 @@ def run_baseline(null_seed: int | None = None, k: int = MAX_REPLICATIONS) -> dic
     found = []
     for x in a.itertuples():
         reps = {}
-        for sp in ("holdout", "sanger"):
+        for sp, split_name in (("holdout", "holdout"), ("sanger", "sanger_indep")):
             try:
-                reps[sp] = world.test_pair(x.biomarker, x.gene, sp)
+                reps[sp] = world.test_pair(x.biomarker, x.gene, split_name)
             except ValueError:  # too few altered lines in this set: untestable counts as not replicated
                 reps[sp] = {"p_one_sided": None, "beta_adj": None}
         ok = all(r["p_one_sided"] is not None and r["p_one_sided"] < ALPHA and r["beta_adj"] < 0 for r in reps.values())

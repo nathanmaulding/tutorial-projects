@@ -123,3 +123,28 @@ def test_custom_model_fits_in_sandbox():
 def test_exhaustive_baseline_solves_exactly_the_in_library_tasks(task):
     r = run_exhaustive(make_instance(task, 0))
     assert r["success"] == (not task.id.startswith("hard_novel")), r
+
+
+# ---------------------------------------------------------------- stricter scoring and honest intervals
+def test_probe_check_separates_mechanisms_that_agree_near_the_data():
+    from mechanism_discovery.rescore import probe_error, probe_grid
+    from mechanism_discovery.tasks import TASKS_BY_ID, make_instance, truth_fn
+    from mechanism_discovery.library import LIBRARY
+    inst = make_instance(TASKS_BY_ID["hard_novel_cooperative_inhibition"], 0)
+    g = probe_grid(inst)
+    assert g.I.max() > inst.task.heldout.I.max()           # the probe reaches beyond the held-out conditions
+    truth = truth_fn(inst.task)(g, inst.task.params)
+    assert probe_error(truth, truth, g) == 0
+    plain = LIBRARY["competitive_inhibition"].predict(g, {"Vmax": 10, "Km": 2, "Ki": 1})
+    assert probe_error(plain, truth, g) > 0.5               # non-cooperative competitive is a different mechanism
+
+
+def test_headline_splits_library_and_dataset_bootstrap_is_wider_than_naive():
+    from mechanism_discovery import analysis as A
+    df = A.with_strict(A.load())
+    h = A.headline(df)
+    assert {"in-library", "out-of-library"} <= set(h.columns)
+    assert h.loc["exhaustive", "out-of-library"].startswith("0/")   # 0% by construction
+    d = A.paired_difference(df, "agent_full · haiku-5-5", "exhaustive", "in-library")
+    lo, hi = d["ci95"]
+    assert lo <= d["difference"] <= hi

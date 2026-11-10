@@ -58,3 +58,22 @@ def test_submitted_verdicts_are_checked_against_replication():
     s.submit_findings([{"hypothesis_id": "H1", "verdict": "replicated", "novelty": "well_established",
                         "claim": "x", "confidence": 0.9}], "summary")
     assert s.submission["findings"][0]["verdict_matches_evidence"] is False  # false claim is flagged
+
+
+def test_reanalysis_output_is_consistent():
+    import json
+    from pathlib import Path
+    p = Path(__file__).resolve().parent.parent / "runs" / "part2" / "reanalysis.json"
+    ra = json.loads(p.read_text())
+    for w, v in ra["summary"]["by_world"].items():
+        assert v["survives_fdr"] <= v["replicated_v2"]
+        if w != "real":
+            assert v["replicated_v2"] == 0                   # null worlds: no false discoveries under any rule
+    assert ra["summary"]["sanger_lines_indep"] < ra["summary"]["sanger_lines_all"]
+
+
+@needs_data
+def test_independent_sanger_split_excludes_discovery_lines():
+    from target_discovery.stats import load, split
+    assert not split("sanger_indep").lines.isin(load("discovery").index).any()
+    assert len(split("sanger_indep").lines) < len(split("sanger").lines)

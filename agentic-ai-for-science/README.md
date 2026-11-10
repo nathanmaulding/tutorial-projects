@@ -13,7 +13,7 @@ The notebooks **replay recorded agent runs by default, so they need no API key a
 ## Layout
 
 ```
-agentlab/                 the framework (about 500 lines, written to be read)
+agentlab/                 the framework (about 650 lines, written to be read)
   agent.py                the agent loop and its guard rails
   tools.py                Python functions -> tools the model can call
   retrieval.py            BM25 search over markdown documents
