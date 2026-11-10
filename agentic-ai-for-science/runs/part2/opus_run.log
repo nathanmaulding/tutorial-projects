@@ -1,0 +1,28 @@
+5 sessions. Spent so far $4.287 of $10.00.
+mission__paralogs__real__claude-opus-5-5__r2                           done         reg=5 repl=4 claimed=4  $0.2484
+mission__open__real__claude-opus-5-5__r1                               done         reg=5 repl=3 claimed=3  $0.1952
+mission__tumor_suppressors__real__claude-opus-5-5__r2                  done         reg=5 repl=3 claimed=3  $0.4580
+mission__tumor_suppressors__real__claude-opus-5-5__r1                  done         reg=5 repl=2 claimed=2  $0.6282
+mission__open__real__claude-opus-5-5__r2                               done         reg=5 repl=5 claimed=5  $0.3223
+Total spent $6.254
+2 sessions. Spent so far $6.254 of $10.00.
+mission__open__null1__claude-opus-5-5__r1                              done         reg=5 repl=0 claimed=0  $0.6563
+mission__paralogs__null1__claude-opus-5-5__r1                          done         reg=2 repl=0 claimed=0  $0.8023
+Total spent $7.794
+1 sessions. Spent so far $7.794 of $10.00.
+mission__tumor_suppressors__null2__claude-opus-5-5__r1                 done         reg=5 repl=0 claimed=0  $0.8015
+Total spent $8.595
+12 sessions. Spent so far $8.595 of $10.00.
+rediscovery__LOSS_MLH1__real__claude-opus-5-5__r1                      done         reg=1 repl=1 claimed=1 top=WRN correct=True $0.0585
+rediscovery__MUT_SMARCA4__real__claude-opus-5-5__r1                    done         reg=1 repl=1 claimed=1 top=SMARCA2 correct=True $0.0634
+rediscovery__MUT_ARID1A__real__claude-opus-5-5__r1                     done         reg=1 repl=1 claimed=1 top=ARID1B correct=True $0.0798
+rediscovery__LOSS_MTAP__real__claude-opus-5-5__r1                      done         reg=2 repl=2 claimed=2 top=PRMT5 correct=True $0.0924
+rediscovery__MUT_STAG2__real__claude-opus-5-5__r1                      done         reg=1 repl=1 claimed=1 top=STAG1 correct=True $0.0550
+rediscovery__~MUT_TP53__real__claude-opus-5-5__r1                      done         reg=2 repl=2 claimed=2 top=MDM2 correct=True $0.0751
+rediscovery__HOT_BRAF__real__claude-opus-5-5__r1                       done         reg=2 repl=2 claimed=2 top=BRAF correct=True $0.0829
+rediscovery__MUT_KEAP1__real__claude-opus-5-5__r1                      done         reg=2 repl=1 claimed=1 top=NFE2L2 correct=True $0.1111
+rediscovery__HOT_NRAS__real__claude-opus-5-5__r1                       done         reg=2 repl=2 claimed=2 top=NRAS correct=True $0.0817
+rediscovery__HOT_PIK3CA__real__claude-opus-5-5__r1                     done         reg=2 repl=1 claimed=1 top=PIK3CA correct=True $0.0748
+rediscovery__LOSS_RPP25__real__claude-opus-5-5__r1                     done         reg=1 repl=1 claimed=1 top=RPP25L correct=True $0.0595
+rediscovery__HOT_KRAS__real__claude-opus-5-5__r1                       done         reg=2 repl=2 claimed=2 top=KRAS correct=True $0.0890
+Total spent $9.519

@@ -8,6 +8,8 @@ Hands-on notebooks for learning and demonstrating concepts in machine learning, 
 |---|----------|-------------------|--------|-------|
 | 01 | [Gradient Descent from Scratch](gradient-descent/) | Loss functions, gradients, learning rates, SGD, all in plain numpy | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nathanmaulding/tutorial-projects/blob/main/gradient-descent/gradient_descent_from_scratch.ipynb) | coming soon |
 
+| 02 | [Agentic AI for Science](agentic-ai-for-science/) | Build an AI agent that discovers mechanistic models from data, benchmark how far to trust it, then point it at real cancer CRISPR screens to hunt for drug targets with pre-registration and independent replication | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nathanmaulding/tutorial-projects/blob/main/agentic-ai-for-science/01_building_a_science_agent.ipynb) | coming soon |
+
 *Planned: in-context learning in transformers.*
 
 ## How to run a tutorial

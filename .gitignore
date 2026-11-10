@@ -7,3 +7,7 @@ venv/
 ._*
 *.egg-info/
 .pytest_cache/
+# local secrets and scratch output
+.env.*
+*.key
+agentic-ai-for-science/runs/scratch/

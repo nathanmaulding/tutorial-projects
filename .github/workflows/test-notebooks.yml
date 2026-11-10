@@ -7,6 +7,13 @@ on:
   workflow_dispatch:
 
 jobs:
+  secret-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail if anything that looks like an API key is in the repo
+        run: python3 scripts/check_secrets.py
+
   discover:
     runs-on: ubuntu-latest
     outputs:
@@ -33,5 +40,7 @@ jobs:
           python-version: "3.11"
       - name: Install
         run: pip install -r ${{ matrix.tutorial }}/requirements.txt nbmake pytest
-      - name: Run every notebook top to bottom
+      - name: Run tests and every notebook top to bottom (replay mode, no API key)
+        env:
+          ANTHROPIC_API_KEY: ""
         run: pytest --nbmake --nbmake-timeout=900 ${{ matrix.tutorial }}

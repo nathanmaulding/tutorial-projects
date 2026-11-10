@@ -1,0 +1,43 @@
+24 sessions. Spent so far $4.285 of $10.00.
+rediscovery__MUT_SMARCA4__real__claude-haiku-5-5__r2                   done         reg=1 repl=1 claimed=1 top=SMARCA2 correct=True $0.0024
+rediscovery__MUT_SMARCA4__real__claude-haiku-5-5__r1                   done         reg=1 repl=1 claimed=1 top=SMARCA2 correct=True $0.0028
+rediscovery__LOSS_MTAP__real__claude-haiku-5-5__r2                     done         reg=2 repl=2 claimed=2 top=WDR77 correct=True $0.0034
+rediscovery__LOSS_MTAP__real__claude-haiku-5-5__r1                     done         reg=2 repl=2 claimed=2 top=WDR77 correct=True $0.0038
+rediscovery__MUT_ARID1A__real__claude-haiku-5-5__r1                    done         reg=1 repl=1 claimed=1 top=ARID1B correct=True $0.0029
+rediscovery__LOSS_MLH1__real__claude-haiku-5-5__r1                     done         reg=1 repl=1 claimed=1 top=WRN correct=True $0.0023
+rediscovery__MUT_ARID1A__real__claude-haiku-5-5__r2                    done         reg=1 repl=1 claimed=1 top=ARID1B correct=True $0.0029
+rediscovery__LOSS_MLH1__real__claude-haiku-5-5__r2                     done         reg=1 repl=1 claimed=1 top=WRN correct=True $0.0019
+rediscovery__MUT_STAG2__real__claude-haiku-5-5__r2                     done         reg=1 repl=1 claimed=1 top=STAG1 correct=True $0.0022
+rediscovery__MUT_STAG2__real__claude-haiku-5-5__r1                     done         reg=1 repl=1 claimed=1 top=STAG1 correct=True $0.0024
+rediscovery__MUT_KEAP1__real__claude-haiku-5-5__r1                     done         reg=1 repl=1 claimed=1 top=NFE2L2 correct=True $0.0033
+rediscovery__MUT_KEAP1__real__claude-haiku-5-5__r2                     done         reg=1 repl=1 claimed=1 top=NFE2L2 correct=True $0.0032
+rediscovery__~MUT_TP53__real__claude-haiku-5-5__r2                     done         reg=1 repl=1 claimed=1 top=MDM2 correct=True $0.0038
+rediscovery__~MUT_TP53__real__claude-haiku-5-5__r1                     done         reg=1 repl=1 claimed=1 top=MDM2 correct=True $0.0044
+rediscovery__HOT_BRAF__real__claude-haiku-5-5__r2                      done         reg=2 repl=2 claimed=2 top=BRAF correct=True $0.0035
+rediscovery__HOT_BRAF__real__claude-haiku-5-5__r1                      done         reg=1 repl=1 claimed=1 top=DUSP4 correct=False $0.0042
+rediscovery__HOT_NRAS__real__claude-haiku-5-5__r1                      done         reg=2 repl=2 claimed=2 top=NRAS correct=True $0.0031
+rediscovery__HOT_NRAS__real__claude-haiku-5-5__r2                      done         reg=1 repl=1 claimed=1 top=SHOC2 correct=True $0.0027
+rediscovery__HOT_PIK3CA__real__claude-haiku-5-5__r2                    done         reg=1 repl=1 claimed=1 top=PIK3CA correct=True $0.0020
+rediscovery__HOT_PIK3CA__real__claude-haiku-5-5__r1                    done         reg=1 repl=1 claimed=1 top=PIK3CA correct=True $0.0034
+rediscovery__HOT_KRAS__real__claude-haiku-5-5__r2                      done         reg=1 repl=1 claimed=1 top=RAF1 correct=False $0.0021
+rediscovery__HOT_KRAS__real__claude-haiku-5-5__r1                      done         reg=1 repl=1 claimed=1 top=RAF1 correct=False $0.0030
+rediscovery__LOSS_RPP25__real__claude-haiku-5-5__r1                    done         reg=1 repl=1 claimed=1 top=RPP25L correct=True $0.0023
+rediscovery__LOSS_RPP25__real__claude-haiku-5-5__r2                    done         reg=1 repl=1 claimed=1 top=RPP25L correct=True $0.0024
+Total spent $5.249
+5 sessions. Spent so far $5.283 of $10.00.
+mission__paralogs__real__claude-haiku-5-5__r2                          done         reg=5 repl=4 claimed=4  $0.0062
+mission__tumor_suppressors__real__claude-haiku-5-5__r1                 done         reg=2 repl=1 claimed=1  $0.0088
+mission__open__real__claude-haiku-5-5__r1                              done         reg=4 repl=2 claimed=2  $0.0062
+mission__open__real__claude-haiku-5-5__r2                              done         reg=3 repl=1 claimed=1  $0.0054
+mission__tumor_suppressors__real__claude-haiku-5-5__r2                 done         reg=3 repl=2 claimed=2  $0.0145
+Total spent $6.210
+3 sessions. Spent so far $6.210 of $10.00.
+mission__open__null1__claude-haiku-5-5__r1                             done         reg=3 repl=0 claimed=0  $0.0101
+mission__tumor_suppressors__null1__claude-haiku-5-5__r1                done         reg=2 repl=0 claimed=0  $0.0169
+mission__paralogs__null1__claude-haiku-5-5__r1                         done         reg=2 repl=0 claimed=0  $0.0205
+Total spent $6.911
+3 sessions. Spent so far $6.960 of $10.00.
+mission__open__null2__claude-haiku-5-5__r1                             done         reg=3 repl=0 claimed=0  $0.0098
+mission__tumor_suppressors__null2__claude-haiku-5-5__r1                done         reg=2 repl=0 claimed=0  $0.0118
+mission__paralogs__null2__claude-haiku-5-5__r1                         done         reg=4 repl=0 claimed=0  $0.0128
+Total spent $7.724

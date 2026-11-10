@@ -1,0 +1,57 @@
+35 runs to do. Spent so far: $0.2044 of $10.00 cap.
+enz_mm__s0__agent_full__claude-opus-5-5__r1                                 done          success=True  label=mm err=0.0264 $0.0630
+enz_hill__s0__agent_full__claude-opus-5-5__r1                               done          success=True  label=hill err=0.0005 $0.0718
+enz_hill__s1__agent_full__claude-opus-5-5__r1                               done          success=True  label=hill err=0.0302 $0.0671
+enz_substrate_inhibition__s1__agent_full__claude-opus-5-5__r1               done          success=True  label=substrate_inhibition err=0.0079 $0.0564
+enz_substrate_inhibition__s0__agent_full__claude-opus-5-5__r1               done          success=True  label=substrate_inhibition err=0.0804 $0.0686
+enz_mm__s1__agent_full__claude-opus-5-5__r1                                 done          success=True  label=custom err=0.0499 $0.0933
+enz_competitive__s0__agent_full__claude-opus-5-5__r1                        done          success=True  label=competitive_inhibition err=0.025 $0.1033
+enz_uncompetitive__s1__agent_full__claude-opus-5-5__r1                      done          success=True  label=uncompetitive_inhibition err=0.0495 $0.0702
+enz_uncompetitive__s0__agent_full__claude-opus-5-5__r1                      done          success=True  label=uncompetitive_inhibition err=0.0044 $0.0806
+enz_competitive__s1__agent_full__claude-opus-5-5__r1                        done          success=True  label=competitive_inhibition err=0.062 $0.0868
+enz_noncompetitive__s0__agent_full__claude-opus-5-5__r1                     done          success=True  label=noncompetitive_inhibition err=0.0093 $0.0847
+enz_noncompetitive__s1__agent_full__claude-opus-5-5__r1                     done          success=True  label=noncompetitive_inhibition err=0.0097 $0.0797
+pk_1cmt_iv__s0__agent_full__claude-opus-5-5__r1                             done          success=True  label=pk_1cmt_iv err=0.0237 $0.0888
+pk_2cmt_iv__s0__agent_full__claude-opus-5-5__r1                             done          success=True  label=pk_2cmt_iv err=0.0603 $0.0797
+pk_2cmt_iv__s1__agent_full__claude-opus-5-5__r1                             done          success=True  label=pk_2cmt_iv err=0.0097 $0.0537
+pk_1cmt_oral__s0__agent_full__claude-opus-5-5__r1                           done          success=True  label=pk_1cmt_oral err=0.0334 $0.0793
+pk_1cmt_iv__s1__agent_full__claude-opus-5-5__r1                             done          success=True  label=pk_1cmt_iv err=0.0237 $0.1260
+pd_direct_emax__s0__agent_full__claude-opus-5-5__r1                         done          success=True  label=pd_direct_emax err=0.0508 $0.0978
+pd_direct_emax__s1__agent_full__claude-opus-5-5__r1                         done          success=True  label=pd_direct_emax err=0.0199 $0.0718
+pd_indirect_inhibition__s0__agent_full__claude-opus-5-5__r1                 done          success=True  label=pd_indirect_inhibition err=0.0125 $0.1142
+pd_effect_compartment__s0__agent_full__claude-opus-5-5__r1                  done          success=True  label=pd_effect_compartment err=0.0286 $0.0955
+pd_effect_compartment__s1__agent_full__claude-opus-5-5__r1                  done          success=True  label=pd_effect_compartment err=0.0588 $0.1053
+hard_unidentifiable_km__s0__agent_full__claude-opus-5-5__r1                 done          success=True  label=linear_rate err=0.0101 $0.0624
+hard_unidentifiable_km__s1__agent_full__claude-opus-5-5__r1                 done          success=True  label=linear_rate err=0.0272 $0.0566
+pk_1cmt_oral__s1__agent_full__claude-opus-5-5__r1                           done          success=True  label=pk_1cmt_oral err=0.0292 $0.0814
+hard_null_effect__s0__agent_full__claude-opus-5-5__r1                       done          success=True  label=pd_no_effect err=0.0175 $0.0558
+hard_saturable_pk__s1__agent_full__claude-opus-5-5__r1                      done          success=True  label=pk_1cmt_iv_mm err=0.036 $0.0651
+pd_indirect_inhibition__s1__agent_full__claude-opus-5-5__r1                 done          success=True  label=pd_indirect_inhibition err=0.0081 $0.1014
+hard_null_effect__s1__agent_full__claude-opus-5-5__r1                       done          success=True  label=pd_no_effect err=0.0105 $0.0792
+hard_novel_partial_inhibition__s1__agent_full__claude-opus-5-5__r1          done          success=True  label=custom err=0.0079 $0.0806
+hard_saturable_pk__s0__agent_full__claude-opus-5-5__r1                      done          success=True  label=pk_1cmt_iv_mm err=0.0397 $0.1135
+hard_novel_cooperative_inhibition__s0__agent_full__claude-opus-5-5__r1      done          success=True  label=custom err=0.0073 $0.1033
+hard_novel_cooperative_inhibition__s1__agent_full__claude-opus-5-5__r1      done          success=True  label=custom err=0.0267 $0.1133
+hard_novel_stimulated_loss__s1__agent_full__claude-opus-5-5__r1             done          success=True  label=custom err=0.0283 $0.1476
+hard_novel_stimulated_loss__s0__agent_full__claude-opus-5-5__r1             done          success=True  label=custom err=0.0213 $0.1082
+Total spent: $3.3091
+18 runs to do. Spent so far: $3.3104 of $10.00 cap.
+enz_mm__s0__single_shot__claude-opus-5-5__r1                                done          success=True  label=mm err=0.0349 $0.0167
+enz_hill__s0__single_shot__claude-opus-5-5__r1                              done          success=True  label=hill err=0.0114 $0.0174
+enz_competitive__s0__single_shot__claude-opus-5-5__r1                       done          success=True  label=competitive_inhibition err=0.0169 $0.0223
+enz_uncompetitive__s0__single_shot__claude-opus-5-5__r1                     done          success=True  label=uncompetitive_inhibition err=0.0056 $0.0192
+enz_noncompetitive__s0__single_shot__claude-opus-5-5__r1                    done          success=True  label=noncompetitive_inhibition err=0.0243 $0.0178
+pk_1cmt_iv__s0__single_shot__claude-opus-5-5__r1                            done          success=True  label=pk_1cmt_iv err=0.0075 $0.0193
+enz_substrate_inhibition__s0__single_shot__claude-opus-5-5__r1              done          success=True  label=substrate_inhibition err=0.0 $0.0423
+pk_1cmt_oral__s0__single_shot__claude-opus-5-5__r1                          done          success=True  label=pk_1cmt_oral err=0.029 $0.0213
+pd_direct_emax__s0__single_shot__claude-opus-5-5__r1                        done          success=True  label=pd_direct_emax err=0.0545 $0.0212
+pk_2cmt_iv__s0__single_shot__claude-opus-5-5__r1                            done          success=True  label=pk_2cmt_iv err=0.1179 $0.0296
+hard_unidentifiable_km__s0__single_shot__claude-opus-5-5__r1                done          success=True  label=linear_rate err=0.0098 $0.0162
+pd_effect_compartment__s0__single_shot__claude-opus-5-5__r1                 done          success=True  label=pd_effect_compartment err=0.0 $0.0294
+hard_null_effect__s0__single_shot__claude-opus-5-5__r1                      done          success=True  label=pd_no_effect err=0.0174 $0.0134
+pd_indirect_inhibition__s0__single_shot__claude-opus-5-5__r1                done          success=False label=pd_indirect_inhibition err=0.1335 $0.0281
+hard_saturable_pk__s0__single_shot__claude-opus-5-5__r1                     done          success=False label=pk_1cmt_iv_mm err=0.2313 $0.0364
+hard_novel_partial_inhibition__s0__single_shot__claude-opus-5-5__r1         done          success=True  label=custom err=0.0131 $0.0282
+hard_novel_stimulated_loss__s0__single_shot__claude-opus-5-5__r1            done          success=False label=pd_indirect_inhibition err=0.1678 $0.0227
+hard_novel_cooperative_inhibition__s0__single_shot__claude-opus-5-5__r1     done          success=True  label=custom err=0.0142 $0.0361
+Total spent: $3.7615

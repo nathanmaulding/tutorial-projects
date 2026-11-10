@@ -1,0 +1,169 @@
+[
+ {
+  "biomarker": "LOSS_ATP6V0E2",
+  "target": "ATP6V0E1",
+  "altered_dependent": "20/23",
+  "others_dependent": "66/595",
+  "beta_adj": -0.8086,
+  "min_effect_leaving_one_lineage_out": -0.867,
+  "top_disease": [
+   "Head and Neck Squamous Cell Carcinoma",
+   "26% of altered vs 5% of all lines"
+  ],
+  "broadly_essential": false,
+  "pubmed_query": "(ATP6V0E1 OR ATP6V0E) AND (ATP6V0E2 OR C7orf32)",
+  "pubmed_hits": 1,
+  "most_relevant_titles": [
+   "2023 The application of weighted gene co-expression network analysis and support vector machine learning in the screening of Parkinson's disease biomarkers and construction of diagnostic models."
+  ]
+ },
+ {
+  "biomarker": "LOSS_DMXL2",
+  "target": "DMXL1",
+  "altered_dependent": "12/13",
+  "others_dependent": "12/605",
+  "beta_adj": -0.7064,
+  "min_effect_leaving_one_lineage_out": -0.756,
+  "top_disease": [
+   "Mature B-Cell Neoplasms",
+   "46% of altered vs 5% of all lines"
+  ],
+  "broadly_essential": false,
+  "pubmed_query": "DMXL1 AND DMXL2",
+  "pubmed_hits": 4,
+  "most_relevant_titles": [
+   "2025 DMXL1 promotes recruitment of V1-ATPase to lysosomes upon TRPML1 activation.",
+   "2025 A heterotrimeric protein complex assembles the metazoan V-ATPase upon dissipation of proton gradients."
+  ]
+ },
+ {
+  "biomarker": "LOSS_CHPT1",
+  "target": "CEPT1",
+  "altered_dependent": "12/13",
+  "others_dependent": "129/605",
+  "beta_adj": -0.9054,
+  "min_effect_leaving_one_lineage_out": -0.92,
+  "top_disease": [
+   "Mature B-Cell Neoplasms",
+   "38% of altered vs 5% of all lines"
+  ],
+  "broadly_essential": false,
+  "pubmed_query": "(CHPT1 OR CPT1 cholinephosphotransferase) AND CEPT1",
+  "pubmed_hits": 10,
+  "most_relevant_titles": [
+   "2023 Differential contributions of phosphotransferases CEPT1 and CHPT1 to phosphatidylcholine homeostasis and lipid droplet biogenesis.",
+   "2021 Differential contributions of choline phosphotransferases CPT1 and CEPT1 to the biosynthesis of choline phospholipids."
+  ]
+ },
+ {
+  "biomarker": "LOSS_NABP1",
+  "target": "NABP2",
+  "altered_dependent": "14/21",
+  "others_dependent": "21/597",
+  "beta_adj": -0.4744,
+  "min_effect_leaving_one_lineage_out": -0.381,
+  "top_disease": [
+   "Neuroblastoma",
+   "29% of altered vs 3% of all lines"
+  ],
+  "broadly_essential": false,
+  "pubmed_query": "(NABP1 OR hSSB2 OR OBFC2A) AND (NABP2 OR hSSB1 OR OBFC2B)",
+  "pubmed_hits": 16,
+  "most_relevant_titles": [
+   "2016 hSSB1 (NABP2/OBFC2B) is regulated by oxidative stress.",
+   "2021 Expression, Purification, and Solution-State NMR Analysis of the Two Human Single-Stranded DNA-Binding Proteins hSSB1 (NABP2/OBFC2B) and hSSB2 (NAPB1/OBFC2A)."
+  ]
+ },
+ {
+  "biomarker": "LOSS_PUDP",
+  "target": "ITPA",
+  "altered_dependent": "7/19",
+  "others_dependent": "8/599",
+  "beta_adj": -0.3946,
+  "min_effect_leaving_one_lineage_out": -0.382,
+  "top_disease": [
+   "Colorectal Adenocarcinoma",
+   "16% of altered vs 5% of all lines"
+  ],
+  "broadly_essential": false,
+  "pubmed_query": "(PUDP OR HDHD1 OR HDHD1A) AND ITPA",
+  "pubmed_hits": 0,
+  "most_relevant_titles": []
+ },
+ {
+  "biomarker": "LOSS_AGPAT2",
+  "target": "AGPAT1",
+  "altered_dependent": "6/13",
+  "others_dependent": "8/605",
+  "beta_adj": -0.672,
+  "min_effect_leaving_one_lineage_out": -0.576,
+  "top_disease": [
+   "Neuroblastoma",
+   "38% of altered vs 3% of all lines"
+  ],
+  "broadly_essential": false,
+  "pubmed_query": "AGPAT1 AND AGPAT2 AND (cancer OR depend* OR lethal* OR paralog*)",
+  "pubmed_hits": 5,
+  "most_relevant_titles": [
+   "2018 Expression of AGPAT2, an enzyme involved in the glycerophospholipid/triacylglycerol biosynthesis pathway, is directly regulated by HIF-1 and promotes survival and etoposide resistance of cancer cells under hypoxia.",
+   "2026 AGPAT family members act as potential predictive biomarkers and therapeutic targets in cervical cancer."
+  ]
+ },
+ {
+  "biomarker": "LOSS_FAM126A",
+  "target": "HYCC2",
+  "altered_dependent": "17/32",
+  "others_dependent": "2/586",
+  "beta_adj": -0.6411,
+  "min_effect_leaving_one_lineage_out": -0.548,
+  "top_disease": [
+   "Invasive Breast Carcinoma",
+   "25% of altered vs 4% of all lines"
+  ],
+  "broadly_essential": false,
+  "pubmed_query": "FAM126A AND (FAM126B OR HYCC2)",
+  "pubmed_hits": 3,
+  "most_relevant_titles": [
+   "2022 Hyccin/FAM126A deficiency reduces glial enrichment and axonal sheath, which are rescued by overexpression of a plasma membrane-targeting PI4KIII\u03b1 in Drosophila.",
+   "2024 Frequent loss of FAM126A expression in colorectal cancer results in selective FAM126B dependency."
+  ]
+ },
+ {
+  "biomarker": "MUT_BRCA1",
+  "target": "FANCM",
+  "altered_dependent": "8/12",
+  "others_dependent": "171/614",
+  "beta_adj": -0.6007,
+  "min_effect_leaving_one_lineage_out": -0.445,
+  "top_disease": [
+   "Ovarian Epithelial Tumor",
+   "25% of altered vs 4% of all lines"
+  ],
+  "broadly_essential": false,
+  "pubmed_query": "BRCA1 AND FANCM AND (synthetic lethal* OR depend*)",
+  "pubmed_hits": 19,
+  "most_relevant_titles": [
+   "1993 Fanconi Anemia.",
+   "2021 FANCM regulates repair pathway choice at stalled replication forks."
+  ]
+ },
+ {
+  "biomarker": "LOSS_CRY1",
+  "target": "MEF2B",
+  "altered_dependent": "11/16",
+  "others_dependent": "2/602",
+  "beta_adj": -0.8081,
+  "min_effect_leaving_one_lineage_out": -0.907,
+  "top_disease": [
+   "Mature B-Cell Neoplasms",
+   "81% of altered vs 5% of all lines"
+  ],
+  "broadly_essential": false,
+  "pubmed_query": "CRY1 AND (MEF2B OR lymphoma)",
+  "pubmed_hits": 4,
+  "most_relevant_titles": [
+   "2016 CRY2 and FBXL3 Cooperatively Degrade c-MYC.",
+   "2026 Integrated Clinical-Molecular Risk Stratification in Diffuse Large B-Cell Lymphoma: Machine Learning Survival Analysis."
+  ]
+ }
+]
