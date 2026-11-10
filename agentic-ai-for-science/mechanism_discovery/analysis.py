@@ -11,9 +11,11 @@ from .tasks import NOVEL
 
 ROOT = Path(__file__).resolve().parent.parent
 RESULTS = ROOT / "runs" / "part1" / "results.jsonl"
-ARM_ORDER = ["exhaustive", "single_shot", "agent_no_retrieval", "agent_full"]
+ARM_ORDER = ["exhaustive", "single_shot", "single_shot_fit", "agent_no_retrieval", "agent_neutral", "agent_full"]
 ARM_NAMES = {"exhaustive": "Exhaustive search (no LLM)", "single_shot": "Single LLM call, no tools",
-             "agent_no_retrieval": "Agent, no retrieval", "agent_full": "Agent, full"}
+             "agent_no_retrieval": "Agent, no retrieval", "agent_full": "Agent, full",
+             "single_shot_fit": "Single LLM call picks the mechanism, harness fits it",
+             "agent_neutral": "Agent, full, with neutral cards (no pointers to new mechanisms)"}
 
 
 def load(path=RESULTS) -> pd.DataFrame:
@@ -58,13 +60,13 @@ def summary(df: pd.DataFrame) -> pd.DataFrame:
         "total cost ($)": g["usd"].sum(),
         "mean steps": g["steps"].mean(),
     })
-    order = [m for a in ARM_ORDER for m in out.index if m.startswith(a)]
+    order = [m for a in ARM_ORDER for m in out.index if m.split(" · ")[0] == a]
     return out.loc[order]
 
 
 def by_task(df: pd.DataFrame) -> pd.DataFrame:
     t = df.pivot_table(index=["tier", "task_id"], columns="method", values="success", aggfunc="mean")
-    order = [m for a in ARM_ORDER for m in t.columns if m.startswith(a)]
+    order = [m for a in ARM_ORDER for m in t.columns if m.split(" · ")[0] == a]
     return t[order]
 
 
@@ -154,7 +156,7 @@ def headline(df: pd.DataFrame, strict: bool = True) -> pd.DataFrame:
             row[name] = f"{k}/{n} = {k / n:.0%}  [{lo:.0%}, {hi:.0%}]" if n else "-"
         rows.append(row)
     out = pd.DataFrame(rows).set_index("method")
-    order = [m for a in ARM_ORDER for m in out.index if m.startswith(a)]
+    order = [m for a in ARM_ORDER for m in out.index if m.split(" · ")[0] == a]
     return out.loc[order]
 
 

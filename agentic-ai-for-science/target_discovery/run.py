@@ -103,24 +103,44 @@ def session_record(sess: TargetSession) -> dict:
             "all_verdicts_match_evidence": all(f["verdict_matches_evidence"] for f in sub.get("findings") or [])}
 
 
+NO_LITERATURE_STEP = ("4. Literature search is not available in this session: judge novelty and mechanism from the "
+                      "data and your reasoning.")
+
+
 def run_session(kind: str, name: str, model: str, rep: int, null_seed: int | None, cfg: RunConfig, ledger: Ledger):
+    """kind: 'rediscovery', 'mission', or the memory-control variants of rediscovery:
+    'rediscovery_reduced' (no PubMed or Python tools, real gene names) and 'rediscovery_anon'
+    (same tools, every gene name hidden behind a random code; see target_discovery/anonymize.py)."""
     world = World(null_seed)
     sess = TargetSession(world)
-    if kind == "rediscovery":
+    tools = sess.registry()
+    system = SYSTEM.format(max_rep=MAX_REPLICATIONS, alpha=ALPHA, max_steps=cfg.max_steps)
+    if kind.startswith("rediscovery"):
         desc, _ = POSITIVE_CONTROLS[name]
         task = REDISCOVERY_TASK.format(biomarker=name, desc=desc)
     else:
         task = MISSION_TASK.format(focus=MISSIONS[name], max_rep=MAX_REPLICATIONS)
-    system = SYSTEM.format(max_rep=MAX_REPLICATIONS, alpha=ALPHA, max_steps=cfg.max_steps)
+    if kind in ("rediscovery_reduced", "rediscovery_anon"):
+        from . import anonymize
+        system = system.replace(system[system.index("4. Check the literature"):system.index("5. Register")],
+                                NO_LITERATURE_STEP + "\n")
+        if kind == "rediscovery_reduced":
+            tools = anonymize.reduced(tools)
+        else:
+            anon = anonymize.Anonymizer()
+            tools = anon.wrap(tools)
+            prefix, gene = (name[:name.index("_") + 1], name[name.index("_") + 1:])
+            coded = prefix + anon.enc[gene]
+            task = REDISCOVERY_TASK.format(biomarker=coded, desc=anonymize.describe(name, anon.enc[gene]))
     key = f"{kind}__{name}__{world.label}__{model}__r{rep}"
     trace_path = RUNS / "traces" / kind / model / f"{name}__{world.label}__r{rep}.jsonl"
-    res = run_agent(client=make_client(model, effort=cfg.effort), tools=sess.registry(), system=system,
+    res = run_agent(client=make_client(model, effort=cfg.effort), tools=tools, system=system,
                     task_prompt=task, cfg=cfg, ledger=ledger, trace=Trace(trace_path), run_id=key,
                     is_done=lambda: sess.submission is not None, done_reminder=DONE_REMINDER)
     rec = {"run_key": key, "kind": kind, "name": name, "world": world.label, "model": model, "rep": rep,
            "status": res.status, "steps": res.steps, "tool_calls": res.tool_calls, "usd": round(res.usd, 5),
            "trace": str(trace_path.relative_to(ROOT)), **session_record(sess)}
-    if kind == "rediscovery":
+    if kind.startswith("rediscovery"):
         _, accepted = POSITIVE_CONTROLS[name]
         top = (rec["findings"] or [{}])[0].get("target")
         rec.update({"top_target": top, "accepted": sorted(accepted), "correct": top in accepted,
@@ -167,7 +187,7 @@ def rediscovery_baseline() -> list[dict]:
 
 def main(argv=None):
     ap = argparse.ArgumentParser()
-    ap.add_argument("kind", choices=["rediscovery", "mission", "baseline"])
+    ap.add_argument("kind", choices=["rediscovery", "rediscovery_reduced", "rediscovery_anon", "mission", "baseline"])
     ap.add_argument("--model", default=None)
     ap.add_argument("--mission", default="paralogs")
     ap.add_argument("--controls", default="all")
@@ -183,12 +203,12 @@ def main(argv=None):
             print(r["world"], "replicated", r["n_replicated"], "of", r["n_registered"])
         return
     cfg = RunConfig(**({"model": a.model} if a.model else {}))
-    cfg.max_steps = a.max_steps or (15 if a.kind == "rediscovery" else 30)
+    cfg.max_steps = a.max_steps or (15 if a.kind.startswith("rediscovery") else 30)
     if a.per_run_cap:
         cfg.per_run_usd_cap = a.per_run_cap
     ledger = Ledger(LEDGER, cfg.total_usd_cap)
     names = (list(POSITIVE_CONTROLS) if a.controls == "all" else a.controls.split(",")) \
-        if a.kind == "rediscovery" else a.mission.split(",")
+        if a.kind.startswith("rediscovery") else a.mission.split(",")
     have = {json.loads(l)["run_key"] for l in (RUNS / "results.jsonl").open()} if (RUNS / "results.jsonl").exists() else set()
     world_label = "real" if a.null_seed is None else f"null{a.null_seed}"
     jobs = [(n, r) for n in names for r in range(1, a.reps + 1)
@@ -199,7 +219,7 @@ def main(argv=None):
         for fut in as_completed(futs):
             try:
                 r = fut.result()
-                extra = f"top={r.get('top_target')} correct={r.get('correct')}" if a.kind == "rediscovery" else ""
+                extra = f"top={r.get('top_target')} correct={r.get('correct')}" if a.kind.startswith("rediscovery") else ""
                 print(f"{r['run_key']:70s} {r['status']:12s} reg={r['n_registered']} repl={r['n_replicated']} "
                       f"claimed={r['n_claimed_replicated']} {extra} ${r['usd']:.4f}", flush=True)
             except Exception as e:  # noqa: BLE001

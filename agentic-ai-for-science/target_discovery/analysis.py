@@ -76,3 +76,28 @@ def costs(df: pd.DataFrame) -> pd.DataFrame:
     d["model"] = d.model.map(short_model)
     return d.groupby(["kind", "model"]).agg(sessions=("run_key", "size"), mean_usd=("usd", "mean"),
                                             total_usd=("usd", "sum"), mean_steps=("steps", "mean"))
+
+
+def memory_control(df: pd.DataFrame) -> pd.DataFrame:
+    """Positive controls with gene names hidden vs shown, same reduced tool set (no PubMed, no Python).
+
+    If accuracy holds when every gene is a random code, the agent is reading the data; if it falls,
+    part of 'rediscovery' was recall of famous biology."""
+    d = df[df.kind.isin(["rediscovery_reduced", "rediscovery_anon"])].copy()
+    if d.empty:
+        return pd.DataFrame()
+    d["condition"] = d.kind.map({"rediscovery_reduced": "names shown", "rediscovery_anon": "names hidden"})
+    d["submitted"] = d["top_target"].notna()
+    d["correct"] = d["correct"].astype(bool)
+    return d.pivot_table(index="name", columns="condition", values="correct", aggfunc="mean")
+
+
+def memory_summary(df: pd.DataFrame) -> pd.DataFrame:
+    d = df[df.kind.isin(["rediscovery_reduced", "rediscovery_anon"])].copy()
+    if d.empty:
+        return pd.DataFrame()
+    d["condition"] = d.kind.map({"rediscovery_reduced": "names shown", "rediscovery_anon": "names hidden"})
+    d["correct"] = d["correct"].astype(bool)
+    d["no_answer"] = d["top_target"].isna()
+    return d.groupby("condition").agg(sessions=("run_key", "size"), correct=("correct", "mean"),
+                                      no_answer=("no_answer", "mean"), mean_usd=("usd", "mean"))

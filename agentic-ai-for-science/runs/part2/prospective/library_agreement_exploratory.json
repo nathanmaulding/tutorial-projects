@@ -1,0 +1,262 @@
+{
+ "note": "exploratory, not pre-registered",
+ "models_screened_in_both": 27,
+ "genes": [
+  {
+   "gene": "AGPAT1",
+   "r_avana_vs_cas12": 0.3,
+   "sd_avana": 0.22,
+   "sd_cas12": 0.2,
+   "frac_dependent_avana": 0.031,
+   "frac_dependent_cas12": 0.059
+  },
+  {
+   "gene": "ARID1B",
+   "r_avana_vs_cas12": 0.33,
+   "sd_avana": 0.2,
+   "sd_cas12": 0.27,
+   "frac_dependent_avana": 0.035,
+   "frac_dependent_cas12": 0.072
+  },
+  {
+   "gene": "ATP6V0E1",
+   "r_avana_vs_cas12": -0.19,
+   "sd_avana": 0.29,
+   "sd_cas12": 0.16,
+   "frac_dependent_avana": 0.116,
+   "frac_dependent_cas12": 0.036
+  },
+  {
+   "gene": "BRAF",
+   "r_avana_vs_cas12": 0.47,
+   "sd_avana": 0.37,
+   "sd_cas12": 0.29,
+   "frac_dependent_avana": 0.086,
+   "frac_dependent_cas12": 0.054
+  },
+  {
+   "gene": "CEPT1",
+   "r_avana_vs_cas12": 0.65,
+   "sd_avana": 0.31,
+   "sd_cas12": 0.35,
+   "frac_dependent_avana": 0.247,
+   "frac_dependent_cas12": 0.222
+  },
+  {
+   "gene": "DMXL1",
+   "r_avana_vs_cas12": 0.72,
+   "sd_avana": 0.17,
+   "sd_cas12": 0.29,
+   "frac_dependent_avana": 0.03,
+   "frac_dependent_cas12": 0.068
+  },
+  {
+   "gene": "DNAJC19",
+   "r_avana_vs_cas12": 0.77,
+   "sd_avana": 0.29,
+   "sd_cas12": 0.38,
+   "frac_dependent_avana": 0.251,
+   "frac_dependent_cas12": 0.271
+  },
+  {
+   "gene": "DUSP4",
+   "r_avana_vs_cas12": 0.48,
+   "sd_avana": 0.33,
+   "sd_cas12": 0.26,
+   "frac_dependent_avana": 0.071,
+   "frac_dependent_cas12": 0.045
+  },
+  {
+   "gene": "DYRK1A",
+   "r_avana_vs_cas12": 0.46,
+   "sd_avana": 0.32,
+   "sd_cas12": 0.44,
+   "frac_dependent_avana": 0.087,
+   "frac_dependent_cas12": 0.109
+  },
+  {
+   "gene": "E2F3",
+   "r_avana_vs_cas12": 0.67,
+   "sd_avana": 0.33,
+   "sd_cas12": 0.31,
+   "frac_dependent_avana": 0.244,
+   "frac_dependent_cas12": 0.262
+  },
+  {
+   "gene": "FANCM",
+   "r_avana_vs_cas12": 0.56,
+   "sd_avana": 0.31,
+   "sd_cas12": 0.37,
+   "frac_dependent_avana": 0.293,
+   "frac_dependent_cas12": 0.321
+  },
+  {
+   "gene": "FOXA1",
+   "r_avana_vs_cas12": 0.44,
+   "sd_avana": 0.27,
+   "sd_cas12": 0.19,
+   "frac_dependent_avana": 0.055,
+   "frac_dependent_cas12": 0.054
+  },
+  {
+   "gene": "HYCC2",
+   "r_avana_vs_cas12": 0.11,
+   "sd_avana": 0.19,
+   "sd_cas12": 0.28,
+   "frac_dependent_avana": 0.023,
+   "frac_dependent_cas12": 0.063
+  },
+  {
+   "gene": "ITPA",
+   "r_avana_vs_cas12": 0.55,
+   "sd_avana": 0.15,
+   "sd_cas12": 0.19,
+   "frac_dependent_avana": 0.019,
+   "frac_dependent_cas12": 0.023
+  },
+  {
+   "gene": "KRAS",
+   "r_avana_vs_cas12": 0.54,
+   "sd_avana": 0.58,
+   "sd_cas12": 0.54,
+   "frac_dependent_avana": 0.554,
+   "frac_dependent_cas12": 0.819
+  },
+  {
+   "gene": "MAP2K1",
+   "r_avana_vs_cas12": -0.01,
+   "sd_avana": 0.21,
+   "sd_cas12": 0.19,
+   "frac_dependent_avana": 0.047,
+   "frac_dependent_cas12": 0.041
+  },
+  {
+   "gene": "MDM2",
+   "r_avana_vs_cas12": 0.83,
+   "sd_avana": 0.56,
+   "sd_cas12": 0.71,
+   "frac_dependent_avana": 0.314,
+   "frac_dependent_cas12": 0.267
+  },
+  {
+   "gene": "MEF2B",
+   "r_avana_vs_cas12": 0.59,
+   "sd_avana": 0.17,
+   "sd_cas12": 0.11,
+   "frac_dependent_avana": 0.018,
+   "frac_dependent_cas12": 0.014
+  },
+  {
+   "gene": "NABP2",
+   "r_avana_vs_cas12": 0.22,
+   "sd_avana": 0.18,
+   "sd_cas12": 0.22,
+   "frac_dependent_avana": 0.046,
+   "frac_dependent_cas12": 0.045
+  },
+  {
+   "gene": "NFE2L2",
+   "r_avana_vs_cas12": 0.72,
+   "sd_avana": 0.27,
+   "sd_cas12": 0.27,
+   "frac_dependent_avana": 0.115,
+   "frac_dependent_cas12": 0.086
+  },
+  {
+   "gene": "NRAS",
+   "r_avana_vs_cas12": 0.84,
+   "sd_avana": 0.36,
+   "sd_cas12": 0.3,
+   "frac_dependent_avana": 0.081,
+   "frac_dependent_cas12": 0.059
+  },
+  {
+   "gene": "PIK3CA",
+   "r_avana_vs_cas12": 0.44,
+   "sd_avana": 0.3,
+   "sd_cas12": 0.46,
+   "frac_dependent_avana": 0.379,
+   "frac_dependent_cas12": 0.416
+  },
+  {
+   "gene": "PPM1D",
+   "r_avana_vs_cas12": 0.87,
+   "sd_avana": 0.29,
+   "sd_cas12": 0.35,
+   "frac_dependent_avana": 0.153,
+   "frac_dependent_cas12": 0.145
+  },
+  {
+   "gene": "PRMT5",
+   "r_avana_vs_cas12": -0.23,
+   "sd_avana": 0.39,
+   "sd_cas12": 0.44,
+   "frac_dependent_avana": 0.936,
+   "frac_dependent_cas12": 0.95
+  },
+  {
+   "gene": "RAF1",
+   "r_avana_vs_cas12": 0.48,
+   "sd_avana": 0.3,
+   "sd_cas12": 0.36,
+   "frac_dependent_avana": 0.115,
+   "frac_dependent_cas12": 0.109
+  },
+  {
+   "gene": "RPP25L",
+   "r_avana_vs_cas12": 0.32,
+   "sd_avana": 0.4,
+   "sd_cas12": 0.19,
+   "frac_dependent_avana": 0.326,
+   "frac_dependent_cas12": 0.24
+  },
+  {
+   "gene": "SHOC2",
+   "r_avana_vs_cas12": 0.57,
+   "sd_avana": 0.27,
+   "sd_cas12": 0.51,
+   "frac_dependent_avana": 0.158,
+   "frac_dependent_cas12": 0.235
+  },
+  {
+   "gene": "SMARCA2",
+   "r_avana_vs_cas12": 0.7,
+   "sd_avana": 0.22,
+   "sd_cas12": 0.26,
+   "frac_dependent_avana": 0.035,
+   "frac_dependent_cas12": 0.023
+  },
+  {
+   "gene": "STAG1",
+   "r_avana_vs_cas12": 0.49,
+   "sd_avana": 0.22,
+   "sd_cas12": 0.38,
+   "frac_dependent_avana": 0.058,
+   "frac_dependent_cas12": 0.072
+  },
+  {
+   "gene": "TTC7A",
+   "r_avana_vs_cas12": 0.69,
+   "sd_avana": 0.28,
+   "sd_cas12": 0.29,
+   "frac_dependent_avana": 0.104,
+   "frac_dependent_cas12": 0.204
+  },
+  {
+   "gene": "WDR77",
+   "r_avana_vs_cas12": 0.25,
+   "sd_avana": 0.42,
+   "sd_cas12": 0.5,
+   "frac_dependent_avana": 0.99,
+   "frac_dependent_cas12": 0.982
+  },
+  {
+   "gene": "WRN",
+   "r_avana_vs_cas12": -0.5,
+   "sd_avana": 0.25,
+   "sd_cas12": 0.3,
+   "frac_dependent_avana": 0.067,
+   "frac_dependent_cas12": 0.118
+  }
+ ]
+}

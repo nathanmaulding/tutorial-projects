@@ -5,6 +5,8 @@ Arms:
     single_shot         one LLM call, no tools: read the data, name the mechanism, guess parameters
     agent_no_retrieval  the agent loop with analysis and fitting tools, but no mechanism library
     agent_full          the agent loop with every tool, including retrieval over mechanism cards
+    single_shot_fit     one LLM call chooses the mechanism; the harness fits it (isolates the loop)
+    agent_neutral       agent_full with "neutral" cards: no pointers toward out-of-library mechanisms
 
 Command line (from the agentic-ai-for-science folder):
     python -m mechanism_discovery.run --arms agent_full --model claude-haiku-5-5 --reps 2
@@ -114,11 +116,68 @@ def run_single_shot(inst: TaskInstance, client, cfg: RunConfig, ledger: Ledger, 
     return result
 
 
+def run_single_shot_fit(inst: TaskInstance, client, cfg: RunConfig, ledger: Ledger, trace: Trace, run_id: str) -> dict:
+    """One LLM call chooses the mechanism (and starting values); the HARNESS then fits it.
+
+    This separates two things the plain single call mixes up: knowing which mechanism it is, and
+    estimating parameters without a fitting tool. Comparing this arm with the agents isolates what
+    the agent LOOP adds (looking, testing alternatives, diagnosing residuals) over one good guess."""
+    labels = "\n".join(f"- {n}: params {list(LIBRARY[n].params)}" for n in library_names_for(inst))
+    user = prompts.SINGLE_SHOT_FIT_USER.format(task_prompt=inst.prompt(), csv=inst.data.to_csv(index=False),
+                                               labels=labels + "\n- custom")
+    trace.log("run_start", run_id=run_id, model=client.model, config=cfg.to_dict(),
+              system=prompts.SINGLE_SHOT_SYSTEM, task_prompt=user, tools=[])
+    try:
+        ledger.check(client.model, len(user) + 500, 8000, 0.0, cfg.per_run_usd_cap)
+        resp = client.create(system=prompts.SINGLE_SHOT_SYSTEM, messages=[{"role": "user", "content": user}],
+                             tools=[], max_tokens=8000)
+    except BudgetExceeded:
+        raise
+    except Exception as e:  # noqa: BLE001
+        trace.log("api_error", error=str(e))
+        return {"status": "api_error", "usd": 0.0, **score(inst, None, None)}
+    usd = ledger.record(client.model, resp.usage, run_id)
+    trace.log("llm_response", step=1, stop_reason=resp.stop_reason, usage=resp.usage, usd=usd,
+              content=resp.content, stop_details=resp.stop_details)
+    base = {"status": "done", "steps": 1, "tool_calls": 0, "usd": usd}
+    m = re.search(r"\{.*\}", resp.text, re.S)
+    try:
+        ans = json.loads(m.group(0))
+        label, guess = ans["mechanism_label"], {k: float(v) for k, v in ans.get("params", {}).items()}
+    except Exception:  # noqa: BLE001
+        trace.log("run_end", status="unparseable", usd=usd)
+        return {**base, "status": "unparseable", **score(inst, None, None)}
+    df = inst.data if not (inst.task.domain == "enzyme" and "I" not in inst.data) else inst.data.assign(I=0.0)
+    em = "proportional" if inst.task.domain == "pk" else "additive"
+    pred, fitted, nonident = None, {}, []
+    try:
+        if label in LIBRARY:
+            auto = auto_init(label, df, inst)
+            init = {p: (guess[p] if guess.get(p, 0) > 0 else auto[p]) for p in LIBRARY[label].params}
+            r = fit(LIBRARY[label].predict, LIBRARY[label].params, init, df, y_col(inst.task), em)
+            fitted = r["params"]
+            pred = LIBRARY[label].predict(inst.heldout_x, fitted)
+            nonident = [w.split(" ")[0] for w in r["identifiability"] if "poorly determined" in w]
+        elif label == "custom" and ans.get("custom_code"):
+            sess = MechanismSession(inst)
+            r = sess.run_custom("fit", ans["custom_code"], init=guess, y_col=y_col(inst.task), error_model=em)
+            fitted = r["params"]
+            pred = sess.run_custom("predict", ans["custom_code"], params=fitted,
+                                   x_csv=inst.heldout_x.to_csv(index=False))["pred"]
+            nonident = [w.split(" ")[0] for w in r.get("identifiability", []) if "poorly determined" in w]
+    except Exception as e:  # noqa: BLE001 - a model that cannot be fitted counts as a failed prediction
+        trace.log("fit_error", error=str(e))
+    result = {**base, "confidence": ans.get("confidence"), "submitted_params": fitted or None,
+              **score(inst, label, pred, n_params=len(fitted or guess), nonident=nonident)}
+    trace.log("run_end", status="done", usd=usd, result=result)
+    return result
+
+
 # ------------------------------------------------------------------ the agent
 def run_agent_arm(inst: TaskInstance, arm: str, client, cfg: RunConfig, ledger: Ledger, trace: Trace,
                   run_id: str) -> dict:
     sess = MechanismSession(inst, arm)
-    system = (prompts.AGENT_FULL if arm == "agent_full" else prompts.AGENT_NO_RETRIEVAL).format(
+    system = (prompts.AGENT_FULL if arm in ("agent_full", "agent_neutral") else prompts.AGENT_NO_RETRIEVAL).format(
         max_steps=cfg.max_steps)
     res = run_agent(client=client, tools=sess.registry(), system=system, task_prompt=inst.prompt(), cfg=cfg,
                     ledger=ledger, trace=trace, run_id=run_id, is_done=lambda: sess.submission is not None,
@@ -168,6 +227,8 @@ def run_one(task_id: str, seed: int, arm: str, model: str, rep: int, cfg: RunCon
         trace = Trace(trace_path)
         if arm == "single_shot":
             result = run_single_shot(inst, client, cfg, ledger, trace, key)
+        elif arm == "single_shot_fit":
+            result = run_single_shot_fit(inst, client, cfg, ledger, trace, key)
         else:
             result = run_agent_arm(inst, arm, client, cfg, ledger, trace, key)
     rec = {"run_key": key, "task_id": task_id, "seed": seed, "tier": inst.task.tier, "domain": inst.task.domain,

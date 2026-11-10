@@ -1,0 +1,77 @@
+{
+ "method": "Europe PMC open-access full-text search with aliases (target_discovery/fulltext_novelty.py); passages where both genes occur within ~250 characters were read and judged by Claude (an AI assistant), not by a domain expert. Not searched: closed-access papers, supplementary tables (including published combinatorial paralog screens), patents.",
+ "verdicts": [
+  {
+   "biomarker": "LOSS_ATP6V0E2",
+   "target": "ATP6V0E1",
+   "verdict": "published",
+   "evidence": "PMC6925302 (Dempster et al. 2019, Nat Commun, Fig. 3e); PMC8863889 (2022, Table 1 #8)"
+  },
+  {
+   "biomarker": "LOSS_DNAJC15",
+   "target": "DNAJC19",
+   "verdict": "published",
+   "evidence": "PMC8863889 (2022, Table 1 #10); PMC10282757 (2023 review); PMC12283369 (2025: 'previously functionally validated')"
+  },
+  {
+   "biomarker": "LOSS_TTC7B",
+   "target": "TTC7A",
+   "verdict": "published",
+   "evidence": "PMC8863889 (2022, Table 1 #9); PMC11025007 (2024); PMC12283369 (2025: 'previously functionally validated')"
+  },
+  {
+   "biomarker": "LOSS_RPP25",
+   "target": "RPP25L",
+   "verdict": "published",
+   "evidence": "PMC8863889 (2022, Table 1 #2, 'well described synthetic lethal'); PMC9905851; PMC10282757"
+  },
+  {
+   "biomarker": "LOSS_FAM126A",
+   "target": "HYCC2",
+   "verdict": "published",
+   "evidence": "PMC11025007 (2024, colorectal cancer, FAM126B dependency)"
+  },
+  {
+   "biomarker": "LOSS_NABP1",
+   "target": "NABP2",
+   "verdict": "not found in open-access full text",
+   "evidence": "43 full-text hits mention both; none of the passages read reports a dependency"
+  },
+  {
+   "biomarker": "LOSS_AGPAT2",
+   "target": "AGPAT1",
+   "verdict": "not found in open-access full text",
+   "evidence": "201 hits; passages are lipid biology, none reports a dependency"
+  },
+  {
+   "biomarker": "LOSS_DMXL2",
+   "target": "DMXL1",
+   "verdict": "not found in open-access full text",
+   "evidence": "45 hits; V-ATPase assembly biology, none reports a dependency"
+  },
+  {
+   "biomarker": "LOSS_CHPT1",
+   "target": "CEPT1",
+   "verdict": "not found in open-access full text",
+   "evidence": "167 hits; phosphatidylcholine synthesis biology, none reports a dependency"
+  },
+  {
+   "biomarker": "LOSS_PUDP",
+   "target": "ITPA",
+   "verdict": "not found in open-access full text",
+   "evidence": "2 hits"
+  },
+  {
+   "biomarker": "LOSS_ACSL4",
+   "target": "FOXA1",
+   "verdict": "likely subtype marker",
+   "evidence": "both are luminal-breast-associated; no dependency report; see RNAi section"
+  },
+  {
+   "biomarker": "LOSS_CRY1",
+   "target": "MEF2B",
+   "verdict": "likely subtype marker",
+   "evidence": "no paper; B-cell lymphoma subtype concentration"
+  }
+ ]
+}

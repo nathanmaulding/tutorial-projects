@@ -60,3 +60,14 @@ predict(df, p) returning one prediction per row (numpy as np, pk_conc(dose, t) a
 Reply with JSON only:
 {{"mechanism_label": "...", "params": {{"name": value, ...}}, "custom_code": null or "...", \
 "confidence": 0.0-1.0, "reasoning": "one or two sentences"}}"""
+
+
+SINGLE_SHOT_FIT_USER = SINGLE_SHOT_USER.replace(
+    "Choose the mechanism and estimate its parameters by inspection, without any tools.",
+    "Choose the mechanism without any tools, and give rough starting values for its parameters. The "
+    "parameters will then be fitted to the data by nonlinear least squares, so the choice of mechanism is "
+    "what matters.").replace(
+    "predict(df, p) returning one prediction per row",
+    "predict(df, p) returning one prediction per row (p is a dict mapping parameter names to values, "
+    "df is a pandas DataFrame with the data columns)")
+assert SINGLE_SHOT_FIT_USER != SINGLE_SHOT_USER and "p is a dict" in SINGLE_SHOT_FIT_USER

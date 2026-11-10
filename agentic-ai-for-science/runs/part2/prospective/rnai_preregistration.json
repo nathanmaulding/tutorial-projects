@@ -1,0 +1,27 @@
+{
+ "written_utc": "2026-11-10T14:31:42+00:00",
+ "statement": "Written before the DEMETER2 combined RNAi data were downloaded or viewed by this project.",
+ "hypotheses_from": {
+  "file": "preregistration.json",
+  "sha256": "7f3f33c887fcd41f3661fae3313a11981f174b78dab618dce5eceb1474a25654",
+  "groups": [
+   "lead",
+   "candidates",
+   "confound_check",
+   "controls"
+  ]
+ },
+ "known_before_writing": "The lead (ATP6V0E2 loss -> ATP6V0E1) was found to be already published (Dempster et al. 2019, Nat Commun, Fig. 3e). This test asks whether it, and the other pairs, hold under a different perturbation technology, not whether they are new.",
+ "rules": {
+  "data": "DEMETER2 combined RNAi gene_effect.csv (Achilles + DRIVE + Marcotte; Figshare record 9170975 v1), cell lines indexed by DepMap ModelID. More negative = more dependent.",
+  "lines_primary": "All RNAi-screened models with a gene effect for the target and a biomarker call.",
+  "lines_secondary": "The same, excluding models in this project's 24Q4 DISCOVERY split (new cell lines AND new technology). Reported separately.",
+  "biomarkers": "Same definitions as before, computed from the 26Q3 omics files already downloaded (default entry per model).",
+  "lineage": "OncotreeLineage from 26Q3 Model.csv.",
+  "test": "Same lineage-adjusted one-sided test as prospective.py; replicated if p < 0.01 and beta < 0; untestable if < 3 altered or unaltered lines; BH 5% across testable pairs; sign test on lead+candidates; control replication rate = power."
+ },
+ "predictions": {
+  "lead": "Replicates if testable (it is a published dependency; RNAi off-target noise could still hide it).",
+  "general": "RNAi is noisier than CRISPR (seed-driven off-target effects), so fewer controls and candidates replicate than in CRISPR; direction should still mostly agree."
+ }
+}

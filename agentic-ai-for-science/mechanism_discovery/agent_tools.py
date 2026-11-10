@@ -22,6 +22,36 @@ from .tasks import TaskInstance, y_col
 CARDS = load_markdown_docs(Path(__file__).parent / "cards")
 CARD_BY_ID = {d.id: d for d in CARDS}
 INDEX = BM25(CARDS)
+
+# "Neutral" cards for the agent_neutral arm: the same library with the sentences removed that point
+# toward the three out-of-library mechanisms (the plateau of partial inhibition, the indirect-response
+# variants the library leaves out, and the worked examples in the residual-diagnostics card). The
+# agent_full vs agent_neutral comparison measures how much those pointers were doing.
+NEUTRAL_EDITS = {
+    "reversible_inhibition": [(' If activity levels off at a nonzero fraction at saturating inhibitor, none of these '
+                               'models apply.', '')],
+    "pd_indirect_response": [('Note: Dayneka et al. describe four basic indirect-response models: the drug can inhibit '
+                              'or stimulate either production (kin) or loss (kout). This library implements only model '
+                              'I (inhibition of production). The others must be written as custom models.', '')],
+    "method_residual_diagnostics": [(' Look at what the data do at the extremes (for example, does inhibition level off '
+                                     'rather than go to zero? does the response go below the floor a candidate model '
+                                     'allows?) and write a custom model that captures it.',
+                                     ' Write a custom model that captures what the data do.')],
+}
+
+
+def _neutral(doc):
+    from dataclasses import replace
+    text = doc.text
+    for old, new in NEUTRAL_EDITS.get(doc.id, []):
+        assert old in text, (doc.id, old[:40])
+        text = text.replace(old, new)
+    return replace(doc, text=text)
+
+
+NEUTRAL_CARDS = [_neutral(d) for d in CARDS]
+NEUTRAL_BY_ID = {d.id: d for d in NEUTRAL_CARDS}
+NEUTRAL_INDEX = BM25(NEUTRAL_CARDS)
 FIT_RUNNER = "from mechanism_discovery.fit_runner import main\nmain()\n"
 MARK = "@@RESULT@@"
 
@@ -46,8 +76,10 @@ class MechanismSession:
     """State for one agent run: the data, the fits made so far, the plan, hypotheses, submission."""
 
     def __init__(self, inst: TaskInstance, arm: str = "agent_full"):
-        assert arm in ("agent_full", "agent_no_retrieval")
+        assert arm in ("agent_full", "agent_no_retrieval", "agent_neutral")
         self.inst, self.arm = inst, arm
+        self.has_library = arm in ("agent_full", "agent_neutral")
+        self.index, self.card_by_id = (NEUTRAL_INDEX, NEUTRAL_BY_ID) if arm == "agent_neutral" else (INDEX, CARD_BY_ID)
         self.task = inst.task
         self.ycol = y_col(self.task)
         self.data = inst.data
@@ -104,15 +136,15 @@ class MechanismSession:
         return text.strip() or "(no output: use print() to see results)"
 
     def search_mechanism_library(self, query: str) -> list[dict]:
-        hits = INDEX.search(query, k=4)
+        hits = self.index.search(query, k=4)
         return [{"card_id": d.id, "title": d.title, "library_model": d.meta.get("library_model"), "score": s}
                 for d, s in hits] or [{"note": "no matching cards"}]
 
     def read_mechanism_card(self, card_id: str) -> str:
-        if card_id not in CARD_BY_ID:
-            raise ToolError(f"no card {card_id!r}. Known: {', '.join(CARD_BY_ID)}")
+        if card_id not in self.card_by_id:
+            raise ToolError(f"no card {card_id!r}. Known: {', '.join(self.card_by_id)}")
         self.cards_read.add(card_id)
-        d = CARD_BY_ID[card_id]
+        d = self.card_by_id[card_id]
         return f"# {d.title}\nlibrary_model: {d.meta.get('library_model')}\n\n{d.text}"
 
     def fit_model(self, model: str, error_model: str = "additive", initial_params: dict | None = None,
@@ -199,7 +231,7 @@ class MechanismSession:
                  {"type": "object", "properties": {"code": {"type": "string"}}, "required": ["code"]},
                  self.run_python_tool),
         ]
-        if self.arm == "agent_full":
+        if self.has_library:
             tools += [
                 Tool("search_mechanism_library", "Search the mechanism library (cards describing candidate "
                      "mechanisms, how to recognise them, and modelling methods). Returns card ids.",
@@ -219,7 +251,7 @@ class MechanismSession:
                     "prediction per row of df (p is a dict of parameter values). np, pd, scipy, solve_ivp, "
                     "pk_conc(dose, t) and per_dose(df, solve_one) are available; per_dose calls "
                     "solve_one(dose, sorted_times) for each dose group and maps results back to rows.")
-        if self.arm == "agent_full":
+        if self.has_library:
             fit_desc += " Or set model to a library model name found in the mechanism cards."
         tools += [
             Tool("fit_model", fit_desc,

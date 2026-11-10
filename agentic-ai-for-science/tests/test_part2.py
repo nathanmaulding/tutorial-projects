@@ -77,3 +77,24 @@ def test_independent_sanger_split_excludes_discovery_lines():
     from target_discovery.stats import load, split
     assert not split("sanger_indep").lines.isin(load("discovery").index).any()
     assert len(split("sanger_indep").lines) < len(split("sanger").lines)
+
+
+def test_prospective_documents_are_unedited():
+    import hashlib
+    from target_discovery.prospective import DIR
+    for doc in ("preregistration", "amendment1"):
+        text = (DIR / f"{doc}.json").read_text()
+        assert hashlib.sha256(text.encode()).hexdigest() == (DIR / f"{doc}.sha256").read_text().split()[0]
+
+
+def test_prospective_test_rules():
+    import numpy as np
+    from target_discovery.prospective import one_sided_test
+    rng = np.random.default_rng(0)
+    lin = np.array(["a"] * 30 + ["b"] * 30)
+    x = np.zeros(60); x[:2] = 1
+    assert one_sided_test(x, rng.normal(size=60), lin)["verdict"] == "untestable"   # < 3 altered lines
+    x[[0, 1, 2, 30, 31, 32]] = 1
+    y = rng.normal(0, 0.1, 60) - 1.0 * x
+    assert one_sided_test(x, y, lin)["verdict"] == "replicated"
+    assert one_sided_test(x, -y, lin)["verdict"] == "not replicated"                # wrong direction never passes

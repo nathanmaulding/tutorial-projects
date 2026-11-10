@@ -8,6 +8,19 @@ Building, benchmarking and stress-testing AI agents that do scientific modelling
 | **1b** | [Benchmarking and reliability](02_benchmarking_and_reliability.ipynb) | 18 tasks with known answers, baselines and ablations, failure analysis, consistency, calibration, cost | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nathanmaulding/tutorial-projects/blob/main/agentic-ai-for-science/02_benchmarking_and_reliability.ipynb) |
 | **2** | [Agentic target discovery](03_agentic_target_discovery.ipynb) | an agent hunting for selective cancer dependencies (candidate drug targets) in DepMap CRISPR screens, with pre-registration, replication in held-out lines and an independent lab's screens, literature novelty checks and null-world controls | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nathanmaulding/tutorial-projects/blob/main/agentic-ai-for-science/03_agentic_target_discovery.ipynb) |
 
+## What we found
+
+**Part 1 (18 tasks × 10 seeds, 1,458 recorded runs):**
+- The Haiku agent solves 96% of runs for $0.003 each; the Opus agent solves 35 of 36.
+- **The agent loop stands in for model capability:** Haiku with one call plus a fitting step solves 10% of new-mechanism datasets, and the Haiku agent solves 92%. Opus with one call plus fitting already solves them all.
+- Retrieval helped on new mechanisms only where a card pointed at the answer.
+
+**Part 2 (DepMap):**
+- Zero false discoveries in null worlds.
+- Positive controls rediscovered even with every gene name hidden.
+- Candidates tested prospectively (cell lines screened after the data release, new CRISPR system) and under RNAi, all pre-registered.
+- The best-supported candidates (DNAJC15 → DNAJC19, TTC7B → TTC7A) hold under every test but turn out to be **published**, as does the original lead (ATP6V0E2 → ATP6V0E1, found by a full-text search after an abstract-only search missed it). NABP1 → NABP2 and AGPAT2 → AGPAT1 are supported by several kinds of evidence, and we found no report of them.
+
 The notebooks **replay recorded agent runs by default, so they need no API key and cost nothing.** Each one also has a live mode that uses *your own* key.
 
 ## Layout

@@ -110,15 +110,17 @@ def submitted_model(row: pd.Series, inst: TaskInstance) -> tuple[str | None, dic
                 best = (name, r)
         return best[0], best[1]["params"], None
     ev = _events(row["trace"]) if isinstance(row["trace"], str) else []
-    if row["arm"] == "single_shot":
+    if row["arm"] in ("single_shot", "single_shot_fit"):
         for e in ev:
             if e.get("kind") == "llm_response":
                 text = "".join(b.get("text", "") for b in e["content"] if b.get("type") == "text")
                 m = re.search(r"\{.*\}", text, re.S)
                 try:
                     ans = json.loads(m.group(0))
-                    return (ans["mechanism_label"], {k: float(v) for k, v in ans.get("params", {}).items()},
-                            ans.get("custom_code"))
+                    guess = {k: float(v) for k, v in ans.get("params", {}).items()}
+                    fitted = row.get("submitted_params")
+                    params = fitted if row["arm"] == "single_shot_fit" and isinstance(fitted, dict) else guess
+                    return ans["mechanism_label"], params, ans.get("custom_code")
                 except Exception:  # noqa: BLE001
                     return None, None, None
         return None, None, None

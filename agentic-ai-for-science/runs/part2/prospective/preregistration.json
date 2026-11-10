@@ -1,0 +1,157 @@
+{
+ "written_utc": "2026-11-10T13:59:28+00:00",
+ "statement": "Written before any DepMap release newer than 24Q4 was downloaded or viewed by this project.",
+ "lead": [
+  [
+   "LOSS_ATP6V0E2",
+   "ATP6V0E1"
+  ]
+ ],
+ "candidates": [
+  [
+   "LOSS_NABP1",
+   "NABP2"
+  ],
+  [
+   "LOSS_AGPAT2",
+   "AGPAT1"
+  ],
+  [
+   "LOSS_PUDP",
+   "ITPA"
+  ],
+  [
+   "LOSS_TTC7B",
+   "TTC7A"
+  ],
+  [
+   "LOSS_DNAJC15",
+   "DNAJC19"
+  ],
+  [
+   "LOSS_RPP25",
+   "RPP25L"
+  ],
+  [
+   "LOSS_FAM126A",
+   "HYCC2"
+  ],
+  [
+   "LOSS_DMXL2",
+   "DMXL1"
+  ],
+  [
+   "LOSS_CHPT1",
+   "CEPT1"
+  ],
+  [
+   "LOSS_ACSL4",
+   "FOXA1"
+  ]
+ ],
+ "confound_check": [
+  [
+   "LOSS_CRY1",
+   "MEF2B"
+  ]
+ ],
+ "controls": [
+  [
+   "LOSS_MTAP",
+   "PRMT5"
+  ],
+  [
+   "LOSS_MTAP",
+   "WDR77"
+  ],
+  [
+   "MUT_SMARCA4",
+   "SMARCA2"
+  ],
+  [
+   "MUT_ARID1A",
+   "ARID1B"
+  ],
+  [
+   "LOSS_MLH1",
+   "WRN"
+  ],
+  [
+   "MUT_STAG2",
+   "STAG1"
+  ],
+  [
+   "MUT_KEAP1",
+   "NFE2L2"
+  ],
+  [
+   "~MUT_TP53",
+   "MDM2"
+  ],
+  [
+   "~MUT_TP53",
+   "PPM1D"
+  ],
+  [
+   "HOT_BRAF",
+   "BRAF"
+  ],
+  [
+   "HOT_BRAF",
+   "MAP2K1"
+  ],
+  [
+   "HOT_BRAF",
+   "DUSP4"
+  ],
+  [
+   "HOT_NRAS",
+   "NRAS"
+  ],
+  [
+   "HOT_NRAS",
+   "SHOC2"
+  ],
+  [
+   "HOT_KRAS",
+   "KRAS"
+  ],
+  [
+   "HOT_KRAS",
+   "RAF1"
+  ],
+  [
+   "HOT_PIK3CA",
+   "PIK3CA"
+  ],
+  [
+   "MUT_RB1",
+   "E2F3"
+  ],
+  [
+   "MUT_RB1",
+   "DYRK1A"
+  ],
+  [
+   "MUT_BRCA1",
+   "FANCM"
+  ]
+ ],
+ "rules": {
+  "new_lines": "ModelIDs with a Broad Avana (library AV) CRISPR screen in the newer release that appear in NONE of the 24Q4 sets used here (discovery, held-out, Sanger; 1162 ModelIDs listed in cache meta.pkl).",
+  "gene_effect": "Chronos gene effect for the new lines, from the newer release's Avana screen-level gene effects (ScreenGeneEffect, library AV, as in prep.py) or CRISPRGeneEffect if screen-level files are absent. Genes missing in the newer release make that pair untestable.",
+  "biomarkers": "Same definitions as 24Q4 prep.py: MUT = damaging-mutation matrix > 0; HOT = hotspot matrix > 0; LOSS = log2(TPM+1) < 1 in the newer release's protein-coding expression matrix (the 'normally expressed' gene set is the one already fixed by 24Q4). ~MUT = no damaging mutation.",
+  "lineage": "OncotreeLineage from the newer release's Model.csv.",
+  "test": "Lineage-adjusted regression of gene effect on the biomarker within the new lines only (the same Frisch-Waugh-Lovell test as stats.py); one-sided (altered lines MORE dependent).",
+  "verdicts": "replicated: p < 0.01 and beta < 0. not replicated: testable but p >= 0.01 or beta >= 0. untestable: fewer than 3 altered or 3 unaltered new lines with both data types, or no within-lineage variation.",
+  "family": "Benjamini-Hochberg at 5% across all testable pairs in this file, reported alongside per-pair verdicts.",
+  "secondary": "Sign test: among testable LEAD+CANDIDATES pairs, the fraction with beta < 0, against 50%.",
+  "calibration": "CONTROLS are established biology. Their replication rate in the new lines estimates the power of this test, so a candidate's failure is read against it.",
+  "sanity": "For ModelIDs present in BOTH 24Q4 and the newer release, report agreement of each biomarker's calls between releases; a biomarker with < 90% agreement is flagged (definition drift), not dropped."
+ },
+ "predictions": {
+  "lead": "LOSS_ATP6V0E2 -> ATP6V0E1 replicates if testable.",
+  "candidates": "Most testable candidates have beta < 0; fewer replicate at p < 0.01 than controls do, because there are few new altered lines.",
+  "confound_check": "LOSS_CRY1 -> MEF2B replicates only if the new lines include B-cell lymphomas with CRY1 loss; if it replicates, that still does not separate biomarker from lymphoma subtype."
+ }
+}

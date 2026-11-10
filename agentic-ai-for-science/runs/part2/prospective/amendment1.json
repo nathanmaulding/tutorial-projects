@@ -1,0 +1,17 @@
+{
+ "written_utc": "2026-11-10T14:12:09+00:00",
+ "amends": {
+  "file": "preregistration.json",
+  "sha256": "7f3f33c887fcd41f3661fae3313a11981f174b78dab618dce5eceb1474a25654"
+ },
+ "what_was_seen_before_writing": "Only counts of screens per library and of new models (5 new Avana lines; about 199 models screened in any library that are not in this project's 24Q4 sets; their lineage counts for the 5 Avana lines). No gene effects, biomarker calls or test results for any hypothesis.",
+ "reason": "DepMap 26Q3 has only 5 Avana-screened models outside the 24Q4 sets, so every pre-registered test is untestable under the original rule. New Broad screening since 24Q4 uses the Humagne-CD (Cas12) library.",
+ "original_rule_result": "Reported as frozen: untestable (5 new lines).",
+ "amendment": {
+  "new_lines": "Models with a Humagne-CD (library CD) screen in 26Q3 that appear in NONE of this project's 24Q4 sets AND have no screen of any library in the 24Q4 ScreenGeneEffect file (first screened after 24Q4).",
+  "gene_effect": "26Q3 ScreenGeneEffect for library CD screens, averaged per model. Chronos scales each library (nonessential median 0, common-essential median -1), so the scale matches Avana.",
+  "sensitivity": "Repeat including CD-screened models that were already in 24Q4's CD screens but unused by this project (unseen by us, but not screened after 24Q4). Reported separately, never pooled into the primary result.",
+  "everything_else": "Unchanged: same hypotheses, biomarker definitions, lineage-adjusted one-sided test, p < 0.01, untestable if < 3 altered or unaltered lines, BH 5%, sign test, control power, drift check."
+ },
+ "caveat_declared_in_advance": "A different CRISPR system (Cas12, different guides) is a change of reagent as well as of cell lines. A replication here survives both; a failure could reflect either."
+}

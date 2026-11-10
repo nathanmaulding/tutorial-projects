@@ -11,3 +11,4 @@ venv/
 .env.*
 *.key
 agentic-ai-for-science/runs/scratch/
+agentic-ai-for-science/runs/part2/fulltext_cache/
