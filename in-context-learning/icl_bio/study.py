@@ -233,11 +233,11 @@ def lineage():
                     run_cell(f"E2|{L}|{target}|k{k}|r{rep}", base, E, ctx, E, y_test, target, have)
 
 
-def prospective():
-    """E3. Builds the 26Q3 test set exactly as agentic-ai-for-science/target_discovery/prospective.py amendment1."""
+def prospective_data(targets: list[str]) -> dict:
+    """The 26Q3 prospective test set, exactly as agentic-ai-for-science/target_discovery/prospective.py amendment1:
+    Cas12 (Humagne-CD) gene effects of models first screened after 24Q4, 26Q3 expression, and the per-target
+    Avana-vs-Cas12 agreement measured on models screened in both libraries."""
     import re
-    p = prereg()
-    targets = p["primary_targets"] + p["secondary_targets"]
     gs = lambda c: re.sub(r"\s*\(\d+\)$", "", c)
     hdr = pd.read_csv(RELEASE_26Q3 / "ScreenGeneEffect.csv", nrows=0).columns
     keep = {c for c in hdr if gs(c) in set(targets)}
@@ -266,6 +266,15 @@ def prospective():
     E26.columns = [gs(c) for c in E26.columns]
     E26 = E26.loc[~E26.index.duplicated(), ~E26.columns.duplicated()]
     new_ids = [i for i in new_ids if i in E26.index]
+    return {"cas12": per["CD"], "new_ids": new_ids, "E24": E24, "E26": E26, "agree": agree, "both": both}
+
+
+def prospective():
+    """E3. Builds the 26Q3 test set with prospective_data (same construction as agentic-ai-for-science amendment1)."""
+    p = prereg()
+    targets = p["primary_targets"] + p["secondary_targets"]
+    d = prospective_data(targets)
+    per, new_ids, E24, E26, agree, both = {"CD": d["cas12"]}, d["new_ids"], d["E24"], d["E26"], d["agree"], d["both"]
     train = pd.concat([load("discovery"), load("holdout")])
     have = done_keys()
     (RUNS / "prospective_eligibility.json").write_text(json.dumps(

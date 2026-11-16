@@ -1,0 +1,66 @@
+{
+ "written_utc": "2026-11-16T14:01:58+00:00",
+ "statement": "Written before any model in study 2 was fitted. Study 1's results WERE known when this was written (its H1 failed), so study 2 uses genes study 1 never examined. H6 and H7 were chosen because published work suggests they are TabPFN's strengths (full predictive distributions; benefiting from similar context examples); that is stated here so the choice is visible.",
+ "study1_preregistration_sha256": "1495094bef3f4ddc80714db3027764164a8ead0b9a0ae23e8c3f76601d170808",
+ "targets": [
+  "TSC1",
+  "PFAS",
+  "XRN1",
+  "TRAF2",
+  "NAMPT",
+  "SLC2A1",
+  "CREBBP",
+  "ITGB5",
+  "KIF18B",
+  "RHOA",
+  "ATIC",
+  "PMM2",
+  "UBIAD1",
+  "POLE3",
+  "PAICS",
+  "FPGS",
+  "GPI",
+  "STX4",
+  "RAB10",
+  "CAB39"
+ ],
+ "target_rule": "study 1's rule (5-50% of discovery lines below -0.5, mean > -0.8, ranked by SD), ranks 21+, excluding study 1's primary and secondary genes; first 20",
+ "data": "as study 1: train pool = 24Q4 Avana discovery lines, test = 24Q4 holdout lines; lines without expression excluded (study 1 clarification 1); features = top-50 |r| expression genes on the context lines only",
+ "methods": {
+  "tabpfn": {
+   "weights": "TabPFN v2 regressor",
+   "n_estimators": 8,
+   "random_state": 0,
+   "device": "cpu",
+   "uncertainty": "its predictive distribution's quantiles at [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95]"
+  },
+  "ridge": "as study 1; uncertainty = prediction + empirical quantiles of its 5-fold cross-validated residuals on the context lines",
+  "random_forest": "as study 1; uncertainty = prediction + empirical quantiles of its 5-fold cross-validated residuals on the context lines",
+  "mean": "context mean; uncertainty = empirical quantiles of the context labels (the no-features reference)"
+ },
+ "metrics": {
+  "r": "Pearson r, predicted vs measured, over the test lines (as study 1)",
+  "pinball": "mean pinball (quantile) loss over the 19 quantile levels and the test lines; a proper scoring rule for predictive distributions (lower is better)",
+  "coverage80": "share of test lines inside the 10%-90% predictive interval (descriptive)"
+ },
+ "experiments": {
+  "A_curve": "k in [16, 64] random discovery lines (3 repeats, seeds 0..2) and k = all discovery lines (1 run); test = all holdout lines",
+  "B_prospective": "context = all 24Q4 lines; test = 26Q3 Cas12 lines first screened after 24Q4 (study 1's E3 construction), only targets with Avana-vs-Cas12 agreement r >= 0.5 on overlap lines",
+  "C_similar_examples": "50 holdout lines (fixed random sample, seed 0) per target. 'similar': for each test line, context = the 64 discovery lines whose expression profile (the 2000 most variable genes on discovery lines, z-scored with discovery mean and SD) correlates most with the test line's; one fit per test line. 'random': 64 random discovery lines (3 repeats). Features in both arms: top-50 selected on all discovery lines. r computed over the 50 lines. With 'similar' context, the mean method is k-nearest-neighbours.",
+  "D_shuffled_labels": "control: k = 64 (seed 0) with the context labels randomly permuted (seed 0); every method should then score r near 0"
+ },
+ "hypotheses": {
+  "H5 (primary; replication of study 1 H1)": "at k = 16 and 64, mean over targets of r(TabPFN) - r(baseline) > 0 for baseline = ridge and random forest; 4 comparisons, gene-level bootstrap 98.75% intervals (Bonferroni); each supported if its interval excludes 0 in TabPFN's favour.",
+  "H6 (primary; uncertainty)": "at k = 16 and 64, mean over targets of pinball(baseline) - pinball(TabPFN) > 0 for baseline = ridge and random forest with cross-validated residual intervals; 4 comparisons, 98.75% intervals; each supported if its interval excludes 0 in TabPFN's favour.",
+  "H6b (secondary)": "the same pinball comparison at k = all discovery lines and in the prospective test; 95% intervals.",
+  "H7 (secondary; similar examples)": "r(TabPFN, similar context) - r(TabPFN, random context) > 0 over targets; 95% interval. Reported alongside: similar-context TabPFN vs k-nearest-neighbours and vs similar-context ridge and random forest (descriptive).",
+  "controls": "D: mean |r| below 0.1 for every method (descriptive check that the methods use the labels)."
+ },
+ "predictions": {
+  "H5": "Given study 1: TabPFN ahead of ridge at k = 16; no clear difference from random forest.",
+  "H6": "TabPFN ahead of both baselines, most clearly at k = 16 (cross-validated residuals from 13 lines give crude intervals; skewed dependency distributions don't suit a constant-shape interval).",
+  "H6b": "Smaller TabPFN advantage with all lines; uncertain under the distribution shift of the prospective test.",
+  "H7": "Similar examples help TabPFN."
+ },
+ "reporting": "every hypothesis is reported whatever the outcome, in the notebook and README, beside study 1."
+}

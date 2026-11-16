@@ -41,6 +41,15 @@ def test_part2_preregistration_is_unedited():
     assert hashlib.sha256(text.encode()).hexdigest() == (ROOT / "runs/part2/preregistration.sha256").read_text().split()[0]
 
 
+def test_study2_preregistration_is_unedited_and_uses_fresh_genes():
+    d = ROOT / "runs/part2/study2"
+    text = (d / "preregistration.json").read_text()
+    assert hashlib.sha256(text.encode()).hexdigest() == (d / "preregistration.sha256").read_text().split()[0]
+    s1 = json.loads((ROOT / "runs/part2/preregistration.json").read_text())
+    s2 = json.loads(text)
+    assert not set(s2["targets"]) & set(s1["primary_targets"] + s1["secondary_targets"])
+
+
 def test_feature_selection_uses_context_lines_only():
     import pandas as pd
     from icl_bio.study import select_features
