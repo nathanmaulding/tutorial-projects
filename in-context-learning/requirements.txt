@@ -1,0 +1,15 @@
+# CPU-only PyTorch wheels (avoids downloading GPU libraries on Linux; Macs use the normal wheels)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.2,<3
+# PyTorch 2.2.2 (the last build for Intel Macs) needs numpy 1.x
+numpy>=1.26,<2; platform_system == "Darwin" and platform_machine == "x86_64"
+numpy>=1.26,<3; platform_system != "Darwin" or platform_machine != "x86_64"
+pandas>=2.2,<3
+scipy>=1.11,<2
+scikit-learn>=1.2,<1.7
+matplotlib>=3.8,<4
+anthropic>=2.7,<3
+# TabPFN 2.2.1 uses the v2 weights (Prior Labs License 1.1: Apache-2.0 plus attribution); later releases need a token
+tabpfn==2.2.1
+jupyterlab>=4
+pytest>=8

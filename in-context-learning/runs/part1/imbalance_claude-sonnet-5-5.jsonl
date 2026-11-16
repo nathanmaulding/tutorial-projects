@@ -1,0 +1,144 @@
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 0, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 0, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 0, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 1, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 1, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 1, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 2, "rep": 0, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 2, "rep": 1, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 2, "rep": 2, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 3, "rep": 0, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 3, "rep": 1, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 3, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 4, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 4, "rep": 1, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 4, "rep": 2, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 5, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 5, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 5, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 6, "rep": 0, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 6, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 6, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 7, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 7, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 7, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 8, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 8, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 8, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 9, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 9, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 9, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 10, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 10, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 10, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 11, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 11, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 11, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 12, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 12, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 12, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 13, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 13, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 13, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 14, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 14, "rep": 1, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 14, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 15, "rep": 0, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 15, "rep": 1, "answer": "neutral", "called_positive": false, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "14 positive : 2 negative", "query": 15, "rep": 2, "answer": "neutral", "called_positive": false, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 0, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 0, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 0, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 1, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 1, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 1, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 2, "rep": 0, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 2, "rep": 1, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 2, "rep": 2, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 3, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 3, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 3, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 4, "rep": 0, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 4, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 4, "rep": 2, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 5, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 5, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 5, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 6, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 6, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 6, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 7, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 7, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 7, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 8, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 8, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 8, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 9, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 9, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 9, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 10, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 10, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 10, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 11, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 11, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 11, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 12, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 12, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 12, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 13, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 13, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 13, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 14, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 14, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 14, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 15, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 15, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "balanced 8 : 8", "query": 15, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 0, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 0, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 0, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 1, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 1, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 1, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 2, "rep": 0, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 2, "rep": 1, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 2, "rep": 2, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 3, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 3, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 3, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 4, "rep": 0, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 4, "rep": 1, "answer": "positive", "called_positive": true, "called_negative": false}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 4, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 5, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 5, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 5, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 6, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 6, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 6, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 7, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 7, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 7, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 8, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 8, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 8, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 9, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 9, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 9, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 10, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 10, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 10, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 11, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 11, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 11, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 12, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 12, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 12, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 13, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 13, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 13, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 14, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 14, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 14, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 15, "rep": 0, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 15, "rep": 1, "answer": "negative", "called_positive": false, "called_negative": true}
+{"model": "claude-sonnet-5-5", "skew": "2 positive : 14 negative", "query": 15, "rep": 2, "answer": "negative", "called_positive": false, "called_negative": true}

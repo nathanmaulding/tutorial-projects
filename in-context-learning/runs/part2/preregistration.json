@@ -1,0 +1,75 @@
+{
+ "written_utc": "2026-11-14T16:12:56+00:00",
+ "statement": "Written before any model in this study was fitted to DepMap data.",
+ "primary_targets": [
+  "TYMS",
+  "KEAP1",
+  "CBFB",
+  "NXT1",
+  "HNF1B",
+  "TSC2",
+  "EP300",
+  "SOX10",
+  "TADA1",
+  "NF2",
+  "TAF5L",
+  "ITGAV",
+  "STAG2",
+  "NMNAT1",
+  "AMBRA1",
+  "PAXIP1",
+  "MEN1",
+  "IRF4",
+  "KLF5",
+  "EFR3A"
+ ],
+ "secondary_targets": [
+  "DNAJC19",
+  "TTC7A",
+  "NABP2",
+  "AGPAT1",
+  "RPP25L",
+  "ATP6V0E1"
+ ],
+ "data": {
+  "train_pool": "24Q4 Broad Avana DISCOVERY split (626 lines)",
+  "test": "24Q4 Avana HOLDOUT split (417 lines)",
+  "features": "24Q4 expression, log2(TPM+1); the 50 genes with the largest |Pearson r| with the target in the CONTEXT lines only (never the test lines); the target gene itself excluded",
+  "prospective": "26Q3 Humagne-CD (Cas12) gene effects of models first screened after 24Q4 (same set as agentic-ai-for-science amendment1); features from 26Q3 expression (default entry per model)"
+ },
+ "methods": {
+  "tabpfn": {
+   "weights": "TabPFN v2 regressor (Prior Labs License 1.1)",
+   "n_estimators": 2,
+   "random_state": 0,
+   "device": "cpu"
+  },
+  "ridge": "StandardScaler + RidgeCV(alphas=logspace(-2,4,25))",
+  "random_forest": {
+   "n_estimators": 300,
+   "max_features": 0.33,
+   "min_samples_leaf": 3,
+   "random_state": 0,
+   "n_jobs": 4
+  },
+  "mean": "predict the context mean (reference for R^2)"
+ },
+ "metric": "Pearson r between predicted and measured gene effect on the test lines, per target gene (averaged over repeats); secondary: out-of-sample R^2 vs the context mean",
+ "experiments": {
+  "E1_curve": "k in [16, 64, 256, 626] context lines drawn at random from discovery (3 repeats for k<626, seeds 0..2); test on all holdout lines",
+  "E2_lineage": "for each lineage in ['Lung', 'Lymphoid', 'CNS/Brain', 'Skin', 'Esophagus/Stomach']: context = discovery lines of OTHER lineages + k in [0, 8] discovery lines of the lineage (3 repeats for k>0); test = that lineage's holdout lines",
+  "E3_prospective": "context = all 1043 24Q4 Avana lines; test = 26Q3 new Cas12 lines, only for targets whose Avana-vs-Cas12 gene effects correlate r >= 0.5 across models screened in both libraries (decided from overlap lines, not the test lines)"
+ },
+ "hypotheses": {
+  "H1 (primary)": "Few-shot advantage: at k = 16 and k = 64, mean over the 20 primary targets of r(TabPFN) - r(baseline) > 0 for baseline = ridge and = random forest. 4 comparisons; each tested with a gene-level bootstrap 98.75% interval (Bonferroni over the 4); supported if the interval excludes 0.",
+  "H2": "At k = 626 (all discovery lines), TabPFN vs ridge and vs random forest: two-sided, reported with 95% intervals.",
+  "H3": "Adapting to a cancer type: the gain from 0 to 8 in-lineage examples (mean over lineages and targets) is larger for TabPFN than for ridge. Secondary; 95% interval.",
+  "H4": "Prospective: on new Cas12 lines, TabPFN vs ridge and vs random forest over eligible targets; two-sided, 95% intervals; reported whatever the number of eligible targets."
+ },
+ "predictions": {
+  "H1": "TabPFN ahead at k = 16 and 64 (its prior acts as regularisation when data are scarce).",
+  "H2": "Close to random forest at k = 626.",
+  "H3": "Uncertain.",
+  "H4": "Same ordering as H2, with lower correlations overall (new lines, new CRISPR system)."
+ }
+}

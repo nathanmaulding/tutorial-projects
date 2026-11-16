@@ -1,0 +1,10 @@
+{
+ "clarifications": [
+  {
+   "n": 1,
+   "written_utc": "2026-11-14T16:16:04+00:00",
+   "text": "Cell lines without RNA expression data (8 discovery, 4 holdout, among 24Q4 Avana lines) are excluded from context and test sets, since every method needs expression features. The pre-registration did not state this. Found when the first fit failed on missing values; no model results existed at the time (only 3 rows of the 'mean' reference method, which were deleted and rerun).",
+   "effect": "k = 626 becomes the 618 discovery lines with expression; the holdout test set has 413 lines."
+  }
+ ]
+}
