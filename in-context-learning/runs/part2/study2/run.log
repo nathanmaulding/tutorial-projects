@@ -1,0 +1,1068 @@
+== curve 07:02
+A|TSC1|k16|r0|mean                                      r=nan pinball=0.1494 0.0s
+A|TSC1|k16|r0|ridge                                     r=-0.008 pinball=0.2548 2.4s
+A|TSC1|k16|r0|random_forest                             r=0.074 pinball=0.1590 2.6s
+A|TSC1|k16|r0|tabpfn                                    r=0.116 pinball=0.1542 19.1s
+A|TSC1|k16|r1|mean                                      r=nan pinball=0.1453 0.0s
+A|TSC1|k16|r1|ridge                                     r=0.184 pinball=0.1586 0.0s
+A|TSC1|k16|r1|random_forest                             r=0.257 pinball=0.1413 2.4s
+A|TSC1|k16|r1|tabpfn                                    r=0.177 pinball=0.1597 19.6s
+A|TSC1|k16|r2|mean                                      r=nan pinball=0.1437 0.0s
+A|TSC1|k16|r2|ridge                                     r=0.119 pinball=0.1835 0.0s
+A|TSC1|k16|r2|random_forest                             r=0.250 pinball=0.1437 3.1s
+A|TSC1|k16|r2|tabpfn                                    r=0.261 pinball=0.1543 15.7s
+A|TSC1|k64|r0|mean                                      r=nan pinball=0.1434 0.0s
+A|TSC1|k64|r0|ridge                                     r=0.251 pinball=0.1743 0.1s
+A|TSC1|k64|r0|random_forest                             r=0.266 pinball=0.1432 2.4s
+A|TSC1|k64|r0|tabpfn                                    r=0.271 pinball=0.1593 18.3s
+A|TSC1|k64|r1|mean                                      r=nan pinball=0.1431 0.0s
+A|TSC1|k64|r1|ridge                                     r=0.278 pinball=0.1463 0.0s
+A|TSC1|k64|r1|random_forest                             r=0.272 pinball=0.1419 2.5s
+A|TSC1|k64|r1|tabpfn                                    r=0.208 pinball=0.1533 18.9s
+A|TSC1|k64|r2|mean                                      r=nan pinball=0.1427 0.0s
+A|TSC1|k64|r2|ridge                                     r=-0.020 pinball=0.1863 0.1s
+A|TSC1|k64|r2|random_forest                             r=0.049 pinball=0.1547 2.2s
+A|TSC1|k64|r2|tabpfn                                    r=0.058 pinball=0.1636 14.7s
+A|TSC1|k626|r0|mean                                     r=nan pinball=0.1420 0.0s
+A|TSC1|k626|r0|ridge                                    r=0.350 pinball=0.1329 0.0s
+A|TSC1|k626|r0|random_forest                            r=0.332 pinball=0.1346 2.8s
+A|TSC1|k626|r0|tabpfn                                   r=0.363 pinball=0.1326 49.6s
+A|PFAS|k16|r0|mean                                      r=nan pinball=0.1386 0.0s
+A|PFAS|k16|r0|ridge                                     r=0.187 pinball=0.1910 0.0s
+A|PFAS|k16|r0|random_forest                             r=0.147 pinball=0.1534 2.0s
+A|PFAS|k16|r0|tabpfn                                    r=0.200 pinball=0.1742 12.5s
+A|PFAS|k16|r1|mean                                      r=nan pinball=0.1368 0.0s
+A|PFAS|k16|r1|ridge                                     r=0.271 pinball=0.1705 0.0s
+A|PFAS|k16|r1|random_forest                             r=0.267 pinball=0.1377 2.1s
+A|PFAS|k16|r1|tabpfn                                    r=0.270 pinball=0.1503 12.1s
+A|PFAS|k16|r2|mean                                      r=nan pinball=0.1381 0.0s
+A|PFAS|k16|r2|ridge                                     r=0.240 pinball=0.1571 0.0s
+A|PFAS|k16|r2|random_forest                             r=0.250 pinball=0.1404 2.1s
+A|PFAS|k16|r2|tabpfn                                    r=0.200 pinball=0.1518 12.3s
+A|PFAS|k64|r0|mean                                      r=nan pinball=0.1356 0.0s
+A|PFAS|k64|r0|ridge                                     r=0.438 pinball=0.1235 0.0s
+A|PFAS|k64|r0|random_forest                             r=0.428 pinball=0.1234 2.1s
+A|PFAS|k64|r0|tabpfn                                    r=0.393 pinball=0.1305 15.2s
+A|PFAS|k64|r1|mean                                      r=nan pinball=0.1365 0.0s
+A|PFAS|k64|r1|ridge                                     r=0.480 pinball=0.1209 0.0s
+A|PFAS|k64|r1|random_forest                             r=0.441 pinball=0.1240 2.1s
+A|PFAS|k64|r1|tabpfn                                    r=0.479 pinball=0.1204 15.0s
+A|PFAS|k64|r2|mean                                      r=nan pinball=0.1365 0.0s
+A|PFAS|k64|r2|ridge                                     r=0.442 pinball=0.1248 0.0s
+A|PFAS|k64|r2|random_forest                             r=0.389 pinball=0.1289 2.1s
+A|PFAS|k64|r2|tabpfn                                    r=0.417 pinball=0.1287 15.3s
+A|PFAS|k626|r0|mean                                     r=nan pinball=0.1355 0.0s
+A|PFAS|k626|r0|ridge                                    r=0.536 pinball=0.1138 0.1s
+A|PFAS|k626|r0|random_forest                            r=0.535 pinball=0.1138 3.1s
+A|PFAS|k626|r0|tabpfn                                   r=0.547 pinball=0.1110 49.7s
+A|XRN1|k16|r0|mean                                      r=nan pinball=0.1416 0.0s
+A|XRN1|k16|r0|ridge                                     r=0.098 pinball=0.1731 0.0s
+A|XRN1|k16|r0|random_forest                             r=0.098 pinball=0.1581 2.0s
+A|XRN1|k16|r0|tabpfn                                    r=0.082 pinball=0.1766 12.0s
+A|XRN1|k16|r1|mean                                      r=nan pinball=0.1392 0.0s
+A|XRN1|k16|r1|ridge                                     r=-0.072 pinball=0.3860 0.0s
+A|XRN1|k16|r1|random_forest                             r=0.068 pinball=0.1428 2.1s
+A|XRN1|k16|r1|tabpfn                                    r=0.018 pinball=0.1675 11.9s
+A|XRN1|k16|r2|mean                                      r=nan pinball=0.1395 0.0s
+A|XRN1|k16|r2|ridge                                     r=0.182 pinball=0.1544 0.0s
+A|XRN1|k16|r2|random_forest                             r=0.196 pinball=0.1395 2.1s
+A|XRN1|k16|r2|tabpfn                                    r=0.208 pinball=0.1439 12.7s
+A|XRN1|k64|r0|mean                                      r=nan pinball=0.1363 0.0s
+A|XRN1|k64|r0|ridge                                     r=0.134 pinball=0.1525 0.0s
+A|XRN1|k64|r0|random_forest                             r=0.157 pinball=0.1438 2.1s
+A|XRN1|k64|r0|tabpfn                                    r=0.147 pinball=0.1552 14.7s
+A|XRN1|k64|r1|mean                                      r=nan pinball=0.1378 0.0s
+A|XRN1|k64|r1|ridge                                     r=0.066 pinball=0.1621 0.0s
+A|XRN1|k64|r1|random_forest                             r=0.140 pinball=0.1386 2.2s
+A|XRN1|k64|r1|tabpfn                                    r=0.122 pinball=0.1461 14.9s
+A|XRN1|k64|r2|mean                                      r=nan pinball=0.1379 0.0s
+A|XRN1|k64|r2|ridge                                     r=0.027 pinball=0.1739 0.0s
+A|XRN1|k64|r2|random_forest                             r=0.177 pinball=0.1384 2.3s
+A|XRN1|k64|r2|tabpfn                                    r=0.176 pinball=0.1438 15.9s
+A|XRN1|k626|r0|mean                                     r=nan pinball=0.1367 0.0s
+A|XRN1|k626|r0|ridge                                    r=0.240 pinball=0.1319 0.1s
+A|XRN1|k626|r0|random_forest                            r=0.282 pinball=0.1302 3.1s
+A|XRN1|k626|r0|tabpfn                                   r=0.250 pinball=0.1321 51.8s
+A|TRAF2|k16|r0|mean                                     r=nan pinball=0.1244 0.0s
+A|TRAF2|k16|r0|ridge                                    r=0.145 pinball=0.1404 0.0s
+A|TRAF2|k16|r0|random_forest                            r=0.100 pinball=0.1292 5.1s
+A|TRAF2|k16|r0|tabpfn                                   r=0.140 pinball=0.1348 18.9s
+A|TRAF2|k16|r1|mean                                     r=nan pinball=0.1221 0.0s
+A|TRAF2|k16|r1|ridge                                    r=0.117 pinball=0.1730 0.0s
+A|TRAF2|k16|r1|random_forest                            r=0.061 pinball=0.1281 2.5s
+A|TRAF2|k16|r1|tabpfn                                   r=0.130 pinball=0.1388 13.8s
+A|TRAF2|k16|r2|mean                                     r=nan pinball=0.1320 0.0s
+A|TRAF2|k16|r2|ridge                                    r=0.104 pinball=0.2697 0.0s
+A|TRAF2|k16|r2|random_forest                            r=-0.093 pinball=0.1460 2.2s
+A|TRAF2|k16|r2|tabpfn                                   r=-0.079 pinball=0.1641 13.0s
+A|TRAF2|k64|r0|mean                                     r=nan pinball=0.1202 0.0s
+A|TRAF2|k64|r0|ridge                                    r=-0.042 pinball=0.2900 0.0s
+A|TRAF2|k64|r0|random_forest                            r=0.143 pinball=0.1246 2.2s
+A|TRAF2|k64|r0|tabpfn                                   r=0.127 pinball=0.1333 18.0s
+A|TRAF2|k64|r1|mean                                     r=nan pinball=0.1211 0.0s
+A|TRAF2|k64|r1|ridge                                    r=0.124 pinball=0.1389 0.0s
+A|TRAF2|k64|r1|random_forest                            r=0.133 pinball=0.1265 2.7s
+A|TRAF2|k64|r1|tabpfn                                   r=0.091 pinball=0.1362 16.5s
+A|TRAF2|k64|r2|mean                                     r=nan pinball=0.1207 0.0s
+A|TRAF2|k64|r2|ridge                                    r=0.003 pinball=0.1709 0.0s
+A|TRAF2|k64|r2|random_forest                            r=0.149 pinball=0.1257 2.3s
+A|TRAF2|k64|r2|tabpfn                                   r=0.149 pinball=0.1286 16.0s
+A|TRAF2|k626|r0|mean                                    r=nan pinball=0.1199 0.0s
+A|TRAF2|k626|r0|ridge                                   r=0.304 pinball=0.1177 0.0s
+A|TRAF2|k626|r0|random_forest                           r=0.375 pinball=0.1102 3.1s
+A|TRAF2|k626|r0|tabpfn                                  r=0.393 pinball=0.1097 66.6s
+A|NAMPT|k16|r0|mean                                     r=nan pinball=0.1556 0.0s
+A|NAMPT|k16|r0|ridge                                    r=0.254 pinball=0.2156 0.0s
+A|NAMPT|k16|r0|random_forest                            r=0.251 pinball=0.1788 2.7s
+A|NAMPT|k16|r0|tabpfn                                   r=0.247 pinball=0.1927 19.0s
+A|NAMPT|k16|r1|mean                                     r=nan pinball=0.1458 0.0s
+A|NAMPT|k16|r1|ridge                                    r=0.029 pinball=0.2229 0.0s
+A|NAMPT|k16|r1|random_forest                            r=0.084 pinball=0.1946 3.1s
+A|NAMPT|k16|r1|tabpfn                                   r=0.087 pinball=0.1924 18.2s
+A|NAMPT|k16|r2|mean                                     r=nan pinball=0.1398 0.0s
+A|NAMPT|k16|r2|ridge                                    r=0.233 pinball=0.1673 0.0s
+A|NAMPT|k16|r2|random_forest                            r=0.374 pinball=0.1319 3.1s
+A|NAMPT|k16|r2|tabpfn                                   r=0.399 pinball=0.1284 17.9s
+A|NAMPT|k64|r0|mean                                     r=nan pinball=0.1398 0.0s
+A|NAMPT|k64|r0|ridge                                    r=0.507 pinball=0.1207 0.0s
+A|NAMPT|k64|r0|random_forest                            r=0.483 pinball=0.1240 2.7s
+A|NAMPT|k64|r0|tabpfn                                   r=0.459 pinball=0.1262 23.7s
+A|NAMPT|k64|r1|mean                                     r=nan pinball=0.1362 0.0s
+A|NAMPT|k64|r1|ridge                                    r=0.496 pinball=0.1237 0.0s
+A|NAMPT|k64|r1|random_forest                            r=0.487 pinball=0.1275 2.2s
+A|NAMPT|k64|r1|tabpfn                                   r=0.422 pinball=0.1245 15.7s
+A|NAMPT|k64|r2|mean                                     r=nan pinball=0.1363 0.0s
+A|NAMPT|k64|r2|ridge                                    r=0.441 pinball=0.1256 0.0s
+A|NAMPT|k64|r2|random_forest                            r=0.471 pinball=0.1224 2.3s
+A|NAMPT|k64|r2|tabpfn                                   r=0.387 pinball=0.1273 13.9s
+A|NAMPT|k626|r0|mean                                    r=nan pinball=0.1347 0.0s
+A|NAMPT|k626|r0|ridge                                   r=0.528 pinball=0.1121 0.0s
+A|NAMPT|k626|r0|random_forest                           r=0.533 pinball=0.1120 3.0s
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+A|NAMPT|k626|r0|tabpfn                                  r=0.539 pinball=0.1078 52.2s
+A|SLC2A1|k16|r0|mean                                    r=nan pinball=0.1681 0.0s
+A|SLC2A1|k16|r0|ridge                                   r=0.081 pinball=0.2101 0.0s
+A|SLC2A1|k16|r0|random_forest                           r=0.118 pinball=0.1636 2.5s
+A|SLC2A1|k16|r0|tabpfn                                  r=0.031 pinball=0.1854 13.5s
+A|SLC2A1|k16|r1|mean                                    r=nan pinball=0.1579 0.0s
+A|SLC2A1|k16|r1|ridge                                   r=0.116 pinball=0.1789 0.0s
+A|SLC2A1|k16|r1|random_forest                           r=0.123 pinball=0.1638 2.2s
+A|SLC2A1|k16|r1|tabpfn                                  r=0.074 pinball=0.1732 15.3s
+A|SLC2A1|k16|r2|mean                                    r=nan pinball=0.1473 0.0s
+A|SLC2A1|k16|r2|ridge                                   r=0.207 pinball=0.1971 0.0s
+A|SLC2A1|k16|r2|random_forest                           r=0.243 pinball=0.1594 2.3s
+A|SLC2A1|k16|r2|tabpfn                                  r=0.205 pinball=0.1797 19.7s
+A|SLC2A1|k64|r0|mean                                    r=nan pinball=0.1516 0.0s
+A|SLC2A1|k64|r0|ridge                                   r=0.061 pinball=0.1738 0.0s
+A|SLC2A1|k64|r0|random_forest                           r=0.126 pinball=0.1550 2.3s
+A|SLC2A1|k64|r0|tabpfn                                  r=0.183 pinball=0.1564 14.9s
+A|SLC2A1|k64|r1|mean                                    r=nan pinball=0.1489 0.0s
+A|SLC2A1|k64|r1|ridge                                   r=0.212 pinball=0.1663 0.0s
+A|SLC2A1|k64|r1|random_forest                           r=0.332 pinball=0.1435 2.3s
+A|SLC2A1|k64|r1|tabpfn                                  r=0.369 pinball=0.1388 15.4s
+A|SLC2A1|k64|r2|mean                                    r=nan pinball=0.1469 0.0s
+A|SLC2A1|k64|r2|ridge                                   r=0.025 pinball=0.1997 0.0s
+A|SLC2A1|k64|r2|random_forest                           r=0.101 pinball=0.1605 2.1s
+A|SLC2A1|k64|r2|tabpfn                                  r=0.127 pinball=0.1778 13.9s
+A|SLC2A1|k626|r0|mean                                   r=nan pinball=0.1469 0.0s
+A|SLC2A1|k626|r0|ridge                                  r=0.477 pinball=0.1275 0.0s
+A|SLC2A1|k626|r0|random_forest                          r=0.479 pinball=0.1276 2.8s
+A|SLC2A1|k626|r0|tabpfn                                 r=0.482 pinball=0.1253 50.5s
+A|CREBBP|k16|r0|mean                                    r=nan pinball=0.1330 0.0s
+A|CREBBP|k16|r0|ridge                                   r=-0.110 pinball=0.2009 0.0s
+A|CREBBP|k16|r0|random_forest                           r=0.025 pinball=0.1359 2.0s
+A|CREBBP|k16|r0|tabpfn                                  r=-0.022 pinball=0.1532 12.3s
+A|CREBBP|k16|r1|mean                                    r=nan pinball=0.1465 0.0s
+A|CREBBP|k16|r1|ridge                                   r=0.075 pinball=0.3103 0.0s
+A|CREBBP|k16|r1|random_forest                           r=0.081 pinball=0.1613 2.1s
+A|CREBBP|k16|r1|tabpfn                                  r=0.074 pinball=0.1547 12.0s
+A|CREBBP|k16|r2|mean                                    r=nan pinball=0.1337 0.0s
+A|CREBBP|k16|r2|ridge                                   r=0.161 pinball=0.1471 0.0s
+A|CREBBP|k16|r2|random_forest                           r=0.168 pinball=0.1322 2.1s
+A|CREBBP|k16|r2|tabpfn                                  r=0.203 pinball=0.1391 12.0s
+A|CREBBP|k64|r0|mean                                    r=nan pinball=0.1299 0.0s
+A|CREBBP|k64|r0|ridge                                   r=0.113 pinball=0.1724 0.0s
+A|CREBBP|k64|r0|random_forest                           r=0.184 pinball=0.1324 2.1s
+A|CREBBP|k64|r0|tabpfn                                  r=0.159 pinball=0.1420 14.0s
+A|CREBBP|k64|r1|mean                                    r=nan pinball=0.1307 0.0s
+A|CREBBP|k64|r1|ridge                                   r=0.145 pinball=0.1665 0.0s
+A|CREBBP|k64|r1|random_forest                           r=0.117 pinball=0.1380 2.1s
+A|CREBBP|k64|r1|tabpfn                                  r=0.122 pinball=0.1404 13.9s
+A|CREBBP|k64|r2|mean                                    r=nan pinball=0.1301 0.0s
+A|CREBBP|k64|r2|ridge                                   r=0.186 pinball=0.1427 0.0s
+A|CREBBP|k64|r2|random_forest                           r=0.203 pinball=0.1311 2.1s
+A|CREBBP|k64|r2|tabpfn                                  r=0.192 pinball=0.1395 14.9s
+A|CREBBP|k626|r0|mean                                   r=nan pinball=0.1296 0.0s
+A|CREBBP|k626|r0|ridge                                  r=0.251 pinball=0.1268 0.1s
+A|CREBBP|k626|r0|random_forest                          r=0.255 pinball=0.1262 3.1s
+A|CREBBP|k626|r0|tabpfn                                 r=0.249 pinball=0.1261 51.0s
+A|ITGB5|k16|r0|mean                                     r=nan pinball=0.1215 0.0s
+A|ITGB5|k16|r0|ridge                                    r=0.112 pinball=0.1473 0.0s
+A|ITGB5|k16|r0|random_forest                            r=0.035 pinball=0.1217 2.0s
+A|ITGB5|k16|r0|tabpfn                                   r=0.051 pinball=0.1246 12.1s
+A|ITGB5|k16|r1|mean                                     r=nan pinball=0.1155 0.0s
+A|ITGB5|k16|r1|ridge                                    r=-0.083 pinball=0.2066 0.0s
+A|ITGB5|k16|r1|random_forest                            r=-0.049 pinball=0.1414 2.2s
+A|ITGB5|k16|r1|tabpfn                                   r=-0.044 pinball=0.1787 13.0s
+A|ITGB5|k16|r2|mean                                     r=nan pinball=0.1087 0.0s
+A|ITGB5|k16|r2|ridge                                    r=0.137 pinball=0.1786 0.0s
+A|ITGB5|k16|r2|random_forest                            r=0.164 pinball=0.1176 2.0s
+A|ITGB5|k16|r2|tabpfn                                   r=0.079 pinball=0.1201 11.9s
+A|ITGB5|k64|r0|mean                                     r=nan pinball=0.1093 0.0s
+A|ITGB5|k64|r0|ridge                                    r=0.081 pinball=0.2010 0.0s
+A|ITGB5|k64|r0|random_forest                            r=0.257 pinball=0.1072 2.1s
+A|ITGB5|k64|r0|tabpfn                                   r=0.138 pinball=0.1179 15.3s
+A|ITGB5|k64|r1|mean                                     r=nan pinball=0.1098 0.0s
+A|ITGB5|k64|r1|ridge                                    r=0.443 pinball=0.1025 0.0s
+A|ITGB5|k64|r1|random_forest                            r=0.454 pinball=0.0981 2.1s
+A|ITGB5|k64|r1|tabpfn                                   r=0.309 pinball=0.1193 14.5s
+A|ITGB5|k64|r2|mean                                     r=nan pinball=0.1090 0.0s
+A|ITGB5|k64|r2|ridge                                    r=0.433 pinball=0.1007 0.0s
+A|ITGB5|k64|r2|random_forest                            r=0.439 pinball=0.0986 2.1s
+A|ITGB5|k64|r2|tabpfn                                   r=0.426 pinball=0.0986 13.9s
+A|ITGB5|k626|r0|mean                                    r=nan pinball=0.1078 0.0s
+A|ITGB5|k626|r0|ridge                                   r=0.534 pinball=0.0937 0.1s
+A|ITGB5|k626|r0|random_forest                           r=0.548 pinball=0.0921 2.9s
+A|ITGB5|k626|r0|tabpfn                                  r=0.560 pinball=0.0891 49.4s
+A|KIF18B|k16|r0|mean                                    r=nan pinball=0.1245 0.0s
+A|KIF18B|k16|r0|ridge                                   r=-0.026 pinball=0.1682 0.0s
+A|KIF18B|k16|r0|random_forest                           r=-0.031 pinball=0.1349 2.1s
+A|KIF18B|k16|r0|tabpfn                                  r=-0.003 pinball=0.1435 11.9s
+A|KIF18B|k16|r1|mean                                    r=nan pinball=0.1192 0.0s
+A|KIF18B|k16|r1|ridge                                   r=-0.042 pinball=0.1719 0.0s
+A|KIF18B|k16|r1|random_forest                           r=0.009 pinball=0.1274 2.0s
+A|KIF18B|k16|r1|tabpfn                                  r=-0.069 pinball=0.1470 12.1s
+A|KIF18B|k16|r2|mean                                    r=nan pinball=0.1239 0.0s
+A|KIF18B|k16|r2|ridge                                   r=0.052 pinball=0.1378 0.0s
+A|KIF18B|k16|r2|random_forest                           r=0.082 pinball=0.1284 2.1s
+A|KIF18B|k16|r2|tabpfn                                  r=0.042 pinball=0.1402 12.0s
+A|KIF18B|k64|r0|mean                                    r=nan pinball=0.1164 0.0s
+A|KIF18B|k64|r0|ridge                                   r=0.065 pinball=0.1884 0.0s
+A|KIF18B|k64|r0|random_forest                           r=0.108 pinball=0.1230 2.1s
+A|KIF18B|k64|r0|tabpfn                                  r=0.096 pinball=0.1179 14.0s
+A|KIF18B|k64|r1|mean                                    r=nan pinball=0.1159 0.0s
+A|KIF18B|k64|r1|ridge                                   r=0.036 pinball=0.1381 0.0s
+A|KIF18B|k64|r1|random_forest                           r=0.010 pinball=0.1347 2.1s
+A|KIF18B|k64|r1|tabpfn                                  r=0.033 pinball=0.1262 14.1s
+A|KIF18B|k64|r2|mean                                    r=nan pinball=0.1159 0.0s
+A|KIF18B|k64|r2|ridge                                   r=0.062 pinball=0.1543 0.0s
+A|KIF18B|k64|r2|random_forest                           r=0.149 pinball=0.1206 2.1s
+A|KIF18B|k64|r2|tabpfn                                  r=0.082 pinball=0.1181 14.6s
+A|KIF18B|k626|r0|mean                                   r=nan pinball=0.1150 0.0s
+A|KIF18B|k626|r0|ridge                                  r=0.329 pinball=0.1122 0.0s
+A|KIF18B|k626|r0|random_forest                          r=0.345 pinball=0.1111 3.0s
+A|KIF18B|k626|r0|tabpfn                                 r=0.349 pinball=0.1078 54.5s
+A|RHOA|k16|r0|mean                                      r=nan pinball=0.1459 0.0s
+A|RHOA|k16|r0|ridge                                     r=0.020 pinball=0.2151 0.0s
+A|RHOA|k16|r0|random_forest                             r=0.143 pinball=0.1469 2.2s
+A|RHOA|k16|r0|tabpfn                                    r=0.126 pinball=0.1540 13.0s
+A|RHOA|k16|r1|mean                                      r=nan pinball=0.1438 0.0s
+A|RHOA|k16|r1|ridge                                     r=-0.027 pinball=0.2276 0.0s
+A|RHOA|k16|r1|random_forest                             r=-0.080 pinball=0.1724 2.1s
+A|RHOA|k16|r1|tabpfn                                    r=-0.117 pinball=0.1784 12.7s
+A|RHOA|k16|r2|mean                                      r=nan pinball=0.1545 0.0s
+A|RHOA|k16|r2|ridge                                     r=0.129 pinball=0.1947 0.0s
+A|RHOA|k16|r2|random_forest                             r=0.234 pinball=0.1573 2.0s
+A|RHOA|k16|r2|tabpfn                                    r=0.206 pinball=0.1717 12.0s
+A|RHOA|k64|r0|mean                                      r=nan pinball=0.1417 0.0s
+A|RHOA|k64|r0|ridge                                     r=0.083 pinball=0.1609 0.0s
+A|RHOA|k64|r0|random_forest                             r=0.086 pinball=0.1524 2.2s
+A|RHOA|k64|r0|tabpfn                                    r=0.116 pinball=0.1587 14.3s
+A|RHOA|k64|r1|mean                                      r=nan pinball=0.1430 0.0s
+A|RHOA|k64|r1|ridge                                     r=0.118 pinball=0.1925 0.0s
+A|RHOA|k64|r1|random_forest                             r=0.253 pinball=0.1418 2.0s
+A|RHOA|k64|r1|tabpfn                                    r=0.225 pinball=0.1500 15.1s
+A|RHOA|k64|r2|mean                                      r=nan pinball=0.1413 0.0s
+A|RHOA|k64|r2|ridge                                     r=0.156 pinball=0.1553 0.0s
+A|RHOA|k64|r2|random_forest                             r=0.167 pinball=0.1479 2.2s
+A|RHOA|k64|r2|tabpfn                                    r=0.191 pinball=0.1497 15.0s
+A|RHOA|k626|r0|mean                                     r=nan pinball=0.1407 0.0s
+A|RHOA|k626|r0|ridge                                    r=0.419 pinball=0.1280 0.0s
+A|RHOA|k626|r0|random_forest                            r=0.423 pinball=0.1271 2.4s
+A|RHOA|k626|r0|tabpfn                                   r=0.453 pinball=0.1248 48.9s
+A|ATIC|k16|r0|mean                                      r=nan pinball=0.1315 0.0s
+A|ATIC|k16|r0|ridge                                     r=0.229 pinball=0.1630 0.0s
+A|ATIC|k16|r0|random_forest                             r=0.245 pinball=0.1403 2.0s
+A|ATIC|k16|r0|tabpfn                                    r=0.161 pinball=0.1504 12.8s
+A|ATIC|k16|r1|mean                                      r=nan pinball=0.1275 0.0s
+A|ATIC|k16|r1|ridge                                     r=0.234 pinball=0.1556 0.0s
+A|ATIC|k16|r1|random_forest                             r=0.267 pinball=0.1337 2.2s
+A|ATIC|k16|r1|tabpfn                                    r=0.245 pinball=0.1403 12.7s
+A|ATIC|k16|r2|mean                                      r=nan pinball=0.1268 0.0s
+A|ATIC|k16|r2|ridge                                     r=0.149 pinball=0.1477 0.0s
+A|ATIC|k16|r2|random_forest                             r=0.415 pinball=0.1196 2.1s
+A|ATIC|k16|r2|tabpfn                                    r=0.398 pinball=0.1306 12.1s
+A|ATIC|k64|r0|mean                                      r=nan pinball=0.1258 0.0s
+A|ATIC|k64|r0|ridge                                     r=0.415 pinball=0.1226 0.0s
+A|ATIC|k64|r0|random_forest                             r=0.428 pinball=0.1179 2.1s
+A|ATIC|k64|r0|tabpfn                                    r=0.431 pinball=0.1209 14.1s
+A|ATIC|k64|r1|mean                                      r=nan pinball=0.1251 0.0s
+A|ATIC|k64|r1|ridge                                     r=0.444 pinball=0.1145 0.0s
+A|ATIC|k64|r1|random_forest                             r=0.474 pinball=0.1114 2.1s
+A|ATIC|k64|r1|tabpfn                                    r=0.422 pinball=0.1160 14.1s
+A|ATIC|k64|r2|mean                                      r=nan pinball=0.1249 0.0s
+A|ATIC|k64|r2|ridge                                     r=0.422 pinball=0.1145 0.0s
+A|ATIC|k64|r2|random_forest                             r=0.340 pinball=0.1212 2.1s
+A|ATIC|k64|r2|tabpfn                                    r=0.387 pinball=0.1160 14.1s
+A|ATIC|k626|r0|mean                                     r=nan pinball=0.1246 0.0s
+A|ATIC|k626|r0|ridge                                    r=0.501 pinball=0.1073 0.0s
+A|ATIC|k626|r0|random_forest                            r=0.492 pinball=0.1084 2.9s
+A|ATIC|k626|r0|tabpfn                                   r=0.506 pinball=0.1050 49.9s
+A|PMM2|k16|r0|mean                                      r=nan pinball=0.1414 0.0s
+A|PMM2|k16|r0|ridge                                     r=-0.093 pinball=0.1913 0.0s
+A|PMM2|k16|r0|random_forest                             r=-0.122 pinball=0.1615 2.0s
+A|PMM2|k16|r0|tabpfn                                    r=-0.134 pinball=0.1708 12.0s
+A|PMM2|k16|r1|mean                                      r=nan pinball=0.1389 0.0s
+A|PMM2|k16|r1|ridge                                     r=-0.006 pinball=0.2139 0.0s
+A|PMM2|k16|r1|random_forest                             r=0.056 pinball=0.1559 2.1s
+A|PMM2|k16|r1|tabpfn                                    r=0.009 pinball=0.1674 13.7s
+A|PMM2|k16|r2|mean                                      r=nan pinball=0.1415 0.0s
+A|PMM2|k16|r2|ridge                                     r=0.003 pinball=0.1772 0.0s
+A|PMM2|k16|r2|random_forest                             r=0.003 pinball=0.1577 2.3s
+A|PMM2|k16|r2|tabpfn                                    r=0.066 pinball=0.1563 14.2s
+A|PMM2|k64|r0|mean                                      r=nan pinball=0.1351 0.0s
+A|PMM2|k64|r0|ridge                                     r=0.235 pinball=0.1465 0.0s
+A|PMM2|k64|r0|random_forest                             r=0.304 pinball=0.1322 2.1s
+A|PMM2|k64|r0|tabpfn                                    r=0.270 pinball=0.1385 14.0s
+A|PMM2|k64|r1|mean                                      r=nan pinball=0.1352 0.0s
+A|PMM2|k64|r1|ridge                                     r=0.277 pinball=0.1422 0.0s
+A|PMM2|k64|r1|random_forest                             r=0.325 pinball=0.1316 2.1s
+A|PMM2|k64|r1|tabpfn                                    r=0.279 pinball=0.1390 14.3s
+A|PMM2|k64|r2|mean                                      r=nan pinball=0.1350 0.0s
+A|PMM2|k64|r2|ridge                                     r=0.233 pinball=0.1436 0.0s
+A|PMM2|k64|r2|random_forest                             r=0.255 pinball=0.1374 2.1s
+A|PMM2|k64|r2|tabpfn                                    r=0.227 pinball=0.1406 14.2s
+A|PMM2|k626|r0|mean                                     r=nan pinball=0.1339 0.0s
+A|PMM2|k626|r0|ridge                                    r=0.435 pinball=0.1197 0.0s
+A|PMM2|k626|r0|random_forest                            r=0.444 pinball=0.1192 2.9s
+A|PMM2|k626|r0|tabpfn                                   r=0.417 pinball=0.1199 49.3s
+A|UBIAD1|k16|r0|mean                                    r=nan pinball=0.1355 0.0s
+A|UBIAD1|k16|r0|ridge                                   r=0.195 pinball=0.1837 0.0s
+A|UBIAD1|k16|r0|random_forest                           r=0.304 pinball=0.1456 2.1s
+A|UBIAD1|k16|r0|tabpfn                                  r=0.265 pinball=0.1578 12.1s
+A|UBIAD1|k16|r1|mean                                    r=nan pinball=0.1535 0.0s
+A|UBIAD1|k16|r1|ridge                                   r=-0.046 pinball=0.2552 0.0s
+A|UBIAD1|k16|r1|random_forest                           r=-0.006 pinball=0.1805 2.1s
+A|UBIAD1|k16|r1|tabpfn                                  r=-0.012 pinball=0.1995 11.9s
+A|UBIAD1|k16|r2|mean                                    r=nan pinball=0.1357 0.0s
+A|UBIAD1|k16|r2|ridge                                   r=-0.094 pinball=0.2405 0.0s
+A|UBIAD1|k16|r2|random_forest                           r=-0.062 pinball=0.1452 2.0s
+A|UBIAD1|k16|r2|tabpfn                                  r=-0.126 pinball=0.1465 12.0s
+A|UBIAD1|k64|r0|mean                                    r=nan pinball=0.1332 0.0s
+A|UBIAD1|k64|r0|ridge                                   r=-0.005 pinball=0.2023 0.0s
+A|UBIAD1|k64|r0|random_forest                           r=0.254 pinball=0.1384 2.1s
+A|UBIAD1|k64|r0|tabpfn                                  r=0.210 pinball=0.1495 13.9s
+A|UBIAD1|k64|r1|mean                                    r=nan pinball=0.1348 0.0s
+A|UBIAD1|k64|r1|ridge                                   r=0.222 pinball=0.1468 0.0s
+A|UBIAD1|k64|r1|random_forest                           r=0.320 pinball=0.1299 2.2s
+A|UBIAD1|k64|r1|tabpfn                                  r=0.285 pinball=0.1329 13.9s
+A|UBIAD1|k64|r2|mean                                    r=nan pinball=0.1342 0.0s
+A|UBIAD1|k64|r2|ridge                                   r=-0.020 pinball=0.2430 0.0s
+A|UBIAD1|k64|r2|random_forest                           r=0.257 pinball=0.1368 2.1s
+A|UBIAD1|k64|r2|tabpfn                                  r=0.277 pinball=0.1353 13.9s
+A|UBIAD1|k626|r0|mean                                   r=nan pinball=0.1322 0.0s
+A|UBIAD1|k626|r0|ridge                                  r=0.479 pinball=0.1187 0.0s
+A|UBIAD1|k626|r0|random_forest                          r=0.490 pinball=0.1176 2.9s
+A|UBIAD1|k626|r0|tabpfn                                 r=0.502 pinball=0.1142 49.8s
+A|POLE3|k16|r0|mean                                     r=nan pinball=0.1197 0.0s
+A|POLE3|k16|r0|ridge                                    r=-0.038 pinball=0.2343 0.0s
+A|POLE3|k16|r0|random_forest                            r=-0.131 pinball=0.1425 2.0s
+A|POLE3|k16|r0|tabpfn                                   r=-0.063 pinball=0.1573 12.0s
+A|POLE3|k16|r1|mean                                     r=nan pinball=0.1344 0.0s
+A|POLE3|k16|r1|ridge                                    r=-0.057 pinball=0.1716 0.0s
+A|POLE3|k16|r1|random_forest                            r=0.049 pinball=0.1412 2.1s
+A|POLE3|k16|r1|tabpfn                                   r=-0.015 pinball=0.1455 13.7s
+A|POLE3|k16|r2|mean                                     r=nan pinball=0.1376 0.0s
+A|POLE3|k16|r2|ridge                                    r=0.090 pinball=0.1783 0.0s
+A|POLE3|k16|r2|random_forest                            r=0.202 pinball=0.1425 2.3s
+A|POLE3|k16|r2|tabpfn                                   r=0.134 pinball=0.1627 12.2s
+A|POLE3|k64|r0|mean                                     r=nan pinball=0.1174 0.0s
+A|POLE3|k64|r0|ridge                                    r=-0.047 pinball=0.2509 0.0s
+A|POLE3|k64|r0|random_forest                            r=0.104 pinball=0.1201 2.1s
+A|POLE3|k64|r0|tabpfn                                   r=0.071 pinball=0.1300 13.5s
+A|POLE3|k64|r1|mean                                     r=nan pinball=0.1155 0.0s
+A|POLE3|k64|r1|ridge                                    r=0.029 pinball=0.1403 0.0s
+A|POLE3|k64|r1|random_forest                            r=-0.057 pinball=0.1236 2.4s
+A|POLE3|k64|r1|tabpfn                                   r=-0.002 pinball=0.1253 16.9s
+A|POLE3|k64|r2|mean                                     r=nan pinball=0.1154 0.0s
+A|POLE3|k64|r2|ridge                                    r=0.057 pinball=0.1321 0.0s
+A|POLE3|k64|r2|random_forest                            r=0.028 pinball=0.1258 2.7s
+A|POLE3|k64|r2|tabpfn                                   r=0.043 pinball=0.1340 16.4s
+A|POLE3|k626|r0|mean                                    r=nan pinball=0.1148 0.0s
+A|POLE3|k626|r0|ridge                                   r=0.213 pinball=0.1145 0.0s
+A|POLE3|k626|r0|random_forest                           r=0.222 pinball=0.1134 2.9s
+A|POLE3|k626|r0|tabpfn                                  r=0.229 pinball=0.1120 47.4s
+A|PAICS|k16|r0|mean                                     r=nan pinball=0.1463 0.0s
+A|PAICS|k16|r0|ridge                                    r=0.309 pinball=0.1621 0.0s
+A|PAICS|k16|r0|random_forest                            r=0.278 pinball=0.1514 2.0s
+A|PAICS|k16|r0|tabpfn                                   r=0.331 pinball=0.1526 11.8s
+A|PAICS|k16|r1|mean                                     r=nan pinball=0.1466 0.0s
+A|PAICS|k16|r1|ridge                                    r=0.113 pinball=0.1766 0.0s
+A|PAICS|k16|r1|random_forest                            r=0.242 pinball=0.1471 2.0s
+A|PAICS|k16|r1|tabpfn                                   r=0.154 pinball=0.1608 15.8s
+A|PAICS|k16|r2|mean                                     r=nan pinball=0.1379 0.0s
+A|PAICS|k16|r2|ridge                                    r=0.455 pinball=0.1419 0.0s
+A|PAICS|k16|r2|random_forest                            r=0.410 pinball=0.1298 2.2s
+A|PAICS|k16|r2|tabpfn                                   r=0.468 pinball=0.1334 16.4s
+A|PAICS|k64|r0|mean                                     r=nan pinball=0.1367 0.0s
+A|PAICS|k64|r0|ridge                                    r=0.461 pinball=0.1246 0.0s
+A|PAICS|k64|r0|random_forest                            r=0.446 pinball=0.1263 2.5s
+A|PAICS|k64|r0|tabpfn                                   r=0.446 pinball=0.1257 17.1s
+A|PAICS|k64|r1|mean                                     r=nan pinball=0.1373 0.0s
+A|PAICS|k64|r1|ridge                                    r=0.478 pinball=0.1224 0.0s
+A|PAICS|k64|r1|random_forest                            r=0.485 pinball=0.1212 2.3s
+A|PAICS|k64|r1|tabpfn                                   r=0.375 pinball=0.1334 17.1s
+A|PAICS|k64|r2|mean                                     r=nan pinball=0.1367 0.0s
+A|PAICS|k64|r2|ridge                                    r=0.437 pinball=0.1247 0.0s
+A|PAICS|k64|r2|random_forest                            r=0.394 pinball=0.1283 2.4s
+A|PAICS|k64|r2|tabpfn                                   r=0.422 pinball=0.1250 14.9s
+A|PAICS|k626|r0|mean                                    r=nan pinball=0.1367 0.0s
+A|PAICS|k626|r0|ridge                                   r=0.529 pinball=0.1144 0.0s
+A|PAICS|k626|r0|random_forest                           r=0.544 pinball=0.1132 2.8s
+A|PAICS|k626|r0|tabpfn                                  r=0.536 pinball=0.1117 48.7s
+A|FPGS|k16|r0|mean                                      r=nan pinball=0.1436 0.0s
+A|FPGS|k16|r0|ridge                                     r=0.163 pinball=0.1849 0.0s
+A|FPGS|k16|r0|random_forest                             r=0.196 pinball=0.1466 2.1s
+A|FPGS|k16|r0|tabpfn                                    r=0.180 pinball=0.1719 11.9s
+A|FPGS|k16|r1|mean                                      r=nan pinball=0.1329 0.0s
+A|FPGS|k16|r1|ridge                                     r=0.081 pinball=0.1642 0.0s
+A|FPGS|k16|r1|random_forest                             r=0.080 pinball=0.1410 2.1s
+A|FPGS|k16|r1|tabpfn                                    r=0.091 pinball=0.1451 12.1s
+A|FPGS|k16|r2|mean                                      r=nan pinball=0.1314 0.0s
+A|FPGS|k16|r2|ridge                                     r=0.378 pinball=0.1256 0.0s
+A|FPGS|k16|r2|random_forest                             r=0.350 pinball=0.1221 2.0s
+A|FPGS|k16|r2|tabpfn                                    r=0.354 pinball=0.1231 12.7s
+A|FPGS|k64|r0|mean                                      r=nan pinball=0.1275 0.0s
+A|FPGS|k64|r0|ridge                                     r=0.409 pinball=0.1159 0.0s
+A|FPGS|k64|r0|random_forest                             r=0.390 pinball=0.1169 2.1s
+A|FPGS|k64|r0|tabpfn                                    r=0.389 pinball=0.1214 14.0s
+A|FPGS|k64|r1|mean                                      r=nan pinball=0.1282 0.0s
+A|FPGS|k64|r1|ridge                                     r=0.378 pinball=0.1193 0.0s
+A|FPGS|k64|r1|random_forest                             r=0.419 pinball=0.1147 2.4s
+A|FPGS|k64|r1|tabpfn                                    r=0.411 pinball=0.1168 14.1s
+A|FPGS|k64|r2|mean                                      r=nan pinball=0.1276 0.0s
+A|FPGS|k64|r2|ridge                                     r=0.369 pinball=0.1196 0.0s
+A|FPGS|k64|r2|random_forest                             r=0.355 pinball=0.1212 2.1s
+A|FPGS|k64|r2|tabpfn                                    r=0.342 pinball=0.1245 14.3s
+A|FPGS|k626|r0|mean                                     r=nan pinball=0.1266 0.0s
+A|FPGS|k626|r0|ridge                                    r=0.429 pinball=0.1137 0.0s
+A|FPGS|k626|r0|random_forest                            r=0.440 pinball=0.1133 3.0s
+A|FPGS|k626|r0|tabpfn                                   r=0.430 pinball=0.1136 60.0s
+A|GPI|k16|r0|mean                                       r=nan pinball=0.1310 0.0s
+A|GPI|k16|r0|ridge                                      r=0.089 pinball=0.2748 0.0s
+A|GPI|k16|r0|random_forest                              r=0.024 pinball=0.1397 2.1s
+A|GPI|k16|r0|tabpfn                                     r=-0.014 pinball=0.1485 13.5s
+A|GPI|k16|r1|mean                                       r=nan pinball=0.1291 0.0s
+A|GPI|k16|r1|ridge                                      r=0.108 pinball=0.1597 0.0s
+A|GPI|k16|r1|random_forest                              r=0.063 pinball=0.1375 2.1s
+A|GPI|k16|r1|tabpfn                                     r=0.096 pinball=0.1362 12.5s
+A|GPI|k16|r2|mean                                       r=nan pinball=0.1470 0.0s
+A|GPI|k16|r2|ridge                                      r=-0.057 pinball=0.2296 0.0s
+A|GPI|k16|r2|random_forest                              r=-0.052 pinball=0.1915 2.1s
+A|GPI|k16|r2|tabpfn                                     r=-0.058 pinball=0.2014 12.9s
+A|GPI|k64|r0|mean                                       r=nan pinball=0.1188 0.0s
+A|GPI|k64|r0|ridge                                      r=0.035 pinball=0.1804 0.0s
+A|GPI|k64|r0|random_forest                              r=0.113 pinball=0.1321 2.2s
+A|GPI|k64|r0|tabpfn                                     r=0.117 pinball=0.1328 14.7s
+A|GPI|k64|r1|mean                                       r=nan pinball=0.1271 0.0s
+A|GPI|k64|r1|ridge                                      r=-0.049 pinball=0.1689 0.0s
+A|GPI|k64|r1|random_forest                              r=0.051 pinball=0.1387 2.1s
+A|GPI|k64|r1|tabpfn                                     r=0.006 pinball=0.1351 14.7s
+A|GPI|k64|r2|mean                                       r=nan pinball=0.1243 0.0s
+A|GPI|k64|r2|ridge                                      r=0.066 pinball=0.1559 0.0s
+A|GPI|k64|r2|random_forest                              r=0.113 pinball=0.1338 2.1s
+A|GPI|k64|r2|tabpfn                                     r=0.093 pinball=0.1444 14.8s
+A|GPI|k626|r0|mean                                      r=nan pinball=0.1184 0.0s
+A|GPI|k626|r0|ridge                                     r=0.227 pinball=0.1182 0.1s
+A|GPI|k626|r0|random_forest                             r=0.200 pinball=0.1197 3.3s
+A|GPI|k626|r0|tabpfn                                    r=0.271 pinball=0.1150 51.4s
+A|STX4|k16|r0|mean                                      r=nan pinball=0.1306 0.0s
+A|STX4|k16|r0|ridge                                     r=0.120 pinball=0.2028 0.0s
+A|STX4|k16|r0|random_forest                             r=0.491 pinball=0.1152 2.1s
+A|STX4|k16|r0|tabpfn                                    r=0.471 pinball=0.1174 12.9s
+A|STX4|k16|r1|mean                                      r=nan pinball=0.1271 0.0s
+A|STX4|k16|r1|ridge                                     r=0.537 pinball=0.1449 0.0s
+A|STX4|k16|r1|random_forest                             r=0.562 pinball=0.1237 2.2s
+A|STX4|k16|r1|tabpfn                                    r=0.569 pinball=0.1075 13.2s
+A|STX4|k16|r2|mean                                      r=nan pinball=0.1282 0.0s
+A|STX4|k16|r2|ridge                                     r=0.514 pinball=0.1229 0.0s
+A|STX4|k16|r2|random_forest                             r=0.527 pinball=0.1195 2.1s
+A|STX4|k16|r2|tabpfn                                    r=0.469 pinball=0.1200 12.7s
+A|STX4|k64|r0|mean                                      r=nan pinball=0.1283 0.0s
+A|STX4|k64|r0|ridge                                     r=0.622 pinball=0.1002 0.0s
+A|STX4|k64|r0|random_forest                             r=0.636 pinball=0.1009 2.3s
+A|STX4|k64|r0|tabpfn                                    r=0.583 pinball=0.1011 13.9s
+A|STX4|k64|r1|mean                                      r=nan pinball=0.1273 0.0s
+A|STX4|k64|r1|ridge                                     r=0.638 pinball=0.1078 0.0s
+A|STX4|k64|r1|random_forest                             r=0.625 pinball=0.1065 2.1s
+A|STX4|k64|r1|tabpfn                                    r=0.677 pinball=0.0943 15.0s
+A|STX4|k64|r2|mean                                      r=nan pinball=0.1269 0.0s
+A|STX4|k64|r2|ridge                                     r=0.618 pinball=0.1084 0.0s
+A|STX4|k64|r2|random_forest                             r=0.644 pinball=0.1013 2.2s
+A|STX4|k64|r2|tabpfn                                    r=0.638 pinball=0.0956 15.4s
+A|STX4|k626|r0|mean                                     r=nan pinball=0.1262 0.0s
+A|STX4|k626|r0|ridge                                    r=0.691 pinball=0.0929 0.0s
+A|STX4|k626|r0|random_forest                            r=0.687 pinball=0.0929 2.6s
+A|STX4|k626|r0|tabpfn                                   r=0.690 pinball=0.0874 52.0s
+A|RAB10|k16|r0|mean                                     r=nan pinball=0.1470 0.0s
+A|RAB10|k16|r0|ridge                                    r=0.026 pinball=0.1839 0.0s
+A|RAB10|k16|r0|random_forest                            r=0.140 pinball=0.1544 2.3s
+A|RAB10|k16|r0|tabpfn                                   r=0.138 pinball=0.1613 17.1s
+A|RAB10|k16|r1|mean                                     r=nan pinball=0.1409 0.0s
+A|RAB10|k16|r1|ridge                                    r=0.233 pinball=0.1962 0.0s
+A|RAB10|k16|r1|random_forest                            r=0.247 pinball=0.1551 2.8s
+A|RAB10|k16|r1|tabpfn                                   r=0.202 pinball=0.1832 16.0s
+A|RAB10|k16|r2|mean                                     r=nan pinball=0.1463 0.0s
+A|RAB10|k16|r2|ridge                                    r=-0.029 pinball=0.1986 0.0s
+A|RAB10|k16|r2|random_forest                            r=-0.112 pinball=0.1597 2.8s
+A|RAB10|k16|r2|tabpfn                                   r=-0.078 pinball=0.1720 16.3s
+A|RAB10|k64|r0|mean                                     r=nan pinball=0.1392 0.0s
+A|RAB10|k64|r0|ridge                                    r=0.243 pinball=0.1469 0.0s
+A|RAB10|k64|r0|random_forest                            r=0.281 pinball=0.1372 2.8s
+A|RAB10|k64|r0|tabpfn                                   r=0.215 pinball=0.1481 155.0s
+A|RAB10|k64|r1|mean                                     r=nan pinball=0.1392 0.0s
+A|RAB10|k64|r1|ridge                                    r=0.387 pinball=0.1375 0.0s
+A|RAB10|k64|r1|random_forest                            r=0.429 pinball=0.1288 2.1s
+A|RAB10|k64|r1|tabpfn                                   r=0.370 pinball=0.1330 7096.5s
+A|RAB10|k64|r2|mean                                     r=nan pinball=0.1379 0.0s
+A|RAB10|k64|r2|ridge                                    r=0.503 pinball=0.1224 0.3s
+A|RAB10|k64|r2|random_forest                            r=0.502 pinball=0.1217 3.2s
+A|RAB10|k64|r2|tabpfn                                   r=0.495 pinball=0.1220 3674.9s
+A|RAB10|k626|r0|mean                                    r=nan pinball=0.1372 0.0s
+A|RAB10|k626|r0|ridge                                   r=0.549 pinball=0.1154 0.0s
+A|RAB10|k626|r0|random_forest                           r=0.534 pinball=0.1165 2.7s
+A|RAB10|k626|r0|tabpfn                                  r=0.530 pinball=0.1160 3744.7s
+A|CAB39|k16|r0|mean                                     r=nan pinball=0.1334 0.0s
+A|CAB39|k16|r0|ridge                                    r=0.150 pinball=0.1428 0.0s
+A|CAB39|k16|r0|random_forest                            r=0.172 pinball=0.1316 2.1s
+A|CAB39|k16|r0|tabpfn                                   r=0.153 pinball=0.1354 2929.7s
+A|CAB39|k16|r1|mean                                     r=nan pinball=0.1399 0.0s
+A|CAB39|k16|r1|ridge                                    r=-0.036 pinball=0.1659 0.0s
+A|CAB39|k16|r1|random_forest                            r=0.000 pinball=0.1446 2.4s
+A|CAB39|k16|r1|tabpfn                                   r=0.046 pinball=0.1507 14.9s
+A|CAB39|k16|r2|mean                                     r=nan pinball=0.1369 0.0s
+A|CAB39|k16|r2|ridge                                    r=0.285 pinball=0.1744 0.0s
+A|CAB39|k16|r2|random_forest                            r=0.345 pinball=0.1378 2.1s
+A|CAB39|k16|r2|tabpfn                                   r=0.281 pinball=0.1608 19.8s
+A|CAB39|k64|r0|mean                                     r=nan pinball=0.1302 0.0s
+A|CAB39|k64|r0|ridge                                    r=0.266 pinball=0.1343 0.0s
+A|CAB39|k64|r0|random_forest                            r=0.353 pinball=0.1227 2.1s
+A|CAB39|k64|r0|tabpfn                                   r=0.280 pinball=0.1312 14.1s
+A|CAB39|k64|r1|mean                                     r=nan pinball=0.1361 0.0s
+A|CAB39|k64|r1|ridge                                    r=0.270 pinball=0.1408 0.0s
+A|CAB39|k64|r1|random_forest                            r=0.358 pinball=0.1267 2.1s
+A|CAB39|k64|r1|tabpfn                                   r=0.261 pinball=0.1399 14.7s
+A|CAB39|k64|r2|mean                                     r=nan pinball=0.1308 0.0s
+A|CAB39|k64|r2|ridge                                    r=0.305 pinball=0.1254 0.0s
+A|CAB39|k64|r2|random_forest                            r=0.286 pinball=0.1252 2.1s
+A|CAB39|k64|r2|tabpfn                                   r=0.232 pinball=0.1295 14.1s
+A|CAB39|k626|r0|mean                                    r=nan pinball=0.1319 0.0s
+A|CAB39|k626|r0|ridge                                   r=0.396 pinball=0.1193 0.0s
+A|CAB39|k626|r0|random_forest                           r=0.435 pinball=0.1171 3.1s
+A|CAB39|k626|r0|tabpfn                                  r=0.411 pinball=0.1185 54.9s
+== shuffled 12:45
+D|TSC1|k64|r0|mean                                      r=nan pinball=nan 0.0s
+D|TSC1|k64|r0|ridge                                     r=-0.041 pinball=nan 0.0s
+D|TSC1|k64|r0|random_forest                             r=-0.081 pinball=nan 0.4s
+D|TSC1|k64|r0|tabpfn                                    r=-0.049 pinball=nan 17.1s
+D|PFAS|k64|r0|mean                                      r=nan pinball=nan 0.0s
+D|PFAS|k64|r0|ridge                                     r=-0.046 pinball=nan 0.0s
+D|PFAS|k64|r0|random_forest                             r=-0.062 pinball=nan 0.4s
+D|PFAS|k64|r0|tabpfn                                    r=0.005 pinball=nan 14.8s
+D|XRN1|k64|r0|mean                                      r=nan pinball=nan 0.0s
+D|XRN1|k64|r0|ridge                                     r=0.009 pinball=nan 0.0s
+D|XRN1|k64|r0|random_forest                             r=-0.036 pinball=nan 0.4s
+D|XRN1|k64|r0|tabpfn                                    r=-0.034 pinball=nan 16.4s
+D|TRAF2|k64|r0|mean                                     r=nan pinball=nan 0.0s
+D|TRAF2|k64|r0|ridge                                    r=-0.184 pinball=nan 0.0s
+D|TRAF2|k64|r0|random_forest                            r=-0.171 pinball=nan 0.4s
+D|TRAF2|k64|r0|tabpfn                                   r=-0.190 pinball=nan 14.1s
+D|NAMPT|k64|r0|mean                                     r=nan pinball=nan 0.0s
+D|NAMPT|k64|r0|ridge                                    r=0.126 pinball=nan 0.0s
+D|NAMPT|k64|r0|random_forest                            r=0.109 pinball=nan 0.4s
+D|NAMPT|k64|r0|tabpfn                                   r=0.107 pinball=nan 15.9s
+D|SLC2A1|k64|r0|mean                                    r=nan pinball=nan 0.0s
+D|SLC2A1|k64|r0|ridge                                   r=-0.053 pinball=nan 0.0s
+D|SLC2A1|k64|r0|random_forest                           r=-0.018 pinball=nan 0.4s
+D|SLC2A1|k64|r0|tabpfn                                  r=0.060 pinball=nan 17.4s
+D|CREBBP|k64|r0|mean                                    r=nan pinball=nan 0.0s
+D|CREBBP|k64|r0|ridge                                   r=-0.040 pinball=nan 0.0s
+D|CREBBP|k64|r0|random_forest                           r=0.057 pinball=nan 0.4s
+D|CREBBP|k64|r0|tabpfn                                  r=-0.009 pinball=nan 14.1s
+D|ITGB5|k64|r0|mean                                     r=nan pinball=nan 0.0s
+D|ITGB5|k64|r0|ridge                                    r=0.019 pinball=nan 0.0s
+D|ITGB5|k64|r0|random_forest                            r=0.092 pinball=nan 0.4s
+D|ITGB5|k64|r0|tabpfn                                   r=0.031 pinball=nan 13.8s
+D|KIF18B|k64|r0|mean                                    r=nan pinball=nan 0.0s
+D|KIF18B|k64|r0|ridge                                   r=0.070 pinball=nan 0.0s
+D|KIF18B|k64|r0|random_forest                           r=0.131 pinball=nan 0.4s
+D|KIF18B|k64|r0|tabpfn                                  r=0.072 pinball=nan 14.1s
+D|RHOA|k64|r0|mean                                      r=nan pinball=nan 0.0s
+D|RHOA|k64|r0|ridge                                     r=-0.066 pinball=nan 0.0s
+D|RHOA|k64|r0|random_forest                             r=-0.015 pinball=nan 0.4s
+D|RHOA|k64|r0|tabpfn                                    r=0.029 pinball=nan 14.0s
+D|ATIC|k64|r0|mean                                      r=nan pinball=nan 0.0s
+D|ATIC|k64|r0|ridge                                     r=-0.127 pinball=nan 0.0s
+D|ATIC|k64|r0|random_forest                             r=-0.038 pinball=nan 0.4s
+D|ATIC|k64|r0|tabpfn                                    r=-0.065 pinball=nan 14.4s
+D|PMM2|k64|r0|mean                                      r=nan pinball=nan 0.0s
+D|PMM2|k64|r0|ridge                                     r=-0.000 pinball=nan 0.0s
+D|PMM2|k64|r0|random_forest                             r=0.115 pinball=nan 0.4s
+D|PMM2|k64|r0|tabpfn                                    r=0.059 pinball=nan 14.5s
+D|UBIAD1|k64|r0|mean                                    r=nan pinball=nan 0.0s
+D|UBIAD1|k64|r0|ridge                                   r=-0.018 pinball=nan 0.0s
+D|UBIAD1|k64|r0|random_forest                           r=0.105 pinball=nan 0.4s
+D|UBIAD1|k64|r0|tabpfn                                  r=-0.016 pinball=nan 16.1s
+D|POLE3|k64|r0|mean                                     r=nan pinball=nan 0.0s
+D|POLE3|k64|r0|ridge                                    r=-0.020 pinball=nan 0.0s
+D|POLE3|k64|r0|random_forest                            r=0.002 pinball=nan 0.4s
+D|POLE3|k64|r0|tabpfn                                   r=0.003 pinball=nan 16.7s
+D|PAICS|k64|r0|mean                                     r=nan pinball=nan 0.0s
+D|PAICS|k64|r0|ridge                                    r=-0.076 pinball=nan 0.0s
+D|PAICS|k64|r0|random_forest                            r=-0.036 pinball=nan 0.4s
+D|PAICS|k64|r0|tabpfn                                   r=-0.046 pinball=nan 14.1s
+D|FPGS|k64|r0|mean                                      r=nan pinball=nan 0.0s
+D|FPGS|k64|r0|ridge                                     r=0.036 pinball=nan 0.0s
+D|FPGS|k64|r0|random_forest                             r=0.038 pinball=nan 0.4s
+D|FPGS|k64|r0|tabpfn                                    r=0.065 pinball=nan 13.9s
+D|GPI|k64|r0|mean                                       r=nan pinball=nan 0.0s
+D|GPI|k64|r0|ridge                                      r=0.115 pinball=nan 0.0s
+D|GPI|k64|r0|random_forest                              r=0.056 pinball=nan 0.4s
+D|GPI|k64|r0|tabpfn                                     r=0.012 pinball=nan 14.0s
+D|STX4|k64|r0|mean                                      r=nan pinball=nan 0.0s
+D|STX4|k64|r0|ridge                                     r=-0.087 pinball=nan 0.0s
+D|STX4|k64|r0|random_forest                             r=-0.074 pinball=nan 0.4s
+D|STX4|k64|r0|tabpfn                                    r=-0.072 pinball=nan 18.9s
+D|RAB10|k64|r0|mean                                     r=nan pinball=nan 0.0s
+D|RAB10|k64|r0|ridge                                    r=-0.074 pinball=nan 0.0s
+D|RAB10|k64|r0|random_forest                            r=0.044 pinball=nan 0.4s
+D|RAB10|k64|r0|tabpfn                                   r=0.053 pinball=nan 16.3s
+D|CAB39|k64|r0|mean                                     r=nan pinball=nan 0.0s
+D|CAB39|k64|r0|ridge                                    r=-0.009 pinball=nan 0.0s
+D|CAB39|k64|r0|random_forest                            r=-0.012 pinball=nan 0.4s
+D|CAB39|k64|r0|tabpfn                                   r=-0.006 pinball=nan 15.0s
+== prospective 12:51
+B|PFAS|mean                                             r=nan pinball=0.0795 0.0s
+B|PFAS|ridge                                            r=-0.185 pinball=0.1357 0.1s
+B|PFAS|random_forest                                    r=-0.180 pinball=0.1464 4.7s
+B|PFAS|tabpfn                                           r=-0.177 pinball=0.1344 67.7s
+B|XRN1|mean                                             r=nan pinball=0.1335 0.0s
+B|XRN1|ridge                                            r=0.170 pinball=0.1285 0.1s
+B|XRN1|random_forest                                    r=0.091 pinball=0.1320 4.3s
+B|XRN1|tabpfn                                           r=0.130 pinball=0.1312 68.9s
+B|TRAF2|mean                                            r=nan pinball=0.1046 0.0s
+B|TRAF2|ridge                                           r=0.387 pinball=0.0996 0.1s
+B|TRAF2|random_forest                                   r=0.381 pinball=0.1010 4.1s
+B|TRAF2|tabpfn                                          r=0.377 pinball=0.1039 78.7s
+B|NAMPT|mean                                            r=nan pinball=0.1121 0.0s
+B|NAMPT|ridge                                           r=0.090 pinball=0.1404 0.1s
+B|NAMPT|random_forest                                   r=0.046 pinball=0.1530 4.8s
+B|NAMPT|tabpfn                                          r=0.004 pinball=0.1479 72.3s
+B|ITGB5|mean                                            r=nan pinball=0.0882 0.0s
+B|ITGB5|ridge                                           r=0.359 pinball=0.0838 0.1s
+B|ITGB5|random_forest                                   r=0.344 pinball=0.0873 4.5s
+B|ITGB5|tabpfn                                          r=0.265 pinball=0.0886 68.3s
+B|KIF18B|mean                                           r=nan pinball=0.0947 0.0s
+B|KIF18B|ridge                                          r=0.396 pinball=0.0901 0.1s
+B|KIF18B|random_forest                                  r=0.370 pinball=0.0999 4.5s
+B|KIF18B|tabpfn                                         r=0.379 pinball=0.0860 73.6s
+B|RHOA|mean                                             r=nan pinball=0.0939 0.0s
+B|RHOA|ridge                                            r=0.459 pinball=0.0794 0.1s
+B|RHOA|random_forest                                    r=0.451 pinball=0.0799 3.5s
+B|RHOA|tabpfn                                           r=0.474 pinball=0.0768 68.0s
+B|PMM2|mean                                             r=nan pinball=0.1065 0.0s
+B|PMM2|ridge                                            r=0.509 pinball=0.1005 0.1s
+B|PMM2|random_forest                                    r=0.508 pinball=0.1025 4.4s
+B|PMM2|tabpfn                                           r=0.513 pinball=0.0964 72.9s
+B|UBIAD1|mean                                           r=nan pinball=0.1098 0.0s
+B|UBIAD1|ridge                                          r=0.470 pinball=0.0786 0.1s
+B|UBIAD1|random_forest                                  r=0.496 pinball=0.0867 5.5s
+B|UBIAD1|tabpfn                                         r=0.510 pinball=0.0754 69.4s
+B|PAICS|mean                                            r=nan pinball=0.1109 0.0s
+B|PAICS|ridge                                           r=0.307 pinball=0.1158 0.1s
+B|PAICS|random_forest                                   r=0.302 pinball=0.1154 4.3s
+B|PAICS|tabpfn                                          r=0.287 pinball=0.1190 67.4s
+B|STX4|mean                                             r=nan pinball=0.2022 0.0s
+B|STX4|ridge                                            r=0.565 pinball=0.1466 0.1s
+B|STX4|random_forest                                    r=0.569 pinball=0.1468 3.9s
+B|STX4|tabpfn                                           r=0.568 pinball=0.1452 65.7s
+B|CAB39|mean                                            r=nan pinball=0.1184 0.0s
+B|CAB39|ridge                                           r=0.308 pinball=0.1118 0.0s
+B|CAB39|random_forest                                   r=0.279 pinball=0.1130 4.4s
+B|CAB39|tabpfn                                          r=0.335 pinball=0.1112 68.4s
+== similar 13:06
+C|random|TSC1|r0|mean                                   r=nan pinball=nan 0.0s
+C|random|TSC1|r0|ridge                                  r=0.139 pinball=nan 0.0s
+C|random|TSC1|r0|random_forest                          r=0.188 pinball=nan 0.4s
+C|random|TSC1|r0|tabpfn                                 r=0.142 pinball=nan 4.8s
+C|random|TSC1|r1|mean                                   r=nan pinball=nan 0.0s
+C|random|TSC1|r1|ridge                                  r=0.154 pinball=nan 0.0s
+C|random|TSC1|r1|random_forest                          r=0.190 pinball=nan 0.4s
+C|random|TSC1|r1|tabpfn                                 r=0.157 pinball=nan 5.6s
+C|random|TSC1|r2|mean                                   r=nan pinball=nan 0.0s
+C|random|TSC1|r2|ridge                                  r=0.139 pinball=nan 0.0s
+C|random|TSC1|r2|random_forest                          r=0.008 pinball=nan 0.4s
+C|random|TSC1|r2|tabpfn                                 r=0.176 pinball=nan 5.2s
+C|similar|TSC1|mean                                     r=0.212 0.0s
+C|similar|TSC1|ridge                                    r=0.237 0.2s
+C|similar|TSC1|random_forest                            r=0.217 18.2s
+C|similar|TSC1|tabpfn                                   r=0.222 153.7s
+C|random|PFAS|r0|mean                                   r=nan pinball=nan 0.0s
+C|random|PFAS|r0|ridge                                  r=0.345 pinball=nan 0.0s
+C|random|PFAS|r0|random_forest                          r=0.356 pinball=nan 0.4s
+C|random|PFAS|r0|tabpfn                                 r=0.336 pinball=nan 4.3s
+C|random|PFAS|r1|mean                                   r=nan pinball=nan 0.0s
+C|random|PFAS|r1|ridge                                  r=0.344 pinball=nan 0.0s
+C|random|PFAS|r1|random_forest                          r=0.359 pinball=nan 0.4s
+C|random|PFAS|r1|tabpfn                                 r=0.425 pinball=nan 4.3s
+C|random|PFAS|r2|mean                                   r=nan pinball=nan 0.0s
+C|random|PFAS|r2|ridge                                  r=0.337 pinball=nan 0.0s
+C|random|PFAS|r2|random_forest                          r=0.354 pinball=nan 0.4s
+C|random|PFAS|r2|tabpfn                                 r=0.323 pinball=nan 5.7s
+C|similar|PFAS|mean                                     r=0.320 0.0s
+C|similar|PFAS|ridge                                    r=0.518 0.2s
+C|similar|PFAS|random_forest                            r=0.381 42.7s
+C|similar|PFAS|tabpfn                                   r=0.411 994.7s
+C|random|XRN1|r0|mean                                   r=nan pinball=nan 0.0s
+C|random|XRN1|r0|ridge                                  r=0.247 pinball=nan 0.0s
+C|random|XRN1|r0|random_forest                          r=0.207 pinball=nan 0.5s
+C|random|XRN1|r0|tabpfn                                 r=0.123 pinball=nan 6.6s
+C|random|XRN1|r1|mean                                   r=nan pinball=nan 0.0s
+C|random|XRN1|r1|ridge                                  r=0.057 pinball=nan 0.0s
+C|random|XRN1|r1|random_forest                          r=-0.025 pinball=nan 0.4s
+C|random|XRN1|r1|tabpfn                                 r=-0.126 pinball=nan 6.8s
+C|random|XRN1|r2|mean                                   r=nan pinball=nan 0.0s
+C|random|XRN1|r2|ridge                                  r=0.010 pinball=nan 0.0s
+C|random|XRN1|r2|random_forest                          r=0.015 pinball=nan 0.5s
+C|random|XRN1|r2|tabpfn                                 r=-0.049 pinball=nan 8.4s
+C|similar|XRN1|mean                                     r=0.199 0.1s
+C|similar|XRN1|ridge                                    r=0.218 0.3s
+C|similar|XRN1|random_forest                            r=0.212 22.6s
+C|similar|XRN1|tabpfn                                   r=0.081 171.8s
+C|random|TRAF2|r0|mean                                  r=nan pinball=nan 0.0s
+C|random|TRAF2|r0|ridge                                 r=0.407 pinball=nan 0.0s
+C|random|TRAF2|r0|random_forest                         r=0.219 pinball=nan 0.3s
+C|random|TRAF2|r0|tabpfn                                r=0.213 pinball=nan 4.3s
+C|random|TRAF2|r1|mean                                  r=nan pinball=nan 0.0s
+C|random|TRAF2|r1|ridge                                 r=0.387 pinball=nan 0.0s
+C|random|TRAF2|r1|random_forest                         r=0.376 pinball=nan 0.4s
+C|random|TRAF2|r1|tabpfn                                r=0.413 pinball=nan 4.4s
+C|random|TRAF2|r2|mean                                  r=nan pinball=nan 0.0s
+C|random|TRAF2|r2|ridge                                 r=0.320 pinball=nan 0.0s
+C|random|TRAF2|r2|random_forest                         r=0.248 pinball=nan 0.4s
+C|random|TRAF2|r2|tabpfn                                r=0.246 pinball=nan 4.6s
+C|similar|TRAF2|mean                                    r=0.324 0.0s
+C|similar|TRAF2|ridge                                   r=0.381 0.2s
+C|similar|TRAF2|random_forest                           r=0.286 17.2s
+C|similar|TRAF2|tabpfn                                  r=0.178 161.4s
+C|random|NAMPT|r0|mean                                  r=nan pinball=nan 0.0s
+C|random|NAMPT|r0|ridge                                 r=0.290 pinball=nan 0.0s
+C|random|NAMPT|r0|random_forest                         r=0.305 pinball=nan 0.4s
+C|random|NAMPT|r0|tabpfn                                r=0.285 pinball=nan 4.5s
+C|random|NAMPT|r1|mean                                  r=nan pinball=nan 0.0s
+C|random|NAMPT|r1|ridge                                 r=0.300 pinball=nan 0.0s
+C|random|NAMPT|r1|random_forest                         r=0.426 pinball=nan 0.4s
+C|random|NAMPT|r1|tabpfn                                r=0.326 pinball=nan 4.4s
+C|random|NAMPT|r2|mean                                  r=nan pinball=nan 0.0s
+C|random|NAMPT|r2|ridge                                 r=0.279 pinball=nan 0.0s
+C|random|NAMPT|r2|random_forest                         r=0.332 pinball=nan 0.4s
+C|random|NAMPT|r2|tabpfn                                r=0.177 pinball=nan 4.4s
+C|similar|NAMPT|mean                                    r=0.294 0.0s
+C|similar|NAMPT|ridge                                   r=0.303 0.2s
+C|similar|NAMPT|random_forest                           r=0.321 20.4s
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+C|similar|NAMPT|tabpfn                                  r=0.306 153.7s
+C|random|SLC2A1|r0|mean                                 r=nan pinball=nan 0.0s
+C|random|SLC2A1|r0|ridge                                r=0.296 pinball=nan 0.0s
+C|random|SLC2A1|r0|random_forest                        r=0.318 pinball=nan 0.3s
+C|random|SLC2A1|r0|tabpfn                               r=0.412 pinball=nan 4.3s
+C|random|SLC2A1|r1|mean                                 r=nan pinball=nan 0.0s
+C|random|SLC2A1|r1|ridge                                r=0.287 pinball=nan 0.0s
+C|random|SLC2A1|r1|random_forest                        r=0.438 pinball=nan 0.4s
+C|random|SLC2A1|r1|tabpfn                               r=0.503 pinball=nan 4.5s
+C|random|SLC2A1|r2|mean                                 r=nan pinball=nan 0.0s
+C|random|SLC2A1|r2|ridge                                r=0.297 pinball=nan 0.0s
+C|random|SLC2A1|r2|random_forest                        r=0.393 pinball=nan 0.4s
+C|random|SLC2A1|r2|tabpfn                               r=0.447 pinball=nan 4.6s
+C|similar|SLC2A1|mean                                   r=0.272 0.0s
+C|similar|SLC2A1|ridge                                  r=0.285 0.2s
+C|similar|SLC2A1|random_forest                          r=0.263 18.0s
+C|similar|SLC2A1|tabpfn                                 r=0.282 157.4s
+C|random|CREBBP|r0|mean                                 r=nan pinball=nan 0.0s
+C|random|CREBBP|r0|ridge                                r=-0.006 pinball=nan 0.0s
+C|random|CREBBP|r0|random_forest                        r=0.122 pinball=nan 0.4s
+C|random|CREBBP|r0|tabpfn                               r=0.102 pinball=nan 9.1s
+C|random|CREBBP|r1|mean                                 r=nan pinball=nan 0.0s
+C|random|CREBBP|r1|ridge                                r=-0.029 pinball=nan 0.0s
+C|random|CREBBP|r1|random_forest                        r=0.131 pinball=nan 0.6s
+C|random|CREBBP|r1|tabpfn                               r=0.049 pinball=nan 8.9s
+C|random|CREBBP|r2|mean                                 r=nan pinball=nan 0.0s
+C|random|CREBBP|r2|ridge                                r=0.143 pinball=nan 0.0s
+C|random|CREBBP|r2|random_forest                        r=0.121 pinball=nan 0.5s
+C|random|CREBBP|r2|tabpfn                               r=0.092 pinball=nan 5.5s
+C|similar|CREBBP|mean                                   r=0.359 0.0s
+C|similar|CREBBP|ridge                                  r=0.297 0.2s
+C|similar|CREBBP|random_forest                          r=0.163 17.4s
+C|similar|CREBBP|tabpfn                                 r=0.243 157.8s
+C|random|ITGB5|r0|mean                                  r=nan pinball=nan 0.0s
+C|random|ITGB5|r0|ridge                                 r=0.350 pinball=nan 0.0s
+C|random|ITGB5|r0|random_forest                         r=0.278 pinball=nan 0.4s
+C|random|ITGB5|r0|tabpfn                                r=0.286 pinball=nan 4.6s
+C|random|ITGB5|r1|mean                                  r=nan pinball=nan 0.0s
+C|random|ITGB5|r1|ridge                                 r=0.386 pinball=nan 0.0s
+C|random|ITGB5|r1|random_forest                         r=0.393 pinball=nan 0.4s
+C|random|ITGB5|r1|tabpfn                                r=0.289 pinball=nan 4.8s
+C|random|ITGB5|r2|mean                                  r=nan pinball=nan 0.0s
+C|random|ITGB5|r2|ridge                                 r=0.380 pinball=nan 0.0s
+C|random|ITGB5|r2|random_forest                         r=0.388 pinball=nan 0.4s
+C|random|ITGB5|r2|tabpfn                                r=0.321 pinball=nan 4.6s
+C|similar|ITGB5|mean                                    r=0.405 0.1s
+C|similar|ITGB5|ridge                                   r=0.446 0.2s
+C|similar|ITGB5|random_forest                           r=0.435 17.5s
+C|similar|ITGB5|tabpfn                                  r=0.439 158.1s
+C|random|KIF18B|r0|mean                                 r=nan pinball=nan 0.0s
+C|random|KIF18B|r0|ridge                                r=0.352 pinball=nan 0.0s
+C|random|KIF18B|r0|random_forest                        r=0.455 pinball=nan 0.4s
+C|random|KIF18B|r0|tabpfn                               r=0.028 pinball=nan 4.4s
+C|random|KIF18B|r1|mean                                 r=nan pinball=nan 0.0s
+C|random|KIF18B|r1|ridge                                r=0.526 pinball=nan 0.0s
+C|random|KIF18B|r1|random_forest                        r=0.562 pinball=nan 0.4s
+C|random|KIF18B|r1|tabpfn                               r=0.378 pinball=nan 4.8s
+C|random|KIF18B|r2|mean                                 r=nan pinball=nan 0.0s
+C|random|KIF18B|r2|ridge                                r=0.497 pinball=nan 0.0s
+C|random|KIF18B|r2|random_forest                        r=0.441 pinball=nan 0.4s
+C|random|KIF18B|r2|tabpfn                               r=0.269 pinball=nan 4.7s
+C|similar|KIF18B|mean                                   r=0.353 0.1s
+C|similar|KIF18B|ridge                                  r=0.512 0.2s
+C|similar|KIF18B|random_forest                          r=0.528 17.6s
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+C|similar|KIF18B|tabpfn                                 r=0.538 158.8s
+C|random|RHOA|r0|mean                                   r=nan pinball=nan 0.0s
+C|random|RHOA|r0|ridge                                  r=0.642 pinball=nan 0.0s
+C|random|RHOA|r0|random_forest                          r=0.621 pinball=nan 0.4s
+C|random|RHOA|r0|tabpfn                                 r=0.643 pinball=nan 4.8s
+C|random|RHOA|r1|mean                                   r=nan pinball=nan 0.0s
+C|random|RHOA|r1|ridge                                  r=0.565 pinball=nan 0.0s
+C|random|RHOA|r1|random_forest                          r=0.598 pinball=nan 0.4s
+C|random|RHOA|r1|tabpfn                                 r=0.641 pinball=nan 4.6s
+C|random|RHOA|r2|mean                                   r=nan pinball=nan 0.0s
+C|random|RHOA|r2|ridge                                  r=0.636 pinball=nan 0.0s
+C|random|RHOA|r2|random_forest                          r=0.589 pinball=nan 0.4s
+C|random|RHOA|r2|tabpfn                                 r=0.556 pinball=nan 4.5s
+C|similar|RHOA|mean                                     r=0.604 0.1s
+C|similar|RHOA|ridge                                    r=0.529 0.2s
+C|similar|RHOA|random_forest                            r=0.581 17.6s
+C|similar|RHOA|tabpfn                                   r=0.633 158.7s
+C|random|ATIC|r0|mean                                   r=nan pinball=nan 0.0s
+C|random|ATIC|r0|ridge                                  r=0.237 pinball=nan 0.0s
+C|random|ATIC|r0|random_forest                          r=0.194 pinball=nan 0.4s
+C|random|ATIC|r0|tabpfn                                 r=0.164 pinball=nan 4.6s
+C|random|ATIC|r1|mean                                   r=nan pinball=nan 0.0s
+C|random|ATIC|r1|ridge                                  r=0.231 pinball=nan 0.0s
+C|random|ATIC|r1|random_forest                          r=0.275 pinball=nan 0.4s
+C|random|ATIC|r1|tabpfn                                 r=0.158 pinball=nan 4.5s
+C|random|ATIC|r2|mean                                   r=nan pinball=nan 0.0s
+C|random|ATIC|r2|ridge                                  r=0.288 pinball=nan 0.0s
+C|random|ATIC|r2|random_forest                          r=0.242 pinball=nan 0.4s
+C|random|ATIC|r2|tabpfn                                 r=0.226 pinball=nan 4.6s
+C|similar|ATIC|mean                                     r=0.237 0.1s
+C|similar|ATIC|ridge                                    r=0.306 0.2s
+C|similar|ATIC|random_forest                            r=0.286 17.4s
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+C|similar|ATIC|tabpfn                                   r=0.324 156.7s
+C|random|PMM2|r0|mean                                   r=nan pinball=nan 0.0s
+C|random|PMM2|r0|ridge                                  r=0.176 pinball=nan 0.0s
+C|random|PMM2|r0|random_forest                          r=0.080 pinball=nan 0.4s
+C|random|PMM2|r0|tabpfn                                 r=0.096 pinball=nan 4.5s
+C|random|PMM2|r1|mean                                   r=nan pinball=nan 0.0s
+C|random|PMM2|r1|ridge                                  r=0.129 pinball=nan 0.0s
+C|random|PMM2|r1|random_forest                          r=0.175 pinball=nan 0.4s
+C|random|PMM2|r1|tabpfn                                 r=0.021 pinball=nan 4.6s
+C|random|PMM2|r2|mean                                   r=nan pinball=nan 0.0s
+C|random|PMM2|r2|ridge                                  r=0.205 pinball=nan 0.0s
+C|random|PMM2|r2|random_forest                          r=0.151 pinball=nan 0.4s
+C|random|PMM2|r2|tabpfn                                 r=0.163 pinball=nan 4.6s
+C|similar|PMM2|mean                                     r=0.183 0.0s
+C|similar|PMM2|ridge                                    r=0.176 0.2s
+C|similar|PMM2|random_forest                            r=0.206 17.1s
+C|similar|PMM2|tabpfn                                   r=0.191 155.0s
+C|random|UBIAD1|r0|mean                                 r=nan pinball=nan 0.0s
+C|random|UBIAD1|r0|ridge                                r=0.395 pinball=nan 0.0s
+C|random|UBIAD1|r0|random_forest                        r=0.361 pinball=nan 0.3s
+C|random|UBIAD1|r0|tabpfn                               r=0.460 pinball=nan 4.6s
+C|random|UBIAD1|r1|mean                                 r=nan pinball=nan 0.0s
+C|random|UBIAD1|r1|ridge                                r=0.403 pinball=nan 0.0s
+C|random|UBIAD1|r1|random_forest                        r=0.393 pinball=nan 0.4s
+C|random|UBIAD1|r1|tabpfn                               r=0.486 pinball=nan 4.4s
+C|random|UBIAD1|r2|mean                                 r=nan pinball=nan 0.0s
+C|random|UBIAD1|r2|ridge                                r=0.345 pinball=nan 0.0s
+C|random|UBIAD1|r2|random_forest                        r=0.354 pinball=nan 0.4s
+C|random|UBIAD1|r2|tabpfn                               r=0.445 pinball=nan 4.4s
+C|similar|UBIAD1|mean                                   r=0.353 0.0s
+C|similar|UBIAD1|ridge                                  r=0.494 0.2s
+C|similar|UBIAD1|random_forest                          r=0.423 17.3s
+C|similar|UBIAD1|tabpfn                                 r=0.466 152.4s
+C|random|POLE3|r0|mean                                  r=nan pinball=nan 0.0s
+C|random|POLE3|r0|ridge                                 r=0.165 pinball=nan 0.0s
+C|random|POLE3|r0|random_forest                         r=0.066 pinball=nan 0.4s
+C|random|POLE3|r0|tabpfn                                r=-0.009 pinball=nan 4.4s
+C|random|POLE3|r1|mean                                  r=nan pinball=nan 0.0s
+C|random|POLE3|r1|ridge                                 r=0.178 pinball=nan 0.0s
+C|random|POLE3|r1|random_forest                         r=0.268 pinball=nan 0.4s
+C|random|POLE3|r1|tabpfn                                r=0.128 pinball=nan 4.4s
+C|random|POLE3|r2|mean                                  r=nan pinball=nan 0.0s
+C|random|POLE3|r2|ridge                                 r=0.292 pinball=nan 0.0s
+C|random|POLE3|r2|random_forest                         r=0.131 pinball=nan 0.4s
+C|random|POLE3|r2|tabpfn                                r=0.185 pinball=nan 4.5s
+C|similar|POLE3|mean                                    r=0.146 0.0s
+C|similar|POLE3|ridge                                   r=0.011 0.2s
+C|similar|POLE3|random_forest                           r=0.182 17.5s
+C|similar|POLE3|tabpfn                                  r=0.123 165.2s
+C|random|PAICS|r0|mean                                  r=nan pinball=nan 0.0s
+C|random|PAICS|r0|ridge                                 r=0.278 pinball=nan 0.0s
+C|random|PAICS|r0|random_forest                         r=0.287 pinball=nan 0.4s
+C|random|PAICS|r0|tabpfn                                r=0.262 pinball=nan 4.9s
+C|random|PAICS|r1|mean                                  r=nan pinball=nan 0.0s
+C|random|PAICS|r1|ridge                                 r=0.288 pinball=nan 0.0s
+C|random|PAICS|r1|random_forest                         r=0.309 pinball=nan 0.4s
+C|random|PAICS|r1|tabpfn                                r=0.206 pinball=nan 4.5s
+C|random|PAICS|r2|mean                                  r=nan pinball=nan 0.0s
+C|random|PAICS|r2|ridge                                 r=0.290 pinball=nan 0.0s
+C|random|PAICS|r2|random_forest                         r=0.283 pinball=nan 0.4s
+C|random|PAICS|r2|tabpfn                                r=0.252 pinball=nan 4.5s
+C|similar|PAICS|mean                                    r=0.222 0.0s
+C|similar|PAICS|ridge                                   r=0.275 0.2s
+C|similar|PAICS|random_forest                           r=0.283 17.1s
+C|similar|PAICS|tabpfn                                  r=0.270 158.8s
+C|random|FPGS|r0|mean                                   r=nan pinball=nan 0.0s
+C|random|FPGS|r0|ridge                                  r=0.254 pinball=nan 0.0s
+C|random|FPGS|r0|random_forest                          r=0.354 pinball=nan 0.4s
+C|random|FPGS|r0|tabpfn                                 r=0.268 pinball=nan 4.7s
+C|random|FPGS|r1|mean                                   r=nan pinball=nan 0.0s
+C|random|FPGS|r1|ridge                                  r=0.269 pinball=nan 0.0s
+C|random|FPGS|r1|random_forest                          r=0.269 pinball=nan 0.4s
+C|random|FPGS|r1|tabpfn                                 r=0.267 pinball=nan 5.1s
+C|random|FPGS|r2|mean                                   r=nan pinball=nan 0.0s
+C|random|FPGS|r2|ridge                                  r=0.251 pinball=nan 0.0s
+C|random|FPGS|r2|random_forest                          r=0.339 pinball=nan 0.4s
+C|random|FPGS|r2|tabpfn                                 r=0.241 pinball=nan 4.6s
+C|similar|FPGS|mean                                     r=0.265 0.0s
+C|similar|FPGS|ridge                                    r=0.259 0.2s
+C|similar|FPGS|random_forest                            r=0.232 17.0s
+C|similar|FPGS|tabpfn                                   r=0.225 160.1s
+C|random|GPI|r0|mean                                    r=nan pinball=nan 0.0s
+C|random|GPI|r0|ridge                                   r=-0.026 pinball=nan 0.0s
+C|random|GPI|r0|random_forest                           r=0.004 pinball=nan 0.4s
+C|random|GPI|r0|tabpfn                                  r=0.012 pinball=nan 4.5s
+C|random|GPI|r1|mean                                    r=nan pinball=nan 0.0s
+C|random|GPI|r1|ridge                                   r=0.009 pinball=nan 0.0s
+C|random|GPI|r1|random_forest                           r=-0.024 pinball=nan 0.4s
+C|random|GPI|r1|tabpfn                                  r=-0.064 pinball=nan 4.6s
+C|random|GPI|r2|mean                                    r=nan pinball=nan 0.0s
+C|random|GPI|r2|ridge                                   r=-0.014 pinball=nan 0.0s
+C|random|GPI|r2|random_forest                           r=0.026 pinball=nan 0.4s
+C|random|GPI|r2|tabpfn                                  r=-0.024 pinball=nan 4.7s
+C|similar|GPI|mean                                      r=0.271 0.1s
+C|similar|GPI|ridge                                     r=0.110 0.2s
+C|similar|GPI|random_forest                             r=0.007 17.2s
+C|similar|GPI|tabpfn                                    r=0.040 161.3s
+C|random|STX4|r0|mean                                   r=nan pinball=nan 0.0s
+C|random|STX4|r0|ridge                                  r=0.629 pinball=nan 0.0s
+C|random|STX4|r0|random_forest                          r=0.527 pinball=nan 0.4s
+C|random|STX4|r0|tabpfn                                 r=0.493 pinball=nan 4.5s
+C|random|STX4|r1|mean                                   r=nan pinball=nan 0.0s
+C|random|STX4|r1|ridge                                  r=0.564 pinball=nan 0.0s
+C|random|STX4|r1|random_forest                          r=0.538 pinball=nan 0.4s
+C|random|STX4|r1|tabpfn                                 r=0.558 pinball=nan 4.6s
+C|random|STX4|r2|mean                                   r=nan pinball=nan 0.0s
+C|random|STX4|r2|ridge                                  r=0.485 pinball=nan 0.0s
+C|random|STX4|r2|random_forest                          r=0.574 pinball=nan 0.4s
+C|random|STX4|r2|tabpfn                                 r=0.525 pinball=nan 4.7s
+C|similar|STX4|mean                                     r=0.638 0.1s
+C|similar|STX4|ridge                                    r=0.659 0.2s
+C|similar|STX4|random_forest                            r=0.686 17.6s
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+/Users/nathandmaulding/Desktop/claude/tutorial-projects/in-context-learning/.venv/lib/python3.11/site-packages/tabpfn/preprocessors/safe_power_transformer.py:157: RuntimeWarning: overflow encountered in expm1
+  x_inv[~pos] = -np.expm1(np.log(-(2 - lmbda) * x[~pos] + 1) / (2 - lmbda))
+C|similar|STX4|tabpfn                                   r=0.661 161.1s
+C|random|RAB10|r0|mean                                  r=nan pinball=nan 0.0s
+C|random|RAB10|r0|ridge                                 r=0.335 pinball=nan 0.0s
+C|random|RAB10|r0|random_forest                         r=0.257 pinball=nan 0.4s
+C|random|RAB10|r0|tabpfn                                r=0.253 pinball=nan 4.6s
+C|random|RAB10|r1|mean                                  r=nan pinball=nan 0.0s
+C|random|RAB10|r1|ridge                                 r=0.336 pinball=nan 0.0s
+C|random|RAB10|r1|random_forest                         r=0.320 pinball=nan 0.4s
+C|random|RAB10|r1|tabpfn                                r=0.315 pinball=nan 4.6s
+C|random|RAB10|r2|mean                                  r=nan pinball=nan 0.0s
+C|random|RAB10|r2|ridge                                 r=0.350 pinball=nan 0.0s
+C|random|RAB10|r2|random_forest                         r=0.346 pinball=nan 0.5s
+C|random|RAB10|r2|tabpfn                                r=0.338 pinball=nan 4.8s
+C|similar|RAB10|mean                                    r=0.298 0.1s
+C|similar|RAB10|ridge                                   r=0.305 0.2s
+C|similar|RAB10|random_forest                           r=0.176 17.4s
+C|similar|RAB10|tabpfn                                  r=0.235 17214.5s
+C|random|CAB39|r0|mean                                  r=nan pinball=nan 0.0s
+C|random|CAB39|r0|ridge                                 r=0.079 pinball=nan 0.0s
+C|random|CAB39|r0|random_forest                         r=0.083 pinball=nan 0.4s
+C|random|CAB39|r0|tabpfn                                r=0.014 pinball=nan 5.6s
+C|random|CAB39|r1|mean                                  r=nan pinball=nan 0.0s
+C|random|CAB39|r1|ridge                                 r=0.133 pinball=nan 0.0s
+C|random|CAB39|r1|random_forest                         r=0.167 pinball=nan 0.6s
+C|random|CAB39|r1|tabpfn                                r=0.156 pinball=nan 5.4s
+C|random|CAB39|r2|mean                                  r=nan pinball=nan 0.0s
+C|random|CAB39|r2|ridge                                 r=0.103 pinball=nan 0.0s
+C|random|CAB39|r2|random_forest                         r=0.150 pinball=nan 0.4s
+C|random|CAB39|r2|tabpfn                                r=0.242 pinball=nan 4.9s
+C|similar|CAB39|mean                                    r=0.150 0.1s
+C|similar|CAB39|ridge                                   r=0.146 0.2s
+C|similar|CAB39|random_forest                           r=0.183 18.5s
+C|similar|CAB39|tabpfn                                  r=0.215 188.3s

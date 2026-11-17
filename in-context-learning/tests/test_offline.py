@@ -50,6 +50,14 @@ def test_study2_preregistration_is_unedited_and_uses_fresh_genes():
     assert not set(s2["targets"]) & set(s1["primary_targets"] + s1["secondary_targets"])
 
 
+def test_study2_tables_build():
+    from icl_bio import analysis2 as A2
+    df = A2.load()
+    h = A2.hypotheses(df)
+    assert set(h.hypothesis) >= {"H5", "H6", "H6b", "H7"}
+    assert A2.coverage_table(df).notna().all().all()
+
+
 def test_feature_selection_uses_context_lines_only():
     import pandas as pd
     from icl_bio.study import select_features

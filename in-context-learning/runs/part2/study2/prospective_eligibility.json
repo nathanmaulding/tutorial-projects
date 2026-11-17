@@ -1,0 +1,40 @@
+{
+ "models_screened_in_both": 27,
+ "new_test_lines": 178,
+ "agreement_r": {
+  "TSC1": 0.489,
+  "PFAS": 0.689,
+  "XRN1": 0.692,
+  "TRAF2": 0.641,
+  "NAMPT": 0.716,
+  "SLC2A1": 0.382,
+  "CREBBP": 0.416,
+  "ITGB5": 0.615,
+  "KIF18B": 0.617,
+  "RHOA": 0.778,
+  "ATIC": 0.493,
+  "PMM2": 0.582,
+  "UBIAD1": 0.803,
+  "POLE3": 0.455,
+  "PAICS": 0.546,
+  "FPGS": 0.275,
+  "GPI": 0.497,
+  "STX4": 0.772,
+  "RAB10": 0.14,
+  "CAB39": 0.57
+ },
+ "eligible": [
+  "PFAS",
+  "XRN1",
+  "TRAF2",
+  "NAMPT",
+  "ITGB5",
+  "KIF18B",
+  "RHOA",
+  "PMM2",
+  "UBIAD1",
+  "PAICS",
+  "STX4",
+  "CAB39"
+ ]
+}

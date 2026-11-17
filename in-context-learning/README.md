@@ -6,7 +6,7 @@ How a model can learn a new task from the examples in its prompt, without changi
 |---|---|---|---|
 | **1a** | [Inside a transformer](01_icl_inside_a_transformer.ipynb) | train a 150k-parameter transformer to do linear regression in context; compare it with least squares and gradient descent; test that it reads the examples; watch it fail out of distribution | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nathanmaulding/tutorial-projects/blob/main/in-context-learning/01_icl_inside_a_transformer.ipynb) |
 | **1b** | [In Claude](02_icl_in_claude.ipynb) | regression from examples, flipped and meaningless labels (examples vs prior knowledge), majority-label bias; how to measure ICL fairly | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nathanmaulding/tutorial-projects/blob/main/in-context-learning/02_icl_in_claude.ipynb) |
-| **2** | [For biology: TabPFN on DepMap](03_icl_for_biology_tabpfn.ipynb) | a pre-registered test of whether an in-context learner predicts cancer gene dependencies better than standard methods when labelled cell lines are scarce, with a prospective test on newly screened lines | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nathanmaulding/tutorial-projects/blob/main/in-context-learning/03_icl_for_biology_tabpfn.ipynb) |
+| **2** | [For biology: TabPFN on DepMap](03_icl_for_biology_tabpfn.ipynb) | two pre-registered studies of whether an in-context learner predicts cancer gene dependencies better than standard methods when labelled cell lines are scarce: a prospective test on newly screened lines, a replication on fresh genes, predictive uncertainty, and choosing similar examples | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nathanmaulding/tutorial-projects/blob/main/in-context-learning/03_icl_for_biology_tabpfn.ipynb) |
 
 Every notebook runs in seconds from saved results, with **no API key, no GPU and no data download**.
 
@@ -14,16 +14,18 @@ Every notebook runs in seconds from saved results, with **no API key, no GPU and
 
 - **1a:** with frozen weights, the tiny transformer's error falls as the prompt holds more examples, tracking least squares closely and beating one step of gradient descent at every prompt length. Scrambling the (x, y) pairs destroys it, and inputs 3x larger than in training break it.
 - **1b:** Claude learns a new line from examples but stays 2–4x less accurate than least squares. Sonnet follows flipped labels every time while Haiku reverts to the real meaning 21% of the time. Haiku drifts toward the majority label on neutral inputs; Sonnet barely does, but calls most neutral reviews negative.
-- **2:** TabPFN, with no training at all, matches a random forest at every data size and in a prospective test on new cell lines, and beats ridge regression. **The pre-registered few-shot advantage did not appear**: with 64 labelled cell lines, random forest was better.
+- **2, study 1:** TabPFN, with no training at all, matches a random forest at every data size and in a prospective test on new cell lines, and beats ridge regression. **The pre-registered few-shot advantage did not appear**: with 64 labelled cell lines, random forest was better.
+- **2, study 2** (pre-registered and pushed before running; 20 fresh genes; TabPFN at its default settings): the few-shot advantage **failed again**, with random forest slightly but significantly better at 16 and 64 lines. With plenty of data TabPFN's predicted ranges are well calibrated and slightly the best; **with 16 lines every method is overconfident** (TabPFN's 80% ranges hold the truth 45% of the time). Giving TabPFN the most similar cell lines as examples helps (correlation 0.25 → 0.30), but helps every method, and simply averaging those lines does as well.
 
 ## Layout
 
 ```
 icl_llm/          Part 1b: Claude wrapper (replay cache, spending cap), experiments, analysis
-icl_bio/          Part 2: the pre-registered study (study.py) and its analysis
+icl_bio/          Part 2: study 1 (study.py, analysis.py) and study 2 (study2.py, analysis2.py)
 models/           the trained tiny transformer (0.7 MB)
 runs/part1/       recorded Claude answers, the spend ledger and results
-runs/part2/       pre-registration (+ SHA-256), clarifications, every model's predictions scored
+runs/part2/       study 1: pre-registration (+ SHA-256), clarifications, every model's predictions scored
+runs/part2/study2/  study 2: its own pre-registration, results and run log
 tests/            offline tests (no key, no data, no weights)
 ```
 
@@ -41,7 +43,7 @@ pytest
 **Part 2 live** needs:
 1. DepMap 24Q4 (Figshare) processed by `agentic-ai-for-science/target_discovery/prep.py`, then converted to `.npz` (see `icl_bio/study.py`), and for the prospective test the DepMap 26Q3 files (`ScreenGeneEffect.csv`, `CRISPRScreenMap.csv`, `Model.csv`, the protein-coding expression matrix) from the DepMap portal.
 2. The TabPFN v2 regressor weights, `tabpfn-v2-regressor.ckpt` (44 MB) from [Prior-Labs/TabPFN-v2-reg](https://huggingface.co/Prior-Labs/TabPFN-v2-reg).
-3. `python -m icl_bio.study curve | lineage | prospective` (about 4 hours on a laptop CPU).
+3. Study 1: `python -m icl_bio.study curve | lineage | prospective` (about 4 hours on a laptop CPU). Study 2: `python -m icl_bio.study2 all` (about 12 hours on a 4-core laptop CPU, mostly TabPFN with 8 ensemble members).
 
 `TABPFN_DISABLE_TELEMETRY=1` is set by the code, so TabPFN never contacts Prior Labs' telemetry service.
 
